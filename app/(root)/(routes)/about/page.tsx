@@ -1,9 +1,12 @@
 import { TeamCard } from "@/components/card-team";
 
-const LandingPage = () => {
+const AboutPage = () => {
   return (
     <div>
-      <p className="text-center font-bold mb-6 text-2xl">Nossa Equipe</p>
+      <div className="w-full flex flex-col items-center text-center mb-8">
+        <h3 className="font-semibold text-xl">Conheça o time</h3>
+        <h1 className="font-bold text-4xl">O Coração da Nossa Excelência</h1>
+      </div>
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <TeamCard
           image="https://github.com/RafaelRMJesus.png"
@@ -18,7 +21,7 @@ const LandingPage = () => {
         />
         <TeamCard
           image="https://github.com/Gplatini.png"
-          name= "Platini - RM551212"
+          name="Platini - RM551212"
           description="Frontend Developer"
         />
         <TeamCard
@@ -36,4 +39,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default AboutPage;

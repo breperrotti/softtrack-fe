@@ -7,15 +7,13 @@ import { Logo } from "./logo";
 import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import {
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
 } from "@radix-ui/react-hover-card";
-import { NavigationMenu } from "@/components/ui/navigation-menu";
 import { Navigation } from "./navigation";
+import { ModeToggle } from "./mode-toggle";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -24,13 +22,14 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background fixed top-0 flex items-center w-full p-6",
+        "z-50 bg-background fixed top-0 flex items-center p-6 w-full",
         scrolled && "border-b shadow-sm"
       )}
     >
       <Logo />
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-4">
-      <Navigation />
+        <Navigation />
+        <ModeToggle />
         {!isSignedIn && (
           <>
             <HoverCard>
@@ -53,13 +52,21 @@ export const Navbar = () => {
             </SignInButton>
           </>
         )}
-        <UserButton
-          appearance={{
-            elements: {
-              userButtonAvatarBox: "w-9 h-9",
-            },
-          }}
-        />
+        {isSignedIn && (
+          <>
+            <Button disabled className="gap-x-2 items-center">
+              <Lock size={17} />
+              Admin
+            </Button>
+            <UserButton
+              appearance={{
+                elements: {
+                  userButtonAvatarBox: "w-9 h-9",
+                },
+              }}
+            />
+          </>
+        )}
       </div>
     </div>
   );
