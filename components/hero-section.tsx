@@ -1,42 +1,62 @@
 import Image from "next/image";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { ChevronRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="flex justify-center -mt-10">
-      <div className="p-4 border-2 border-lilas rounded-3xl">
-        <div className="h-128 bg-[#C5BBFF] rounded-2xl flex justify-center p-12">
-          <span className="text-5xl font-bold text-white">
-            Transformamos <span className="underline">Dados</span> em Decisões
-            Inteligentes
-          </span>
+    <div className="flex justify-center">
+      <section className="pb-28">
+        <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
+          <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+            <Badge className="bg-lilas rounded-none rounded-br-2xl rounded-tl-2xl">
+              SoftTrack
+            </Badge>
+            <h2 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
+              Transformamos <br />{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#4F46E5] to-[#E114E5]">
+                dados
+              </span>{" "}
+              em soluções{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
+                Inteligentes
+              </span>
+            </h2>
+            <p>
+              Utilizando a inteligência dos dados para alcançar novos patamares
+              de sucesso. Com a SofTrack, cada decisão é guiada por insights
+              precisos, ajudando sua empresa a explorar novas oportunidades e
+              garantir um crescimento competitivo.
+            </p>
+            <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+              <Button>Quero saber mais</Button>
+              <Button variant={"outline"} className="gap-x-2 font-bold">
+                Crie sua conta <ChevronRight size={22} />
+              </Button>
+            </div>
+          </div>
+          <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
+            <Image
+              src={"/hero-image.png"}
+              className=" md:rounded-tl-[108px]"
+              alt="teste"
+              width={550}
+              height={400}
+            />
+          </div>
         </div>
-        <div className="-mt-[24.5%] flex gap-x-8">
-          <Image
-            src={"/illustrations/illustration 19.svg"}
-            alt="Illsutação 2"
-            width={250}
-            height={400}
-          />
-          <Image
-            src={"/illustrations/illustration 20.svg"}
-            alt="Illsutação 2"
-            width={250}
-            height={400}
-          />
-          <Image
-            src={"/illustrations/illustration 13.svg"}
-            alt="Illsutação 2"
-            width={250}
-            height={400}
-          />
-          <Image
-            src={"/illustrations/illustration 10.svg"}
-            alt="Illsutação 2"
-            width={250}
-            height={400}
-          />
+        <div className="mt-20 px-4 md:px-8">
+          <p className="text-center text-sm text-muted-foreground font-semibold">
+            Acompanhados dos melhores parceiros
+          </p>
+          <div className="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 mt-6">
+            <Image src={"/vercel.svg"} alt="vercel" width={150} height={200} />
+            <Image src={"/logo-fiap.png"} alt="vercel" width={120} height={200} />
+            <Image src={"/logo-softtek.png"} alt="vercel" width={150} height={200} />
+            <Image src={"/next.svg"} alt="vercel" width={130} height={200} />
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
