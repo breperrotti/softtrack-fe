@@ -17,39 +17,39 @@ import { Slack } from "lucide-react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
+    title: "Lorem ipsum",
     href: "#",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Lorem ipsum",
+    href: "#",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Lorem ipsum",
+    href: "#",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Lorem ipsum",
+    href: "#",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Lorem ipsum",
+    href: "#",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Lorem ipsum",
+    href: "#",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
 
@@ -87,14 +87,14 @@ export function Navigation() {
               <ListItem href="/#" title="Nossas Soluções">
                 Transformando dados com eficiência.
               </ListItem>
-              <ListItem href="/#" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/#" title="Lorem ipsum">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Navegue</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (

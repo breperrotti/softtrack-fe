@@ -14,11 +14,11 @@ export const Hero = () => {
             </Badge>
             <h2 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
               Transformamos <br />{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#4F46E5] to-[#E114E5]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-l from-roxo to-roxoClaro">
                 dados
               </span>{" "}
               em soluções{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-roxoClaro">
                 Inteligentes
               </span>
             </h2>
@@ -35,25 +35,8 @@ export const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
-            <Image
-              src={"/hero-image.png"}
-              className=" md:rounded-tl-[108px]"
-              alt="teste"
-              width={550}
-              height={400}
-            />
-          </div>
-        </div>
-        <div className="mt-20 px-4 md:px-8">
-          <p className="text-center text-sm text-muted-foreground font-semibold">
-            Acompanhados dos melhores parceiros
-          </p>
-          <div className="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 mt-6">
-            <Image src={"/vercel.svg"} alt="vercel" width={150} height={200} />
-            <Image src={"/logo-fiap.png"} alt="vercel" width={120} height={200} />
-            <Image src={"/logo-softtek.png"} alt="vercel" width={150} height={200} />
-            <Image src={"/next.svg"} alt="vercel" width={130} height={200} />
+          <div className="flex-none mt-14 md:mt-0 md:max-w-xl bg-roxoClaro h-[370px] w-128 flex items-center justify-center rounded-tl-[108px]">
+              <p className="font-bold text-white">Imagem ou Animação</p>
           </div>
         </div>
       </section>
