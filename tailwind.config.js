@@ -40,6 +40,11 @@ module.exports = {
         '320': '80rem',
       },
       colors: {
+        lilas: "#CECDEE",
+        lilasClaro: '#F1EFFF',
+        roxo: '#5654EF',
+        roxoClaro: '#6868F0',
+        logo: '#5F5DF1',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -1,11 +1,11 @@
-import Hero from "@/components/hero";
+import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero-section";
 
 const LandingPage = () => {
   return (
     <div className="w-full">
-      <div className="h-144">
-        <Hero />
-      </div>
+      <Hero />
+      <Footer />
     </div>
   );
 };

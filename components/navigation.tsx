@@ -66,11 +66,11 @@ export function Navigation() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-black dark:bg-white p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-logo p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <Slack className="h-6 w-6 text-white dark:text-black" />
-                    <div className="mb-2 mt-4 text-lg font-medium text-white dark:text-black">
+                    <Slack className="h-6 w-6 text-white" />
+                    <div className="mb-2 mt-4 text-lg font-medium text-white">
                       SoftTrack
                     </div>
                     <p className="text-sm leading-tight text-muted/70 dark:text-muted">

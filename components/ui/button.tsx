@@ -18,16 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        fiap: "rounded-2xl border-2 text-white border-black bg-logo px-6 py-3 font-semibold transition-all duration-300 translate-x-[-4px] translate-y-[-4px] rounded-md shadow-[2px_2px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
       },
       size: {
-        default: "h-10 px-4 py-2",
+        default: "h-10 px-6 py-3",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-11 rounded- px-8",
         icon: "h-10 w-10",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "fiap",
       size: "default",
     },
   }

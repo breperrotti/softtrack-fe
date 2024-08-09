@@ -13,7 +13,6 @@ import {
   HoverCardContent,
 } from "@radix-ui/react-hover-card";
 import { Navigation } from "./navigation";
-import { ModeToggle } from "./mode-toggle";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -29,7 +28,6 @@ export const Navbar = () => {
       <Logo />
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-4">
         <Navigation />
-        <ModeToggle />
         {!isSignedIn && (
           <>
             <HoverCard>
