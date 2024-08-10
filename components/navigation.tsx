@@ -14,6 +14,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Slack } from "lucide-react";
+import { TransitionLink } from "./transition-link";
+import { Button } from "./ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -59,7 +61,7 @@ export function Navigation() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <Link href={"/"}>Página Inicial</Link>
+            <TransitionLink href={"/"}>Página Inicial</TransitionLink>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -81,7 +83,7 @@ export function Navigation() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/#" title="Nossa Missão">
+              <ListItem href="/#" title="Nossa Visão">
                 Qualidade e inovação para pequenas e médias empresas.
               </ListItem>
               <ListItem href="/#" title="Nossas Soluções">
@@ -110,11 +112,11 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <TransitionLink href="/about" passHref>
+            <Button variant={"ghost"}>
               Sobre o Projeto
-            </NavigationMenuLink>
-          </Link>
+            </Button>
+          </TransitionLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -74,3 +74,32 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #6868F0;
+  z-index: 9999;
+  transform: translateX(0);
+  transition: transform 800ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-transition-in {
+  transform: translateX(-100%);
+}
+
+/* Block slides out */
+.page-transition-out {
+  transform: translateX(-200%);
+}
+

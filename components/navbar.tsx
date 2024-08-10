@@ -13,6 +13,7 @@ import {
   HoverCardContent,
 } from "@radix-ui/react-hover-card";
 import { Navigation } from "./navigation";
+import Link from "next/link";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -52,10 +53,12 @@ export const Navbar = () => {
         )}
         {isSignedIn && (
           <>
-            <Button disabled className="gap-x-2 items-center">
-              <Lock size={17} />
-              Admin
-            </Button>
+            <Link href={"/admin"}>
+              <Button className="gap-x-2 items-center">
+                <Lock size={17} />
+                Admin
+              </Button>
+            </Link>
             <UserButton
               appearance={{
                 elements: {

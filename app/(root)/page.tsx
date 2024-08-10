@@ -1,12 +1,14 @@
 import { Footer } from "@/components/footer";
+import { Solutions } from "@/components/solutions-section";
 import { Hero } from "@/components/hero-section";
-import { Mission } from "@/components/mission-section";
+import { Vision } from "@/components/vision-section";
 
 const LandingPage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col">
       <Hero />
-      <Mission />
+      <Vision />
+      <Solutions />
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import { Layers3, Lightbulb, Shield, Zap } from "lucide-react";
 
-export const Mission = () => {
+export const Vision = () => {
   const features = [
     {
       icon: <Zap />,

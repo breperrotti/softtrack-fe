@@ -25,7 +25,7 @@ const AboutPage = () => {
           description="Frontend Developer"
         />
         <TeamCard
-          image="https://github.com/rebeca.png"
+          image="https://github.com/GabrielMikas.png"
           name="Gabriel Tavares - RM97753"
           description="Head of Back-end Developer & Pitch"
         />
