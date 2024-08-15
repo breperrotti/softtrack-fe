@@ -5,14 +5,14 @@ import { Badge } from "./ui/badge";
 
 export const Solutions = () => {
   return (
-    <>
+    <div id="solutions">
       <div className="mt-24 flex flex-col items-center justify-center">
         <Badge variant={"outline"}>
           Nossas Soluções
         </Badge>
         <h1 className="text-4xl font-bold py-4">Como podemos ajudar nossos clientes?</h1>
       </div>
-      <div className="p-4 mt-8 w-full flex justify-center">
+      <div className="p-4 mt-8 w-full flex justify-center ">
         <div className="h-144 grid gap-4 grid-cols-4 grid-rows-2 w-3/5">
           <HelpCard
             title="Nossa Solução"
@@ -20,14 +20,13 @@ export const Solutions = () => {
             href="#"
             proportion={80}
             icon={<Lightbulb size={60} />}
-            className="col-span-2 row-span-2 rounded-bl-[108px]"
+            className="col-span-2 row-span-2"
           />
           <HelpCard
             title="Contratos"
             subtitle="Veja com quais empresas a SoftTarck tem contratos"
             href="#"
             icon={<Newspaper />}
-            className="rounded-tr-[108px]"
             proportion={40}
           />
           <HelpCard
@@ -36,7 +35,7 @@ export const Solutions = () => {
             proportion={60}
             href="#"
             icon={<CircleHelp size={40}/>}
-            className="row-span-2 rounded-tr-[108px]"
+            className="row-span-2 "
           />
           <HelpCard
             title="Equipes"
@@ -44,11 +43,11 @@ export const Solutions = () => {
             proportion={40}
             href="#"
             icon={<Users />}
-            className="rounded-bl-[108px]"
+            className=""
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -73,7 +72,7 @@ const HelpCard = ({
     <a
       href={href}
       className={cn(
-        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-8px] translate-y-[-8px] shadow-[8px_8px_0px_black]",
+        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-6px] translate-y-[-6px] shadow-[6px_6px_0px_black]",
         className
       )}
     >

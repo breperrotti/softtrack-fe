@@ -17,10 +17,6 @@ module.exports = {
         md: '768px',
         lg: '976px',
         xl: '1440px',
-        '2xl': '1600px',
-        '3xl': '1920px',
-        '4xl': '2240px',
-        '5xl': '2560px',
       },
     },
     extend: {
@@ -38,6 +34,11 @@ module.exports = {
         '288': '72rem',
         '304': '76rem',
         '320': '80rem',
+        '336': '84rem',
+        '352': '88rem',
+        '368': '92rem',
+        '384': '96rem',
+        '400': '100rem',
       },
       colors: {
         lilas: "#CECDEE",

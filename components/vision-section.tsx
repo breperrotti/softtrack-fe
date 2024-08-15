@@ -25,7 +25,7 @@ export const Vision = () => {
   ];
 
   return (
-    <section className="relative py-28 bg-roxo">
+    <section className="relative py-28 bg-roxo" id="vision">
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-between gap-24 lg:flex md:px-8">
         <div className="max-w-xl">
           <h3 className="text-white text-3xl font-semibold sm:text-4xl">

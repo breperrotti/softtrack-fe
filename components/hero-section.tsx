@@ -9,9 +9,6 @@ export const Hero = () => {
       <section className="pb-28">
         <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
           <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-            <Badge className="bg-logo rounded-none rounded-br-2xl rounded-tl-2xl hover:bg-roxoClaro">
-              SoftTrack
-            </Badge>
             <h2 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
               Transformamos <br />{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-l from-roxo to-roxoClaro">

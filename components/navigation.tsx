@@ -66,10 +66,10 @@ export function Navigation() {
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
+                <TransitionLink  href="/">
+                  <div
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-logo p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                   
                   >
                     <Slack className="h-6 w-6 text-white" />
                     <div className="mb-2 mt-4 text-lg font-medium text-white">
@@ -80,13 +80,13 @@ export function Navigation() {
                       proporcionando aumento de eficiência operacional e redução
                       de custos.
                     </p>
-                  </a>
-                </NavigationMenuLink>
+                  </div>
+                </TransitionLink>
               </li>
-              <ListItem href="/#" title="Nossa Visão">
+              <ListItem href="/#vision" title="Nossa Visão">
                 Qualidade e inovação para pequenas e médias empresas.
               </ListItem>
-              <ListItem href="/#" title="Nossas Soluções">
+              <ListItem href="/#solutions" title="Nossas Soluções">
                 Transformando dados com eficiência.
               </ListItem>
               <ListItem href="/#" title="Lorem ipsum">
@@ -112,11 +112,11 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <TransitionLink href="/about" passHref>
+          <Link href="/about" passHref>
             <Button variant={"ghost"}>
               Sobre o Projeto
             </Button>
-          </TransitionLink>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
