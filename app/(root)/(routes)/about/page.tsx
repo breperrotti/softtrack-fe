@@ -1,3 +1,5 @@
+"use client"
+
 import { TeamCard } from "@/components/card-team";
 
 const AboutPage = () => {
