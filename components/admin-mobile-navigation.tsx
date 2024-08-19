@@ -6,7 +6,6 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import {
-  Menu,
   Link,
   Home,
   ShoppingCart,

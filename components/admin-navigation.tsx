@@ -11,8 +11,6 @@ import {
 import { ArrowUpRight, Bell, CircleHelp, Home, LineChart, Newspaper, Settings, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ContractSwitcher from "./switcher";
-import { contratos } from "@/mocks/contracts";
 
 interface NavigationProps {
   className?: string
@@ -27,6 +25,11 @@ export const AdminNavigation = ({className}: NavigationProps) => {
       icon: <Home className="h-6 w-6" />,
     },
     {
+      name: "Análise",
+      path: "/admin/analise",
+      icon: <LineChart className="h-6 w-6" />,
+    },
+    {
       name: "Contratos",
       path: "/admin/contratos",
       icon: <Newspaper className="h-6 w-6" />
@@ -36,11 +39,7 @@ export const AdminNavigation = ({className}: NavigationProps) => {
       path: "/admin/equipes",
       icon: <Users className="h-6 w-6" />
     },
-    {
-      name: "Análise",
-      path: "/admin/analytics",
-      icon: <LineChart className="h-6 w-6" />,
-    },
+
     {
       name: "Configurações",
       path: "/admin/settings",
@@ -55,8 +54,6 @@ export const AdminNavigation = ({className}: NavigationProps) => {
 
   const currentPath = usePathname()
 
-  const contracts = contratos
-
   return (
     <div className={`hidden border-r bg-muted/40 md:block ${className}`}>
       <div className="flex h-full max-h-screen flex-col gap-2">
@@ -66,8 +63,7 @@ export const AdminNavigation = ({className}: NavigationProps) => {
           </Link>
         </div>
         <div className="flex-1">
-          <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-          <ContractSwitcher items={contracts} />
+          <nav className="grid items-start px-2 text-sm font-medium lg:px-4 lg:mt-6">
             {routes.map((route) => (
               <Link
                 key={route.name}

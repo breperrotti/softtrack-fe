@@ -40,7 +40,7 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
 
     transitionElement.classList.replace("page-transition-in", "page-transition-out");
 
-    await sleep(900);
+    await sleep(1000);
     transitionElement.remove();
   };
 

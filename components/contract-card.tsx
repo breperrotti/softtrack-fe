@@ -1,14 +1,16 @@
 "use client"
 
-import { Contrato } from "@/mocks/contracts";
+import { Contrato, contratos } from "@/mocks/contracts";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { ChevronDown, ChevronUp, Ghost } from "lucide-react";
+import { ChevronUp } from "lucide-react";
+import { GraficoFuncionariosDisponiveisOverview } from "./charts/grafico-funcionarios-disponiveis-overview";
+import { GraficoDemandaSegmentoOverview } from "./charts/grafico-demandas-segmento-overview";
+import { Component } from "./charts/grafico-demandas-senioridade-overview";
 
 interface ContractCardProps {
   contrato: Contrato;
@@ -21,11 +23,11 @@ export const ContractCard = (params: ContractCardProps) => {
         align: "start",
       }}
       orientation="vertical"
-      className="w-full bg-roxoClaro h-80 rounded-2xl"
+      className="w-full bg-roxoClaro h-128 rounded-2xl"
     >
-      <CarouselContent className="h-80 p-4">
-        <CarouselItem className="h-80">
-          <div className="h-[240px] w-full flex items-center justify-center rounded-2xl">
+      <CarouselContent className="h-128 p-4">
+        <CarouselItem className="h-128">
+          <div className="h-[420px] w-full flex items-center justify-center rounded-2xl">
             <h1 className="text-white text-5xl font-bold text-center flex flex-col items-center">
               <ChevronUp size={72} />
               {params.contrato.name}
@@ -35,23 +37,23 @@ export const ContractCard = (params: ContractCardProps) => {
             </h1>
           </div>
         </CarouselItem>
-        <CarouselItem className="h-72 mt-12 pb-12">
-          <div className="h-72 mt-4 bg-white w-full flex items-center justify-center rounded-2xl">
+        <CarouselItem className="h-128 mt-12 pb-12">
+          <div className="h-[480px] mt-4 bg-white w-full flex items-center justify-center rounded-2xl">
             <h1 className="text-4xl font-bold text-center flex flex-col items-center p-4">
               {`"${params.contrato.description}"`}
             </h1>
           </div>
         </CarouselItem>
-        <CarouselItem className="h-80 mt-12">
+        <CarouselItem className="h-[480px] mt-12">
           <div className="grid grid-cols-3 gap-4">
-            <div className="w-full bg-white rounded-2xl h-72 flex flex-col items-center justify-center">
-              <h1 className="font-bold text-3xl mb-4">Consultores</h1><p className="text-7xl">{params.contrato.consultores}</p>
+            <div>
+              <Component />
             </div>
-            <div className="w-full text-white rounded-2xl h-72 flex flex-col items-center justify-center">
-              <h1 className="font-bold text-3xl mb-4">Demandas</h1><p className="text-7xl">{params.contrato.demandas}</p>
+            <div>
+              <GraficoDemandaSegmentoOverview />
             </div>
-            <div className="w-full bg-white rounded-2xl h-72 flex flex-col items-center justify-center">
-              <h1 className="font-bold text-3xl mb-4">Tipo</h1><p className="text-7xl">{params.contrato.tipo}</p>
+            <div>
+              <GraficoFuncionariosDisponiveisOverview disponiveis={params.contrato.consultores} ausentes={params.contrato.consultores}/>
             </div>
           </div>
         </CarouselItem>

@@ -4,21 +4,14 @@ import { useScrollTop } from "@/hooks/use-scroll-top";
 import { Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
-import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
+import Avatar, { genConfig } from 'react-nice-avatar'
 
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from "@radix-ui/react-hover-card";
 import { Navigation } from "./navigation";
-import Link from "next/link";
 import { TransitionLink } from "./transition-link";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
-  const { isSignedIn } = useUser();
 
   return (
     <div
@@ -30,45 +23,13 @@ export const Navbar = () => {
       <Logo />
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-4">
         <Navigation />
-        {!isSignedIn && (
-          <>
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div>
-                  <Button disabled className="gap-x-2 items-center">
-                    <Lock size={17} />
-                    Admin
-                  </Button>
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="border border-solid p-4 rounded-lg mt-2">
-                <h4 className="text-sm font-semibold text-center">
-                  Faça Login para acessar essa seção
-                </h4>
-              </HoverCardContent>
-            </HoverCard>
-            <SignInButton>
-              <Button>Crie sua conta SoftTrack</Button>
-            </SignInButton>
-          </>
-        )}
-        {isSignedIn && (
-          <>
-            <TransitionLink href={"/admin/overview"}>
-              <Button className="gap-x-2 items-center">
-                <Lock size={17} />
-                Admin
-              </Button>
-            </TransitionLink>
-            <UserButton
-              appearance={{
-                elements: {
-                  userButtonAvatarBox: "w-9 h-9",
-                },
-              }}
-            />
-          </>
-        )}
+        <TransitionLink href={"/admin/overview"}>
+          <Button className="gap-x-2 items-center">
+            <Lock size={17} />
+            Admin
+          </Button>
+        </TransitionLink>
+        <Avatar className="w-10 h-10" />
       </div>
     </div>
   );

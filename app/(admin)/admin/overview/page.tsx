@@ -34,7 +34,7 @@ const OverviewPage = () => {
           </Button>
         </div>
         <div className="w-max-96 mt-4 px-16 justify-center">
-          <Carousel className="w-full mb-96 mt-8">
+          <Carousel className="w-full mt-8">
             <CarouselContent>
               {contratos.map((contrato, index) => (
                 <CarouselItem key={index}>

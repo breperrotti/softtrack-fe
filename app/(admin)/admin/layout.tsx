@@ -1,22 +1,16 @@
 "use client";
 
-import { redirect } from "next/navigation";
-
-import { useAuth, UserButton } from "@clerk/nextjs";
 import { AdminNavigation } from "@/components/admin-navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Menu } from "lucide-react";
 import { MobileNavigation } from "@/components/admin-mobile-navigation";
 import { Button } from "@/components/ui/button";
 import { TransitionLink } from "@/components/transition-link";
+import Avatar from 'react-nice-avatar'
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
-  const { isSignedIn } = useAuth();
 
-  if (!isSignedIn) {
-    return redirect("/");
-  }
+
 
   return (
     <>
@@ -47,13 +41,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
               <TransitionLink href="/">
                 <Button size={"sm"}> Voltar à página principal</Button>
               </TransitionLink>
-              <UserButton
-                appearance={{
-                  elements: {
-                    userButtonAvatarBox: "w-9 h-9",
-                  },
-                }}
-              />
+              <Avatar className="w-10 h-10" />
             </div>
           </header>
           <main className="flex-1 overflow-y-auto lg:pt-[60px]">
