@@ -1,9 +1,10 @@
+import { AdminBanner } from "@/components/admin-banner"
 
 
 const AnalisePage = () => {
   return (
     <div>
-      <p>Analise</p>
+      <AdminBanner title="Análise"/>
     </div>
   )
 }

@@ -2,53 +2,89 @@
 
 import { Button } from "@/components/ui/button";
 import React from "react";
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { ChevronRight, User } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { contratos } from "@/mocks/contracts";
 import { ContractCard } from "@/components/contract-card";
+import { AdminBanner } from "@/components/admin-banner";
 
 const OverviewPage = () => {
   return (
     <div>
-      <div className="relative h-[400px] w-full shadow-2xl">
-        <Image
-          src={"/hero-admin.svg"}
-          alt="hero admin"
-          layout="fill"
-          objectFit="cover"
-          className="z-0 select-none"
-        />
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-white text-7xl font-bold select-none">
-            Visão Geral
-          </h1>
-        </div>
-      </div>
+      <AdminBanner title="Visão Geral"/>
       <div className="p-6 w-full">
-        <div className="flex items-center justify-between mt-4">
-          <p className="font-bold text-2xl">Contratos</p>
-          <Button>
-            Mostrar todos <ChevronRight />
-          </Button>
-        </div>
-        <div className="w-max-96 mt-4 px-16 justify-center">
-          <Carousel className="w-full mt-8">
-            <CarouselContent>
-              {contratos.map((contrato, index) => (
-                <CarouselItem key={index}>
-                  <ContractCard contrato={contrato}/>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious variant={"ghost"}/>
-            <CarouselNext variant={"ghost"}/>
-          </Carousel>
-        </div>
+        <BentoGridDemo />
       </div>
     </div>
   );
 };
 
 export default OverviewPage;
+
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+
+export function BentoGridDemo() {
+  return (
+    <BentoGrid className="max-w-full mx-auto">
+      {items.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          description={item.description}
+          header={item.header}
+          icon={item.icon}
+          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+        />
+      ))}
+    </BentoGrid>
+  );
+}
+const Skeleton = () => (
+  <div className="flex w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 text-neutral-900 items-center justify-center"> teste</div>
+);
+
+const items = [
+  {
+    title: "The Dawn of Innovation",
+    description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Digital Revolution",
+    description: "Dive into the transformative power of technology.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Art of Design",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Power of Communication",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Pursuit of Knowledge",
+    description: "Join the quest for understanding and enlightenment.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Joy of Creation",
+    description: "Experience the thrill of bringing ideas to life.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+    icon: <User className="h-4 w-4 text-neutral-500" />,
+  },
+];
