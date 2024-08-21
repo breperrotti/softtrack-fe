@@ -7,7 +7,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="fixed inset-0 flex flex-col md:flex-row">
       <AdminNavigation />
       <div className="flex flex-1 flex-col overflow-x-hidden">
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <main className="flex-1">{children}</main>
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
 import { AdminBanner } from "@/components/admin-banner"
 
 
-const ContratosPage = () => {
+const EquipesPage = () => {
   return (
     <div>
-      <AdminBanner title="Contratos"/>
+      <AdminBanner title="Equipes"/>
     </div>
   )
 }
 
-export default ContratosPage
+export default EquipesPage

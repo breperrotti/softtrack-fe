@@ -40,7 +40,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function GraficoBalançoChamadosConsultoresSegmento() {
+export function GraficoBalancoChamadosConsultoresSegmento() {
   return (
     <Card className="border-none shadow-none">
       <CardHeader className="items-center pb-4">

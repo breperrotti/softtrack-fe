@@ -1,11 +1,10 @@
 "use client";
 
 import { useScrollTop } from "@/hooks/use-scroll-top";
-import { Lock } from "lucide-react";
+import { Lock, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
-import Avatar, { genConfig } from 'react-nice-avatar'
 
 import { Navigation } from "./navigation";
 import { TransitionLink } from "./transition-link";
@@ -29,7 +28,9 @@ export const Navbar = () => {
             Admin
           </Button>
         </TransitionLink>
-        <Avatar className="w-10 h-10" />
+        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-400 to-indigo-700 flex items-center justify-center text-white">
+          <User />
+        </div>
       </div>
     </div>
   );

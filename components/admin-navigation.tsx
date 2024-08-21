@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Avatar, { genConfig } from "react-nice-avatar";
 import { TransitionLink } from "./transition-link";
 
 interface NavigationProps {
@@ -24,7 +23,6 @@ interface NavigationProps {
 
 export const AdminNavigation = ({ className }: NavigationProps) => {
   const [isExpanded, setIsExpanded] = useState(true);
-  const avatarConfig = genConfig();
 
   const routes = [
     {
@@ -101,7 +99,13 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
         <div className="p-4">
           <TransitionLink href="/">
             <Button size="sm" className="w-full">
-              <span className="text-xs">{ isExpanded ? `Voltar para a página principal` : <ArrowUpRight />}</span>
+              <span className="text-xs">
+                {isExpanded ? (
+                  `Voltar para a página principal`
+                ) : (
+                  <ArrowUpRight />
+                )}
+              </span>
             </Button>
           </TransitionLink>
         </div>

@@ -40,7 +40,7 @@ const chartConfig = {
 
 export function GraficoChsmadosAbertosResolvidosSegmento() {
   return (
-    <Card>
+    <Card className="border-none shadow-none">
       <CardHeader className="text-center">
         <CardTitle>Número de abertos Abertos x Resolvidos por segmento</CardTitle>
         <CardDescription>Agosto - 2024</CardDescription>
@@ -65,12 +65,12 @@ export function GraficoChsmadosAbertosResolvidosSegmento() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Número de chamados concluídos aumentou em 3.4% <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Porcentagem baseada nos últimos 3 meses
         </div>
       </CardFooter>
     </Card>
