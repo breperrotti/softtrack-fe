@@ -68,7 +68,7 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
       } transition-all duration-300`}
     >
       <div className="flex h-full max-h-screen flex-col gap-2">
-        <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6 justify-between">
+        <div className="flex h-14 items-center border-b px-4 lg:h-[60px] justify-between">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             {isExpanded && <span className="text-3xl">SoftTrack</span>}
           </Link>
@@ -88,7 +88,7 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
                 href={route.path}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all mt-1 ${
                   currentPath === route.path
-                    ? "bg-roxoClaro text-white hover:bg-roxo"
+                    ? "bg-roxoClaro text-white shadow-2xl hover:bg-roxo"
                     : "hover:text-black hover:bg-lilas"
                 }`}
               >

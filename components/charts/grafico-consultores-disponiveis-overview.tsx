@@ -17,40 +17,37 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { getRandomNumber } from "@/lib/utils";
 
 const chartConfig = {
   ausentes: {
-    label: "ausentes",
+    label: "Ausentes",
     color: "#CECDEE",
   },
   disponiveis: {
-    label: "disponiveis",
+    label: "Disponíveis",
     color: "#5F5DF1",
   },
 } satisfies ChartConfig;
 
-interface GraficoFuncionariosDisponiveisOverviewProps {
+interface GraficoConsultoresDisponiveisOverviewProps {
   disponiveis: string;
   ausentes: string;
 }
 
-export function GraficoFuncionariosDisponiveisOverview({
+export function GraficoConsultoresDisponiveisOverview({
   disponiveis,
   ausentes,
-}: GraficoFuncionariosDisponiveisOverviewProps) {
+}: GraficoConsultoresDisponiveisOverviewProps) {
   const chartData = [
     { month: "janeiro", ausentes: 500, disponiveis: Number(disponiveis) },
   ];
 
   const totalVisitors = chartData[0].ausentes + chartData[0].disponiveis;
 
-  const percent = getRandomNumber(1, 10).toString();
-
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col border-none shadow-none">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Funcionários Disponíveis</CardTitle>
+        <CardTitle>Consultores Disponíveis</CardTitle>
         <CardDescription>Agosto - 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 items-center pb-0">
@@ -86,7 +83,7 @@ export function GraficoFuncionariosDisponiveisOverview({
                           y={(viewBox.cy || 0) + 4}
                           className="fill-muted-foreground"
                         >
-                          Funcionários
+                          Consultores
                         </tspan>
                       </text>
                     );
@@ -113,7 +110,7 @@ export function GraficoFuncionariosDisponiveisOverview({
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 font-medium leading-none">
-          Aumento de {percent}.3% de funcionários disponíveis{" "}
+          Aumento de 7.3% dos consultores disponíveis{" "}
           <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">

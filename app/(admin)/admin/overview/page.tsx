@@ -2,14 +2,14 @@
 
 import React from "react";
 import { AdminBanner } from "@/components/admin-banner";
-import { BentoGridDemo } from "@/components/demo";
+import { OverviewDashboard } from "@/components/overview-dashboard";
 
 const OverviewPage = () => {
   return (
     <div>
       <AdminBanner title="Visão Geral"/>
       <div className="p-6 w-full">
-        <BentoGridDemo />
+        <OverviewDashboard />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
 import {
   Card,
@@ -17,60 +17,55 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
 const chartData = [
-  { month: "Junior", demandas: 186 },
-  { month: "Pleno", demandas: 305 },
-  { month: "Sênior", demandas: 137 },
-  { month: "Expert", demandas: 57 },
+  { month: "T.I", abertos: 186, resolvidos: 150 },
+  { month: "Vendas", abertos: 305, resolvidos: 200 },
+  { month: "Suporte", abertos: 237, resolvidos: 120 },
+  { month: "Outros", abertos: 73, resolvidos: 190 },
+  { month: "Infra", abertos: 209, resolvidos: 130 },
+  { month: "R.H", abertos: 214, resolvidos: 140 },
 ]
 
 const chartConfig = {
-  demandas: {
-    label: "Demandas",
-    color: "#5654EF",
+  abertos: {
+    label: "Abertos",
+    color: "#CECDEE",
+  },
+  resolvidos: {
+    label: "Resolvidos",
+    color: "#5F5DF1",
   },
 } satisfies ChartConfig
 
-export function GraficoDemandasSenioridade() {
+export function GraficoChsmadosAbertosResolvidosSegmento() {
   return (
-    <Card className="border-none shadow-none">
-      <CardHeader className="flex flex-col items-center">
-        <CardTitle>Demandas por Senioridade</CardTitle>
+    <Card>
+      <CardHeader className="text-center">
+        <CardTitle>Número de abertos Abertos x Resolvidos por segmento</CardTitle>
         <CardDescription>Agosto - 2024</CardDescription>
       </CardHeader>
-      <CardContent className="mt-6">
+      <CardContent>
         <ChartContainer config={chartConfig}>
-          <BarChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              top: 20,
-            }}
-          >
+          <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="month"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => value}
+              tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<ChartTooltipContent indicator="dashed" />}
             />
-            <Bar dataKey="demandas" fill="var(--color-demandas)" radius={8}>
-              <LabelList
-                position="top"
-                offset={12}
-                className="fill-foreground"
-                fontSize={12}
-              />
-            </Bar>
+            <Bar dataKey="abertos" fill="#CECDEE" radius={4} />
+            <Bar dataKey="resolvidos" fill="#5F5DF1" radius={4} />
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-center gap-2 text-sm mt-6">
+      <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
