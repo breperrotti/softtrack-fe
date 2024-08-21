@@ -45,17 +45,7 @@ export const ContractCard = (params: ContractCardProps) => {
           </div>
         </CarouselItem>
         <CarouselItem className="h-[480px] mt-12">
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <Component />
-            </div>
-            <div>
-              <GraficoDemandaSegmentoOverview />
-            </div>
-            <div>
-              <GraficoFuncionariosDisponiveisOverview disponiveis={params.contrato.consultores} ausentes={params.contrato.consultores}/>
-            </div>
-          </div>
+
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious />

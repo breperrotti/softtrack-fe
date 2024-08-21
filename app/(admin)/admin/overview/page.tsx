@@ -22,7 +22,7 @@ const OverviewPage = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1 className="text-white text-7xl font-bold select-none">
-            SoftTrack
+            Visão Geral
           </h1>
         </div>
       </div>

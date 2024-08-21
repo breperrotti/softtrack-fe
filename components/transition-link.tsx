@@ -35,12 +35,12 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
     await sleep(10);
     transitionElement.classList.add("page-transition-in");
 
-    await sleep(800);
+    await sleep(900);
     router.push(href);
 
     transitionElement.classList.replace("page-transition-in", "page-transition-out");
 
-    await sleep(1000);
+    await sleep(900);
     transitionElement.remove();
   };
 
