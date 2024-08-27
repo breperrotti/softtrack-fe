@@ -1,126 +1,137 @@
-"use client";
+"use client"
 
 import { cn } from "@/lib/utils";
-import { AnimatedList } from "@/components/ui/animated-list";
+import { AnimatedList } from "./ui/animated-list";
 
-interface Card {
-  title: string;
-  value: string;
-  percentage: string;
-  trend: "up" | "down";
+interface Item {
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  time: string;
 }
 
-const cards: Card[] = [
+let notifications = [
   {
-    title: "Pirâmide vendas",
-    value: "3.76%",
-    percentage: "17%",
-    trend: "up",
+    name: "Pagamento recebido",
+    description: "Painel Financeiro",
+    time: "15m atrás",
+    icon: "💸",
+    color: "#00C9A7",
   },
   {
-    title: "Teste",
-    value: "7.65k",
-    percentage: "19%",
-    trend: "up",
+    name: "Novo usuário inscrito",
+    description: "Painel de Usuários",
+    time: "10m atrás",
+    icon: "👤",
+    color: "#FFB800",
   },
   {
-    title: "Teste 3",
-    value: "4.12k",
-    percentage: "12%",
-    trend: "up",
+    name: "Nova mensagem",
+    description: "Painel de Comunicações",
+    time: "5m atrás",
+    icon: "💬",
+    color: "#FF3D71",
   },
   {
-    title: "Teste 2",
-    value: "32.4k",
-    percentage: "1.2%",
-    trend: "down",
+    name: "Novo evento",
+    description: "Calendário de Eventos",
+    time: "2m atrás",
+    icon: "🗞️",
+    color: "#1E86FF",
   },
   {
-    title: "Teste 4",
-    value: "4.3k",
-    percentage: "9%",
-    trend: "up",
+    name: "Pagamento aprovado",
+    description: "Painel Financeiro",
+    time: "30m atrás",
+    icon: "✔️",
+    color: "#CECDEE",
   },
   {
-    title: "Teste 5",
-    value: "6m 2s",
-    percentage: "13%",
-    trend: "up",
+    name: "Funcionário ausente",
+    description: "Painel de RH",
+    time: "1h atrás",
+    icon: "🚫",
+    color: "#DC3545",
   },
   {
-    title: "Teste 6",
-    value: "45%",
-    percentage: "3%",
-    trend: "down",
+    name: "Tarefa concluída",
+    description: "Painel de Projetos",
+    time: "20m atrás",
+    icon: "✅",
+    color: "#007BFF",
   },
   {
-    title: "Teste 7",
-    value: "2.5k",
-    percentage: "22%",
-    trend: "up",
+    name: "Alerta de baixo estoque",
+    description: "Gerenciador de Inventário",
+    time: "45m atrás",
+    icon: "📉",
+    color: "#FFC107",
   },
   {
-    title: "Teste 8",
-    value: "1.8k",
-    percentage: "8%",
-    trend: "up",
+    name: "Atualização de sistema disponível",
+    description: "Painel de TI",
+    time: "2h atrás",
+    icon: "🔄",
+    color: "#6F42C1",
   },
   {
-    title: "Teste 9",
-    value: "92%",
-    percentage: "5%",
-    trend: "up",
-  },
-  {
-    title: "Teste",
-    value: "$12.4k",
-    percentage: "4%",
-    trend: "up",
-  },
-  {
-    title: "Net Revenue",
-    value: "$8.9k",
-    percentage: "2%",
-    trend: "down",
+    name: "Novo comentário em postagem",
+    description: "Monitor de Redes Sociais",
+    time: "15m atrás",
+    icon: "💬",
+    color: "#17A2B8",
   },
 ];
 
+notifications = Array.from({ length: 10 }, () => notifications).flat();
 
-const Card = ({ title, value, percentage, trend }: Card) => {
+const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
-    <div
+    <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
-        // animation styles
-        "transition-all duration-300 ease-in-out hover:scale-[103%]",
-        // light styles
-        "border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-200 translate-x-[-4px] translate-y-[-4px] rounded-md shadow-[2px_2px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
+        "relative mx-auto min-h-fit w-full cursor-pointer overflow-hidden rounded-md p-4 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-4px] translate-y-[-4px] shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none",
       )}
     >
-      <div className="flex flex-row items-center justify-between">
-        <div className="flex flex-col">
-          <span className="text-sm sm:text-lg font-medium">{title}</span>
-          <span className="text-lg font-bold">{value}</span>
+      <div className="flex flex-row items-center gap-3">
+        <div
+          className="flex size-10 items-center justify-center rounded-2xl"
+          style={{
+            backgroundColor: color,
+          }}
+        >
+          <span className="text-lg">{icon}</span>
         </div>
-        <div className={`text-lg font-bold ${trend === "up" ? "text-green-500" : "text-red-500"}`}>
-          {percentage} {trend === "up" ? "↑" : "↓"}
+        <div className="flex flex-col overflow-hidden">
+          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
+            <span className="text-sm sm:text-lg">{name}</span>
+            <span className="mx-1">·</span>
+            <span className="text-xs text-gray-500">{time}</span>
+          </figcaption>
+          <p className="text-sm font-normal dark:text-white/60">
+            {description}
+          </p>
         </div>
       </div>
-    </div>
+    </figure>
   );
 };
 
-export function AnimatedListDemo({ className }: { className?: string }) {
+export function AnimatedListDemo({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <div
       className={cn(
-        "relative flex h-[500px] w-full flex-col p-6 overflow-hidden rounded-lg bg-lilas border-2 border-black shadow-2xl",
-        className
+        "relative flex h-[595px] w-full flex-col p-6 overflow-hidden rounded-lg",
+        className,
       )}
     >
       <AnimatedList>
-        {cards.map((card, idx) => (
-          <Card {...card} key={idx} />
+        {notifications.map((item, idx) => (
+          <Notification {...item} key={idx} />
         ))}
       </AnimatedList>
     </div>

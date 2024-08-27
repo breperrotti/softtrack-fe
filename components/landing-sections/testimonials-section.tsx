@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Marquee } from './ui/marquee'
+import { Marquee } from '../ui/marquee'
 
 const reviews = [
   {
@@ -106,7 +106,7 @@ function ReviewCard({
 
 export function Testimonials() {
    return (
-      <div className="bg-background relative flex size-full flex-col items-center justify-center overflow-hidden rounded-lg border py-20 md:shadow-xl">
+      <div className="bg-background relative flex size-full flex-col items-center justify-center overflow-hidden py-20 ">
          <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map(review => (
                <ReviewCard key={review.username} {...review} />

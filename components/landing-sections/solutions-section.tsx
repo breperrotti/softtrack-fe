@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight, CircleHelp, Lightbulb, Newspaper, User, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Badge } from "./ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export const Solutions = () => {
   return (

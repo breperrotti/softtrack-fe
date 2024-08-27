@@ -86,8 +86,8 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
                 href={route.path}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all mt-1 ${
                   currentPath === route.path
-                    ? "bg-roxoClaro text-white shadow-2xl hover:bg-roxo"
-                    : "hover:text-black hover:bg-lilas"
+                    ? "bg-roxo text-white shadow-2xl"
+                    : "hover:text-black hover:bg-muted-foreground/30"
                 }`}
               >
                 {route.icon}

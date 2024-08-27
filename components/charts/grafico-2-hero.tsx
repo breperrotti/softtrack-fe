@@ -22,10 +22,10 @@ import {
 } from "@/components/ui/chart";
 
 const chartData = [
-  { segmento: "ti", consultores: 2067, fill: "#D9014B" },
+  { segmento: "ti", consultores: 2067, fill: "#5F5DF1" },
   { segmento: "vendas", consultores: 3562, fill: "#00CEBE" },
-  { segmento: "rh", consultores: 1530, fill: "#EF462F" },
-  { segmento: "suporte", consultores: 1892, fill: "#FADF0B" },
+  { segmento: "rh", consultores: 1530, fill: "#3b82f6" },
+  { segmento: "suporte", consultores: 1892, fill: "#CECDEE" },
 ];
 
 const chartConfig = {
@@ -34,7 +34,7 @@ const chartConfig = {
   },
   ti: {
     label: "T.I",
-    color: "#D9014B",
+    color: "#5F5DF1",
   },
   vendas: {
     label: "Vendas",
@@ -42,11 +42,11 @@ const chartConfig = {
   },
   rh: {
     label: "RH",
-    color: "#EF462F",
+    color: "#D9014B",
   },
   suporte: {
     label: "Suporte",
-    color: "#FADF0B",
+    color: "#CECDEE",
   },
 } satisfies ChartConfig;
 

@@ -8,8 +8,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Github, Lightbulb, Linkedin } from "lucide-react";
-import { GraficoChsmadosAbertosResolvidosSegmento } from "./charts/grafico-chamados-abertos-resolvidos";
+import { Github, Linkedin } from "lucide-react";
 import { Grafico1Hero } from "./charts/grafico-1-hero";
 import { Grafico2Hero } from "./charts/grafico-2-hero";
 
@@ -19,32 +18,31 @@ export const HeroCards = () => {
       {/* Testimonial */}
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
-          <div className="rounded-full bg-laranja h-8 w-8"></div>
+          <div className="rounded-full bg-gradient-to-br from-teal-400 to-indigo-700 h-8 w-8"></div>
           <div className="flex flex-col">
-            <CardTitle className="text-lg">John Doe React</CardTitle>
-            <CardDescription>@john_doe</CardDescription>
+            <CardTitle className="text-lg">Funcionário #54732</CardTitle>
+            <CardDescription>@lorem_ipsum</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>This landing page is awesome!</CardContent>
+        <CardContent>Essa Dashboard é maneeeeira!</CardContent>
       </Card>
 
       {/* Team */}
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <div
-            className="absolute bg-verde -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+            className="absolute bg-gradient-to-br from-teal-400 to-indigo-700 -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
-          <CardTitle className="text-center">Leo Miranda</CardTitle>
+          <CardTitle className="text-center">Lorem Ipsum</CardTitle>
           <CardDescription className="font-normal text-primary">
-            Frontend Developer
+            Lorem Ipsum
           </CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
           <p>
-            I really enjoy transforming ideas into functional software that
-            exceeds expectations
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab amet adipisci.
           </p>
         </CardContent>
 
@@ -52,7 +50,7 @@ export const HeroCards = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa"
+              href="#"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",
@@ -64,7 +62,7 @@ export const HeroCards = () => {
             </a>
             <a
               rel="noreferrer noopener"
-              href="https://twitter.com/leo_mirand4"
+              href="#"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",
@@ -85,7 +83,7 @@ export const HeroCards = () => {
 
             <a
               rel="noreferrer noopener"
-              href="https://www.linkedin.com/in/leopoldo-miranda/"
+              href="#"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",
@@ -99,13 +97,11 @@ export const HeroCards = () => {
         </CardFooter>
       </Card>
 
-      {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[150px] left-[50px] w-72">
         <Grafico2Hero />
       </Card>
 
-      {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10 ">
         <Grafico1Hero />
       </Card>
     </div>
