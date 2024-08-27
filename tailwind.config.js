@@ -42,11 +42,12 @@ module.exports = {
         '400': '100rem',
       },
       colors: {
-        lilas: "#CECDEE",
-        lilasClaro: '#F1EFFF',
-        roxo: '#5654EF',
-        roxoClaro: '#6868F0',
-        logo: '#5F5DF1',
+        verde: "#00CEBE",
+        laranja: "#EF462F",
+        amarelo: "#FADF0B",
+        rosa: "#D9014B",
+        roxo: '#5623E2',
+        logo: '#5623E2',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -95,12 +96,17 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "marquee": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "marquee": "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
-    },
   },
   plugins: [require("tailwindcss-animate")],
-}
+}}

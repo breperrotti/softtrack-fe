@@ -17,44 +17,6 @@ import { Slack } from "lucide-react";
 import { TransitionLink } from "./transition-link";
 import { Button } from "./ui/button";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Lorem ipsum",
-    href: "#",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-];
-
 export function Navigation() {
   return (
     <NavigationMenu>
@@ -66,11 +28,8 @@ export function Navigation() {
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                <TransitionLink  href="/">
-                  <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-logo p-6 no-underline outline-none focus:shadow-md"
-                   
-                  >
+                <TransitionLink href="/">
+                  <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-logo p-6 no-underline outline-none focus:shadow-md">
                     <Slack className="h-6 w-6 text-white" />
                     <div className="mb-2 mt-4 text-lg font-medium text-white">
                       SoftTrack
@@ -96,26 +55,13 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Navegue</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/video" passHref>
+            <Button variant={"ghost"}>Video Pitch</Button>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/about" passHref>
-            <Button variant={"ghost"}>
-              Sobre o Projeto
-            </Button>
+            <Button variant={"ghost"}>Sobre o Projeto</Button>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

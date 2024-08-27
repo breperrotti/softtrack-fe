@@ -11,7 +11,7 @@ import { GraficoChsmadosAbertosResolvidosSegmento } from "./charts/grafico-chama
 
 export function OverviewDashboard() {
   return (
-    <BentoGrid className="max-w-full mx-auto">
+    <BentoGrid className="max-w-full mx-auto mt-12">
       {items.map((item, i) => (
           <BentoGridItem
             key={i}

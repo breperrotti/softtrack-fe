@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { AdminBanner } from "@/components/admin-banner";
 import { OverviewDashboard } from "@/components/overview-dashboard";
+import { AdminBanner } from "@/components/admin-banner";
 
 const OverviewPage = () => {
 
   return (
-    <div>
-      <AdminBanner title="Visão Geral" />
+    <div className="bg-gray-100">
+      <AdminBanner title="Painel Administrador"/>
         <div className="p-6 w-full">
           <OverviewDashboard />
         </div>

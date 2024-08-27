@@ -7,8 +7,8 @@ export const Solutions = () => {
   return (
     <div id="solutions">
       <div className="mt-24 flex flex-col items-center justify-center">
-        <Badge variant={"outline"}>
-          Nossas Soluções
+        <Badge variant={"neutral"} className="font-bold">
+          Nossa Solução
         </Badge>
         <h1 className="text-4xl font-bold py-4">Como podemos ajudar nossos clientes?</h1>
       </div>
@@ -18,32 +18,32 @@ export const Solutions = () => {
             title="Nossa Solução"
             subtitle="Como usamos IA generativa para fazer uma inteligente análise dos recursos pra sua empresa?"
             href="#"
-            proportion={80}
             icon={<Lightbulb size={60} />}
             className="col-span-2 row-span-2"
+            color="#5623E2"
           />
           <HelpCard
             title="Contratos"
             subtitle="Veja com quais empresas a SoftTarck tem contratos"
             href="#"
             icon={<Newspaper />}
-            proportion={40}
+            color="#EF462F"
           />
           <HelpCard
             title="Quem somos nós?"
             subtitle="Conheça as personalidades que formam o time SoftTrack"
-            proportion={60}
             href="#"
             icon={<CircleHelp size={40}/>}
-            className="row-span-2 "
+            className="row-span-2"
+            color= "#D9014B"
           />
           <HelpCard
             title="Equipes"
             subtitle="Quer conhecer as equipes que trabalham conosco?"
-            proportion={40}
             href="#"
             icon={<Users />}
             className=""
+            color= "#00CEBE"
           />
         </div>
       </div>
@@ -55,9 +55,9 @@ interface CardType {
   title: string;
   subtitle: string;
   icon: React.ReactNode;
-  proportion: number;
   href: string;
   className?: string;
+  color: string
 }
 
 const HelpCard = ({
@@ -66,7 +66,7 @@ const HelpCard = ({
   icon,
   href,
   className,
-  proportion,
+  color
 }: CardType) => {
   return (
     <a
@@ -76,8 +76,7 @@ const HelpCard = ({
         className
       )}
     >
-      <div className="absolute inset-0 bg-roxo translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-400 text-white flex items-center justify-center">
-        <ArrowUpRight size={proportion} />
+      <div className={cn(`absolute inset-0 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-400 text-white flex items-center justify-center`)} style={{ backgroundColor: color }}>
       </div>
       <div className="mb-2 text-black group-hover:text-white transition-colors relative z-10 duration-300">
         {icon}

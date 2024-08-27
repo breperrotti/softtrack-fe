@@ -6,7 +6,7 @@ interface AdminBannerProps {
 
 export const AdminBanner = ({ title }: AdminBannerProps) => {
   return (
-    <div className="relative h-[300px] w-full shadow-2xl">
+    <div className="relative h-[300px] w-full shadow-md">
       <Image
         src={"/hero-admin.svg"}
         alt="hero admin"

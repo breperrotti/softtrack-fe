@@ -1,42 +1,63 @@
-import Image from "next/image";
+import { Github } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ChevronRight } from "lucide-react";
+import { buttonVariants } from "./ui/button";
+import { HeroCards } from "./hero-cards";
+import { Bowlby_One } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const bowlby = Bowlby_One({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export const Hero = () => {
   return (
-    <div className="flex justify-center">
-      <section className="pb-28">
-        <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
-          <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-            <h2 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
-              Transformamos <br />{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-l from-roxo to-roxoClaro">
-                dados
-              </span>{" "}
-              em soluções{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-roxoClaro">
-                Inteligentes
-              </span>
-            </h2>
-            <p>
-              Utilizando a inteligência dos dados para alcançar novos patamares
-              de sucesso. Com a SofTrack, cada decisão é guiada por insights
-              precisos, ajudando sua empresa a explorar novas oportunidades e
-              garantir um crescimento competitivo.
-            </p>
-            <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-              <Button>Quero saber mais</Button>
-              <Button variant={"outline"} className="gap-x-2 font-bold">
-                Crie sua conta <ChevronRight size={22} />
-              </Button>
-            </div>
-          </div>
-          <div className="flex-none mt-14 md:mt-0 md:max-w-xl bg-roxoClaro h-[370px] w-128 flex items-center justify-center rounded-tl-[108px]">
-              <p className="font-bold text-white">Imagem ou Animação</p>
-          </div>
+    <section className="container grid lg:grid-cols-2 place-items-center py-24 -mt-12 gap-10">
+      <div className="text-center lg:text-start space-y-6">
+        <Badge variant={"neutral"} >Lorem ipsum dolor, sit amet co</Badge>
+        <main className={cn("text-5xl md:text-7xl font-bold", bowlby.className)}>
+          <h1 className={"inline"}>
+            <span className="inline text-verde">Shadcn</span> landing page
+          </h1>{" "}
+          for{" "}
+          <h2 className="inline font-bold">
+            <span className="inline text-rosa font-bold">
+              React
+            </span>{" "}
+            developers
+          </h2>
+        </main>
+
+        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+          Build your React landing page effortlessly with the required sections
+          to your project.
+        </p>
+
+        <div className="space-y-4 md:space-y-0 md:space-x-4">
+          <Button className="w-full md:w-1/3">Get Started</Button>
+
+          <a
+            rel="noreferrer noopener"
+            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+            target="_blank"
+            className={`w-full md:w-1/3 ${buttonVariants({
+              variant: "outline",
+            })}`}
+          >
+            Github Repository
+            <Github className="ml-2 w-5 h-5" />
+          </a>
         </div>
-      </section>
-    </div>
+      </div>
+
+      {/* Hero cards sections */}
+      <div className="z-10">
+        <HeroCards />
+      </div>
+
+      {/* Shadow effect */}
+      <div className="shadow"></div>
+    </section>
   );
 };

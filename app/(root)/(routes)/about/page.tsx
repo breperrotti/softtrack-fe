@@ -9,7 +9,7 @@ const AboutPage = () => {
         <h3 className="font-semibold text-xl">Conheça o time</h3>
         <h1 className="font-bold text-4xl">O Coração da Nossa Excelência</h1>
       </div>
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-center">
         <TeamCard
           image="https://github.com/RafaelRMJesus.png"
           github="RafaelRMJesus"
