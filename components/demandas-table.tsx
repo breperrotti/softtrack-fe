@@ -1,6 +1,4 @@
 "use client";
-import * as XLSX from "xlsx";
-
 import * as React from "react";
 import {
   ColumnDef,
