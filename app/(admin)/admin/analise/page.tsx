@@ -6,8 +6,6 @@ import { useWindowSize } from "@/hooks/use-window-size";
 
 const AnalisePage = () => {
 
-  const windowSize = useWindowSize()
-
   return (
     <div>
       <div className="flex items-center justify-center h-full w-full p-8">
