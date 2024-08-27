@@ -2,6 +2,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CardProps {
   image: string;
@@ -16,7 +17,6 @@ export const TeamCard = ({
   name,
   description,
   github,
-  linkedin,
 }: CardProps) => {
   return (
     <div className="relative h-[300px] w-full group">
@@ -25,7 +25,7 @@ export const TeamCard = ({
         <p className="text-sm font-light text-slate-300">{description}</p>
       </div>
       <div className="absolute inset-0 z-10 bg-slate-200 transition-all ease-in-out duration-300 group-hover:right-1/2 group-hover:top-1/2">
-        <img className="object-cover w-full h-full" src={image} alt={name} />
+        <Image className="object-cover w-full h-full" src={image} alt={name} fill/>
       </div>
       <div className="absolute bottom-0 right-0 z-0 grid h-1/2 w-1/2 place-content-center bg-white text-black">
         <div className="p-6 grid grid-cols-2 gap-2">

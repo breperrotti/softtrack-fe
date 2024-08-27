@@ -11,7 +11,6 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex flex-1 flex-col overflow-x-hidden">
         <AdminHeader />
         <main className="flex-1">{children}</main>
-        <Toaster />
       </div>
     </div>
   );

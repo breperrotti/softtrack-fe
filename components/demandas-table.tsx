@@ -36,7 +36,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Demanda, demandas } from "@/mocks/contracts";
-import { useToast } from "./ui/use-toast";
 
 const data: Demanda[] = demandas;
 
@@ -115,7 +114,6 @@ export const columns: ColumnDef<Demanda>[] = [
     enableHiding: false,
     cell: ({ row }) => {
       const demanda = row.original;
-      const { toast } = useToast();
 
       return (
         <DropdownMenu>
@@ -130,9 +128,6 @@ export const columns: ColumnDef<Demanda>[] = [
             <DropdownMenuItem
               onClick={() => {
                 navigator.clipboard.writeText(demanda.chamado);
-                toast({
-                  description: <p>Chamado <span className="bg-roxoClaro rounded-sm px-1 font-bold text-white">{demanda.chamado}</span> copiado para a área de transferência.</p>,
-                });
               }}
             >
               Copie o código do chamado
@@ -140,9 +135,6 @@ export const columns: ColumnDef<Demanda>[] = [
             <DropdownMenuItem
               onClick={() => {
                 navigator.clipboard.writeText(demanda.id);
-                toast({
-                  description: <p>ID <span className="bg-roxoClaro rounded-sm px-1 font-bold text-white">{demanda.id}</span> copiado para a área de transferência.</p>,
-                });
               }}
             >
               Copie o ID

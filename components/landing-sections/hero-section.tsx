@@ -2,7 +2,7 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HeroCards } from "@/components/hero-cards";
-import { Bowlby_One } from "next/font/google";
+import { Bowlby_One, Syne } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -11,13 +11,18 @@ const bowlby = Bowlby_One({
   subsets: ["latin"],
 });
 
+const syne = Syne({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"]
+})
+
 export const Hero = () => {
   return (
     <section className="container grid lg:grid-cols-2 place-items-center py-24 -mt-12 gap-10">
       <div className="text-center lg:text-start space-y-6">
         <Badge variant={"neutral"}>Lorem ipsum dolor, sit amet co</Badge>
         <main
-          className={cn("text-5xl md:text-6xl font-bold", bowlby.className)}
+          className={cn("text-5xl md:text-7xl font-bold", syne.className)}
         >
           <h1 className={"inline"}>
             Transforme<span className="inline text-verde">Dados</span> em
