@@ -2,7 +2,6 @@
 
 import { AdminHeader } from "@/components/admin-header";
 import { AdminNavigation } from "@/components/admin-navigation";
-import { Toaster } from "@/components/ui/toaster";
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
