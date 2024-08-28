@@ -3,7 +3,7 @@ import { Solutions } from "@/components/landing-sections/solutions-section";
 import { Hero } from "@/components/landing-sections/hero-section";
 import { Vision } from "@/components/landing-sections/vision-section";
 import { Testimonials } from "@/components/landing-sections/testimonials-section";
-import { ReatltimeSection } from "@/components/landing-sections/realtime-section";
+import HeroFormCenterAlignedWithAForm from "@/components/landing-sections/realtime-section";
 
 const LandingPage = () => {
   return (
@@ -11,8 +11,7 @@ const LandingPage = () => {
       <Hero />
       <Vision />
       <Testimonials />
-      <ReatltimeSection />
-      <Solutions />
+      <HeroFormCenterAlignedWithAForm />
       <Footer />
     </div>
   );

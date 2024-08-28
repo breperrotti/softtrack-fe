@@ -1,13 +1,16 @@
 "use client"
 
 import { TeamCard } from "@/components/card-team";
+import { Badge } from "@/components/ui/badge";
 
 const AboutPage = () => {
   return (
     <div>
-      <div className="w-full flex flex-col items-center text-center mb-8">
-        <h3 className="font-semibold text-xl">Conheça o time</h3>
-        <h1 className="font-bold text-4xl">O Coração da Nossa Excelência</h1>
+      <div className="mt-24 flex flex-col items-center justify-center">
+        <Badge variant={"neutral"} className="font-bold">
+          Sobre o Projeto
+        </Badge>
+        <h1 className="text-4xl font-bold py-4">Conheça o nosso time</h1>
       </div>
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-center">
         <TeamCard

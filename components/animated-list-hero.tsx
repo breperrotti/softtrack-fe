@@ -59,7 +59,7 @@ let notifications = [
     description: "Painel de Projetos",
     time: "20m atrás",
     icon: "✅",
-    color: "#007BFF",
+    color: "#22c55e",
   },
   {
     name: "Alerta de baixo estoque",
@@ -73,7 +73,7 @@ let notifications = [
     description: "Painel de TI",
     time: "2h atrás",
     icon: "🔄",
-    color: "#6F42C1",
+    color: "#38bdf8",
   },
   {
     name: "Novo comentário em postagem",
