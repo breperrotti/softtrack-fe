@@ -46,10 +46,11 @@ export const VisionSection = () => {
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-12 px-60">
           <div className="grid grid-rows-2 grid-cols-2 gap-6">
-            {visionData.map((vision) => (
+            {visionData.map((vision, index) => (
               <a
                 className="group flex flex-col justify-center md:p-5 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-4px] translate-y-[-4px] rounded-md shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
-                href="#"
+                href={""}
+                key={index}
               >
                 <div className="flex justify-center items-center w-12 bg-primary h-12 border rounded-lg">
                   <div className="flex-shrink-0 w-6 h-6 text-primary-foreground">
