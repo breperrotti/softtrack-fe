@@ -1,17 +1,20 @@
 import { Footer } from "@/components/footer";
-import { Solutions } from "@/components/landing-sections/solutions-section";
 import { Hero } from "@/components/landing-sections/hero-section";
-import { Vision } from "@/components/landing-sections/vision-section";
+import { VisionSection } from "@/components/landing-sections/vision-section";
 import { Testimonials } from "@/components/landing-sections/testimonials-section";
-import HeroFormCenterAlignedWithAForm from "@/components/landing-sections/realtime-section";
+import GuideSection from "@/components/landing-sections/guide-section";
+import { ReatltimeSection } from "@/components/landing-sections/realtime-section";
+import AnalisePrevisaoSection from "@/components/landing-sections/analise-previsao-section";
 
 const LandingPage = () => {
   return (
     <div className="w-full flex flex-col">
       <Hero />
-      <Vision />
+      <VisionSection />
+      <GuideSection />
+      <ReatltimeSection />
+      <AnalisePrevisaoSection />
       <Testimonials />
-      <HeroFormCenterAlignedWithAForm />
       <Footer />
     </div>
   );
