@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartLine, CircleHelp, ClockArrowUp, Lightbulb, Newspaper, SquareStack, Users } from "lucide-react";
+import { ChartLine, ClockArrowUp, SquareStack, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Solutions = () => {
@@ -70,7 +70,7 @@ const HelpCard = ({
       <div className="mb-2 text-black group-hover:text-white transition-colors relative z-10 duration-300">
         {icon}
       </div>
-      <h3 className="font-medium mt-4 text-3xl text-slate-950 group-hover:text-white relative z-10 duration-300">
+      <h3 className="font-medium mt-4 text-2xl text-slate-950 group-hover:text-white relative z-10 duration-300 mb-6">
         {title}
       </h3>
       <p className="text-zinc-900 group-hover:text-white relative z-10 duration-300 w-4/5">

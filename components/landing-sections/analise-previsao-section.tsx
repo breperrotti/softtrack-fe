@@ -1,15 +1,31 @@
+import { cn } from "@/lib/utils";
+import { Syne } from "next/font/google";
+import { Badge } from "../ui/badge";
+
+const syne = Syne({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
 export default function AnalisePrevisaoSection() {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 mt-12">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div className="">
-          <p className="text-xs font-semibold text-muted-foreground tracking-wide uppercase mb-3">
-            Análise de Demandas
-          </p>
-          <h2 className="mb-4 text-5xl tracking-tight font-extrabold">
-            Análise de Demandas
-          </h2>
-          <p className="mb-4">
+          <Badge className="mb-3">
+            <p className="text-xs font-bold text-black tracking-wider uppercase">
+              Análise de demandas
+            </p>
+          </Badge>
+          <h1
+            className={cn(
+              "scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight transition-colors first:mt-0 ",
+              syne.className
+            )}
+          >
+            Análise de demandas
+          </h1>
+          <p className="mb-4 mt-4">
             Com a Análise de Demandas, você obtém uma visão clara da
             complexidade e criticidade de cada solicitação, permitindo uma
             alocação de recursos precisa e eficiente.

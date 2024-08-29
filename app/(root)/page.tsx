@@ -5,6 +5,7 @@ import { Testimonials } from "@/components/landing-sections/testimonials-section
 import GuideSection from "@/components/landing-sections/guide-section";
 import { ReatltimeSection } from "@/components/landing-sections/realtime-section";
 import AnalisePrevisaoSection from "@/components/landing-sections/analise-previsao-section";
+import { UserUXSection } from "@/components/landing-sections/user-ux-section";
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <GuideSection />
       <ReatltimeSection />
       <AnalisePrevisaoSection />
+      <UserUXSection />
       <Testimonials />
       <Footer />
     </div>

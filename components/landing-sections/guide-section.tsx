@@ -1,5 +1,13 @@
+import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
 import { Solutions } from "./solutions-section";
+import { cn } from "@/lib/utils";
+import { SketchSVG } from "@/svgs/svgs";
+
+const syne = Syne({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export default function GuideSection() {
   return (
@@ -14,28 +22,31 @@ export default function GuideSection() {
                   Navegue pela solução
                 </p>
               </Badge>
-              <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <h1
+                className={cn(
+                  "scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl",
+                  syne.className
+                )}
+              >
                 Conheça as funcionalidades que tornam nossa Dashboard
                 Inteligente a escolha ideal para sua empresa
               </h1>
             </div>
             {/* End Title */}
-            {/* Form */}
-            <form>
+            <div>
               <div className="mx-auto max-w-7xl sm:flex sm:space-x-3 p-3">
                 <div className="gap-x-2 w-full p-1">
                   <Solutions />
                 </div>
               </div>
-            </form>
-            {/* End Form */}
-            {/* SVG Element */}
+            </div>
+            
             <div
-              className="hidden absolute start-0 transform md:block -translate-y-24 lg:-translate-x-56"
+              className="hidden absolute start-0 transform md:block -translate-y-24 lg:-translate-x-96"
               aria-hidden="true"
             >
               <svg
-                className="w-52 h-auto"
+                className="w-96 h-auto"
                 width={717}
                 height={653}
                 viewBox="0 0 717 653"
@@ -62,11 +73,11 @@ export default function GuideSection() {
             {/* End SVG Element */}
             {/* SVG Element */}
             <div
-              className="hidden absolute top-3/4 end-0 transform -translate-y-2/4 translate-x-72 md:block"
+              className="hidden absolute top-3/4 end-0 transform -translate-y-3/4 translate-x-144 md:block"
               aria-hidden="true"
             >
               <svg
-                className="w-72 h-auto"
+                className="w-144 h-auto"
                 width={1115}
                 height={636}
                 viewBox="0 0 1115 636"

@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { CloudSVG } from "@/svgs/svgs";
 import {
   BookOpenIcon,
   ChartLine,
@@ -15,21 +16,25 @@ const visionData = [
     title: "Inovação Contínua",
     desc: "Desenvolvemos soluções que antecipam e moldam o futuro digital.",
     icon: <Lightbulb />,
+    color: "#5623E2",
   },
   {
     title: "Eficiência Operacional",
     desc: "Maximizamos a produtividade com automação e tecnologia de ponta.",
     icon: <Cog />,
+    color: "#00CEBE",
   },
   {
     title: "Experiência do Usuário",
     desc: "Criamos interfaces intuitivas que se adaptam às necessidades individuais.",
     icon: <User />,
+    color: "#5623E2",
   },
   {
     title: "Decisão Baseada em Dados",
     desc: "Capacitamos decisões estratégicas com insights precisos em tempo real.",
     icon: <ChartLine />,
+    color: "#00CEBE",
   },
 ];
 
@@ -52,8 +57,11 @@ export const VisionSection = () => {
                 href={""}
                 key={index}
               >
-                <div className="flex justify-center items-center w-12 bg-primary h-12 border rounded-lg">
-                  <div className="flex-shrink-0 w-6 h-6 text-primary-foreground">
+                <div
+                  className="flex justify-center items-center w-12 bg-primary h-12 border rounded-lg"
+                  style={{ backgroundColor: vision.color }}
+                >
+                  <div className="flex-shrink-0 w-6 h-6 text-primary-foreground ">
                     {vision.icon}
                   </div>
                 </div>
@@ -65,7 +73,12 @@ export const VisionSection = () => {
             ))}
           </div>
           <div className="lg:w-3/4">
-            <h2 className={cn("scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight transition-colors first:mt-0", syne.className)}>
+            <h2
+              className={cn(
+                "scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight transition-colors first:mt-0",
+                syne.className
+              )}
+            >
               Entenda um pouco mais sobre a nossa visão
             </h2>
             <p className="mt-3 text-muted-foreground">
@@ -84,6 +97,12 @@ export const VisionSection = () => {
               </Link>
             </p>
           </div>
+        </div>
+        <div
+          className="absolute top-0 left-0 transform rotate-12 z-10"
+          style={{ top: "79%", left: "79%" }}
+        >
+          <CloudSVG />
         </div>
 
         {/* SVG Position */}
