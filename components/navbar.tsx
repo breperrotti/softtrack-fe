@@ -17,16 +17,16 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background fixed top-0 flex items-center p-6 w-full",
+        "z-50 bg-background fixed top-0 flex items-center p-4 w-full",
         scrolled && "border-b shadow-sm"
       )}
     >
       <Logo />
-      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-4">
+      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center flex-wrap gap-x-4">
         <Navigation className="hidden md:flex" /> {/* Mostrar apenas em telas maiores */}
         <NavigationMobile /> {/* Mostrar apenas em telas menores */}
         <TransitionLink href={"/admin/overview"}>
-          <Button className="gap-x-2 items-center">
+          <Button className="gap-x-2 items-center whitespace-nowrap">
             <Lock size={17} />
             Admin
           </Button>

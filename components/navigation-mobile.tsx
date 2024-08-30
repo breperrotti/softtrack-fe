@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
+
 export const NavigationMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +12,7 @@ export const NavigationMobile = () => {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="flex md:hidden">
       <button
         className="flex items-center justify-center p-2"
         onClick={toggleMenu}

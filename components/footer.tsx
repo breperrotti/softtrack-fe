@@ -4,9 +4,9 @@ import { Logo } from "./logo";
 
 export const Footer = () => {
   return (
-    <footer className="flex items-center w-full p-6 bg-background z-50 dark:bg-[#1F1F1F]">
+    <footer className="flex flex-col md:flex-row items-center w-full p-4 md:p-6 bg-background z-50 dark:bg-[#1F1F1F]">
       <Logo />
-      <div className="md:ml-auto w-full justify-between md:justify-end flex items-center gap-x-2 text-muted-foreground">
+      <div className="w-full mt-4 md:mt-0 md:ml-auto flex flex-col md:flex-row items-center justify-between md:justify-end gap-2 md:gap-4 text-muted-foreground">
         <Button variant={"ghost"} size={"sm"}>
           Políticas de Privacidade
         </Button>
@@ -15,5 +15,5 @@ export const Footer = () => {
         </Button>
       </div>
     </footer>
-  )
-}
+  );
+};
