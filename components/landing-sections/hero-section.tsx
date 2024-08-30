@@ -44,8 +44,8 @@ export const Hero = () => {
             Antecipe tendências e mova-se à frente da concorrência. Acelere seu
             processo decisório com inteligência artificial.
           </p>
-          <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-full md:w-1/3">Quero saber mais</Button>
+          <div className="space-y-4 md:space-x-4">
+            <Button className="w-2/3 sm:w-1/3">Quero saber mais</Button>
             <Link href="https://github.com/leoMirandaa/shadcn-landing-page.git">
               <Button variant={"outline"}>
                 Softtrack Docs

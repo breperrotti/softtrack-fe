@@ -17,9 +17,13 @@ import { Slack } from "lucide-react";
 import { TransitionLink } from "./transition-link";
 import { Button } from "./ui/button";
 
-export function Navigation() {
+interface NavigationProps {
+  className: string
+}
+
+export function Navigation({ className }: NavigationProps) {
   return (
-    <NavigationMenu>
+    <NavigationMenu className={className}>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
@@ -42,7 +46,7 @@ export function Navigation() {
                   </div>
                 </TransitionLink>
               </li>
-              <ListItem href="/#vision" title="Nossa Visão">
+              <ListItem href="/#visao" title="Nossa Visão">
                 Qualidade e inovação para pequenas e médias empresas.
               </ListItem>
               <ListItem href="/#solutions" title="Nossas Soluções">

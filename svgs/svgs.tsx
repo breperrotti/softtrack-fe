@@ -7,15 +7,15 @@ export const SparkleSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M75.7477 171.209C76.4381 145.116 65.8169 119.095 42.5286 103.391C33.5106 97.3101 22.8276 95.096 12.3066 93.2559C55.0486 91.7897 69.8872 47.0546 75.8345 12.4238C73.7691 43.4833 90.0077 77.0321 123.193 80.1279C90.1579 99.5624 78.8199 135.225 75.7477 171.209Z"
       fill="#00CEBE"
       stroke="black"
-      stroke-width="14.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="14.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -28,15 +28,15 @@ export const Sparkle2SVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M75.7477 171.209C76.4381 145.116 65.8169 119.095 42.5286 103.391C33.5106 97.3101 22.8276 95.096 12.3066 93.2559C55.0486 91.7897 69.8872 47.0546 75.8345 12.4238C73.7691 43.4833 90.0077 77.0321 123.193 80.1279C90.1579 99.5624 78.8199 135.225 75.7477 171.209Z"
       fill="#5623E2"
       stroke="black"
-      stroke-width="14.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="14.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -50,15 +50,15 @@ export const ZapSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M26.1626 234.774C50.4755 204.55 73.7168 175.789 96.8212 144.645C107.841 129.791 118.917 112.155 129.2 96.7586C106.5 94.7757 94.1185 97.0015 71.4926 94.7831C71.4838 94.7831 80.6047 47.0301 85.9734 12.707C52.7161 46.8299 25.7844 104.856 12.7314 137.662C28.6947 138.579 45.0156 139.265 61.0069 138.835C49.7955 170.928 37.7611 202.838 26.1626 234.774Z"
       fill="#5623E2"
       stroke="black"
-      stroke-width="12.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="12.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -74,10 +74,10 @@ export const CurlySVG = () => (
     <path
       d="M261.185 183.242C253.667 221.579 227.809 247.675 189.393 254.737C165.928 259.048 131.063 249.655 127.454 221.831C124.945 202.486 161.806 175.204 168.966 200.287C172.614 213.065 159.242 228.554 150.139 235.423C124.039 255.115 88.5834 248.892 64.7518 228.064C43.7025 209.669 39.8868 176.706 55.934 153.705C65.7278 139.667 91.236 126.98 103.865 145.495C123.398 174.13 64.7121 183.476 45.4454 173.227C-24.2254 136.169 31.0126 39.5434 80.3892 12.6484"
       stroke="#00CEBE"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -93,10 +93,10 @@ export const Curly2SVG = () => (
     <path
       d="M261.185 183.242C253.667 221.579 227.809 247.675 189.393 254.737C165.928 259.048 131.063 249.655 127.454 221.831C124.945 202.486 161.806 175.204 168.966 200.287C172.614 213.065 159.242 228.554 150.139 235.423C124.039 255.115 88.5834 248.892 64.7518 228.064C43.7025 209.669 39.8868 176.706 55.934 153.705C65.7278 139.667 91.236 126.98 103.865 145.495C123.398 174.13 64.7121 183.476 45.4454 173.227C-24.2254 136.169 31.0126 39.5434 80.3892 12.6484"
       stroke="#5623E2"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -112,18 +112,18 @@ export const CircleArrowSVG = () => (
     <path
       d="M225.006 54.4521C231.13 101.843 225.271 150.417 193.177 188.732C164.207 223.316 122.061 232.935 98.2021 187.553C86.9076 166.071 87.876 133.05 108.238 117.06C130.924 99.2446 149.835 131.992 150.509 151.123C152.083 195.806 118.94 240.722 70.2756 246.359C12.6462 253.036 15.0281 193.4 15.397 193.546"
       stroke="black"
-      stroke-width="6.79294"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="6.79294"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M267.995 85.8549C262.811 84.8263 258.622 81.7684 254.285 78.9317C240.044 69.6186 227.684 55.0358 223.681 38.1113C222.063 56.8813 213.637 80.7052 195.89 89.4772"
       stroke="black"
-      stroke-width="6.79294"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="6.79294"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -137,18 +137,18 @@ export const ExplosionSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M152.918 102.199C165.691 88.6804 179.789 76.2443 193.072 63.2252C174.817 62.2198 156.373 59.3433 138.082 60.1485C137.839 47.2575 137.053 34.4401 134.292 21.7802C123.316 32.285 111.417 42.4924 102.331 54.6901C96.9789 40.1798 89.3889 25.7091 80.3576 13.1758C71.5693 27.6081 63.7891 43.8879 58.8518 59.9734C46.4362 57.5724 33.3526 56.2328 20.7192 56.2077C24.4848 69.0149 29.4249 81.4908 34.1002 93.9888C26.0759 102.537 18.6198 112.671 12.7859 122.899C21.2136 125.147 29.993 126.029 38.5341 127.776C36.7676 141.159 36.4675 154.73 35.6431 168.195C46.6822 163.125 56.9691 156.617 66.9572 149.745C73.2268 161.666 78.7679 173.944 84.9845 185.894C92.1315 174.244 99.3267 162.246 107.277 151.113C116.061 160.107 127.43 166.264 136.949 174.491C135.821 162.335 136.52 150.158 136.44 137.976C149.961 138.51 163.777 138.075 177.327 138.09C168.808 127.264 160.325 116.417 152.422 105.124"
       fill="#5623E2"
     />
     <path
       d="M152.918 102.199C165.691 88.6804 179.789 76.2443 193.072 63.2252C174.817 62.2198 156.373 59.3433 138.082 60.1485C137.839 47.2575 137.053 34.4401 134.292 21.7802C123.316 32.2849 111.417 42.4924 102.331 54.6901C96.9789 40.1798 89.3889 25.7091 80.3576 13.1758C71.5693 27.6081 63.7891 43.8879 58.8518 59.9734C46.4362 57.5724 33.3526 56.2328 20.7192 56.2077C24.4848 69.0149 29.4249 81.4908 34.1002 93.9888C26.0759 102.537 18.6198 112.671 12.7859 122.899C21.2136 125.147 29.993 126.029 38.5341 127.776C36.7676 141.159 36.4675 154.73 35.6431 168.195C46.6822 163.125 56.9691 156.617 66.9572 149.745C73.2268 161.666 78.7679 173.944 84.9845 185.894C92.1315 174.244 99.3267 162.246 107.277 151.113C116.061 160.107 127.43 166.264 136.949 174.491C135.821 162.335 136.52 150.158 136.44 137.976C149.961 138.511 163.777 138.075 177.327 138.09C168.808 127.264 160.325 116.417 152.422 105.124"
       stroke="black"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -162,18 +162,18 @@ export const BigExplosionSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M152.918 102.199C165.691 88.6804 179.789 76.2443 193.072 63.2252C174.817 62.2198 156.373 59.3433 138.082 60.1485C137.839 47.2575 137.053 34.4401 134.292 21.7802C123.316 32.285 111.417 42.4924 102.331 54.6901C96.9789 40.1798 89.3889 25.7091 80.3576 13.1758C71.5693 27.6081 63.7891 43.8879 58.8518 59.9734C46.4362 57.5724 33.3526 56.2328 20.7192 56.2077C24.4848 69.0149 29.4249 81.4908 34.1002 93.9888C26.0759 102.537 18.6198 112.671 12.7859 122.899C21.2136 125.147 29.993 126.029 38.5341 127.776C36.7676 141.159 36.4675 154.73 35.6431 168.195C46.6822 163.125 56.9691 156.617 66.9572 149.745C73.2268 161.666 78.7679 173.944 84.9845 185.894C92.1315 174.244 99.3267 162.246 107.277 151.113C116.061 160.107 127.43 166.264 136.949 174.491C135.821 162.335 136.52 150.158 136.44 137.976C149.961 138.51 163.777 138.075 177.327 138.09C168.808 127.264 160.325 116.417 152.422 105.124"
       fill="#5623E2"
     />
     <path
       d="M152.918 102.199C165.691 88.6804 179.789 76.2443 193.072 63.2252C174.817 62.2198 156.373 59.3433 138.082 60.1485C137.839 47.2575 137.053 34.4401 134.292 21.7802C123.316 32.2849 111.417 42.4924 102.331 54.6901C96.9789 40.1798 89.3889 25.7091 80.3576 13.1758C71.5693 27.6081 63.7891 43.8879 58.8518 59.9734C46.4362 57.5724 33.3526 56.2328 20.7192 56.2077C24.4848 69.0149 29.4249 81.4908 34.1002 93.9888C26.0759 102.537 18.6198 112.671 12.7859 122.899C21.2136 125.147 29.993 126.029 38.5341 127.776C36.7676 141.159 36.4675 154.73 35.6431 168.195C46.6822 163.125 56.9691 156.617 66.9572 149.745C73.2268 161.666 78.7679 173.944 84.9845 185.894C92.1315 174.244 99.3267 162.246 107.277 151.113C116.061 160.107 127.43 166.264 136.949 174.491C135.821 162.335 136.52 150.158 136.44 137.976C149.961 138.511 163.777 138.075 177.327 138.09C168.808 127.264 160.325 116.417 152.422 105.124"
       stroke="black"
-      stroke-width="9.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="9.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -189,26 +189,26 @@ export const ThreeLinesSVG = () => (
     <path
       d="M109.572 56.9141C84.1849 94.6289 63.2548 134.696 39.6499 173.405"
       stroke="black"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M236.496 53.6797C177.271 98.4649 122.015 150.4 70.3018 203.514"
       stroke="black"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M255.261 181.707C204.932 189.642 138.053 222.593 89.4209 243.008"
       stroke="black"
-      stroke-width="18.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="18.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -224,10 +224,10 @@ export const ZigZagSVG = () => (
     <path
       d="M207.67 121.688C206.963 113.56 207.807 105.205 207.477 97.0481C206.943 83.8258 205.172 70.6477 204.874 57.4181C197.624 63.9968 191.209 71.5324 183.841 77.9802C175.521 85.2611 166.043 92.3344 158.988 100.875C157.642 81.2305 156.334 61.5738 155.103 41.9185C140.077 54.9656 124.404 68.6354 110.611 82.894L103.894 24.4919C86.7987 36.5586 71.8659 51.7991 54.6543 63.9026C54.3054 47.1518 52.3637 29.8606 52.8613 13.2246C38.8824 23.6087 25.6543 37.1166 12.9429 48.9786"
       stroke="#00CEBE"
-      stroke-width="9.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="9.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -243,10 +243,10 @@ export const ZigZag2SVG = () => (
     <path
       d="M207.67 121.688C206.963 113.56 207.807 105.205 207.477 97.0481C206.943 83.8258 205.172 70.6477 204.874 57.4181C197.624 63.9968 191.209 71.5324 183.841 77.9802C175.521 85.2611 166.043 92.3344 158.988 100.875C157.642 81.2305 156.334 61.5738 155.103 41.9185C140.077 54.9656 124.404 68.6354 110.611 82.894L103.894 24.4919C86.7987 36.5586 71.8659 51.7991 54.6543 63.9026C54.3054 47.1518 52.3637 29.8606 52.8613 13.2246C38.8824 23.6087 25.6543 37.1166 12.9429 48.9786"
       stroke="#5623E2"
-      stroke-width="9.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="9.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -260,15 +260,15 @@ export const CloudSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M109.721 83.8648C117.555 113.365 75.7484 138.18 59.0152 108.859C34.1149 129.152 -1.13721 99.2834 18.8434 72.6048C22.1232 68.2268 26.1789 64.8336 31.0044 62.3208C28.0102 54.7101 25.7166 46.6019 27.8718 38.4583C32.0186 22.7909 51.9565 8.7708 68.3702 14.5546C78.2391 18.0317 83.0219 23.9804 87.5221 33.0116C120.553 17.5342 138.459 67.5776 109.721 83.8648Z"
       fill="#00CEBE"
       stroke="black"
-      stroke-width="3.5735"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3.5735"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -282,327 +282,327 @@ export const SketchSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M655.445 363.105C655.058 345.971 655.393 328.829 655.59 311.695C655.646 306.798 656.31 301.877 656.092 296.987C655.991 294.719 655.798 291.872 654.249 290.06C652.306 287.786 646.498 288.656 643.75 288.538C633.768 288.109 623.782 287.781 613.793 287.533C573.152 286.522 100.826 286.834 60.1771 287.089C46.9668 287.172 33.7559 287.249 20.5457 287.272C17.3419 287.278 14.0738 286.839 10.8828 287.08C9.34919 287.196 7.63531 287.544 6.57224 288.755C5.09816 290.435 5.54984 293.176 5.53891 295.244C5.50916 300.632 5.5164 306.021 5.53765 311.409C5.59533 326.256 5.7556 341.103 5.51883 355.949C5.46237 359.484 5.3835 363.018 5.27604 366.551C5.21472 368.54 5.22199 370.711 6.75011 372.205C8.0287 373.454 9.91867 373.775 11.635 373.847C14.9942 373.987 18.4201 373.449 21.7726 373.236C35.1262 372.39 48.4973 371.843 61.8721 371.484C112.614 370.119 595.057 371.465 645.796 370.084C650.147 369.963 655.01 367.971 655.445 363.105Z"
       fill="white"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.5625 301.466C9.56934 296.684 14.916 291.363 19.5694 287.275"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.58545 319.246C15.5614 309.226 27.7254 296.969 37.9506 287.206"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.65479 336.123C20.4776 320.309 40.5299 300.817 57.2257 287.105"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.5625 352.028C27.0176 330.545 52.1891 307.789 74.3445 287.05"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.33105 367.864C34.5084 343.021 65.0442 310.773 95.3672 287.004"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M14.6377 373.814C44.0517 348.943 77.3337 317.399 113.088 286.97"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M35.6123 372.424C64.7128 347.7 96.2789 317.19 131.652 286.941"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M54.4106 371.682C83.0687 347.254 114.289 316.807 149.124 286.92"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M73.7646 371.291C102.199 347.14 133.886 316.454 168.45 286.907"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M93.6279 371.128C121.887 347.117 153.864 316.266 188.213 286.89"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M112.798 371.027C140.895 347.286 173.656 315.923 207.808 286.877"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M131.228 370.969C159.404 347.155 191.836 316.005 226.085 286.869"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M149.826 370.912C178.001 347.098 210.218 315.988 244.467 286.853"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M168.417 370.888C196.593 347.074 228.925 315.979 263.174 286.844"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M186.99 370.856C215.166 347.042 247.256 315.979 281.506 286.844"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M205.576 370.838C233.751 347.024 265.895 315.975 300.145 286.84"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M224.142 370.823C252.318 347.009 284.412 315.975 318.662 286.84"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M242.697 370.805C270.873 346.991 302.807 315.971 337.057 286.835"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M261.259 370.798C289.435 346.984 321.737 315.984 355.986 286.848"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M279.779 370.786C307.955 346.972 340.245 315.979 374.495 286.844"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M298.365 370.793C326.541 346.979 358.51 315.992 392.759 286.856"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M316.908 370.798C345.083 346.984 377.263 316.005 411.512 286.869"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M335.451 370.789C363.626 346.975 395.775 316.017 430.025 286.882"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M354.017 370.789C382.193 346.974 414.221 316.034 448.47 286.898"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M372.529 370.789C400.705 346.975 432.624 316.059 466.873 286.924"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M391.103 370.787C419.279 346.973 451.305 316.085 485.555 286.949"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M409.623 370.785C437.798 346.971 470.003 316.114 504.253 286.979"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M428.162 370.775C456.337 346.961 488.516 316.16 522.766 287.025"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M446.732 370.777C474.908 346.963 506.726 316.202 540.975 287.067"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M465.275 370.767C493.451 346.953 525.083 316.266 559.332 287.13"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M483.845 370.757C512.021 346.943 543.532 316.346 577.782 287.21"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M503.568 370.745C531.744 346.931 562.925 316.464 597.175 287.328"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M523.681 370.714C551.857 346.9 583.106 316.767 617.355 287.631"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M543.197 370.684C571.373 346.87 601.787 317.369 636.036 288.233"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M562.466 370.64C590.045 347.346 620.262 318.136 653.787 289.636"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M581.876 370.584C603.516 352.244 629.593 327.412 655.897 304.974"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M600.681 370.516C617.166 356.714 635.407 339.277 655.446 322.391"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M618.955 370.405C629.336 361.873 642.667 349.776 655.286 339.337"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M639.392 370.208C644.005 366.236 649.722 360.676 655.328 355.816"
       stroke="black"
-      stroke-width="5"
-      stroke-miterlimit="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeMiterlimit="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -616,8 +616,8 @@ export const AsteriskSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M118.713 3.06019C107.178 5.2479 104.989 7.63464 103.398 17.977C102.205 26.3305 102.006 26.5294 97.8297 23.9438C70.9789 6.44134 8.92457 50.9933 28.2171 73.8658C38.3605 85.8001 41.3436 91.7666 42.7358 93.7554C10.3163 98.7268 0.968384 97.9312 0.968384 134.131C0.968384 164.163 8.92413 162.572 46.7136 165.158C43.3325 169.931 30.0073 190.815 22.4493 199.565C14.6926 208.516 15.0899 210.505 27.0235 223.035C61.8297 259.831 80.1277 265.797 98.4256 246.305C105.983 238.35 107.973 239.743 108.172 254.062C108.569 271.565 128.857 276.537 180.768 271.366C213.386 268.184 210.402 264.404 207.817 245.709L228.7 254.46C249.982 263.41 258.137 257.444 300.103 201.952C302.689 198.572 294.932 191.81 288.568 191.81C286.18 191.81 279.816 187.831 274.445 183.057L264.501 174.307C271.462 173.511 282.998 171.92 292.346 170.329C297.119 169.533 300.501 165.556 300.899 160.781C302.887 132.34 303.683 120.208 303.683 120.407C303.883 117.225 302.291 114.041 299.705 112.252C296.721 110.263 291.75 107.677 282.999 105.888C269.076 103.104 268.876 104.495 284.589 87.7889C301.494 69.4903 301.894 70.6836 271.86 39.8553C246.004 13.2037 225.32 4.85013 212.59 15.3915L206.426 20.5626L205.231 15.5904C202.248 3.65683 152.922 -3.50338 118.713 3.06019ZM174.403 44.4297C176.192 86.7938 183.552 90.3737 208.613 61.3356C234.668 31.3029 230.691 32.4962 248.392 49.4021C267.287 67.3024 267.883 64.5179 241.827 88.9822C212.392 116.43 214.381 122.196 251.772 118.219C279.22 115.235 276.236 121.401 273.451 155.81C223.728 158.992 207.021 158.992 233.275 177.688C253.761 192.406 262.91 201.157 260.523 204.339C259.33 205.732 235.264 235.565 235.264 235.565C232.082 233.179 227.309 231.19 210.999 215.478C187.132 192.803 179.176 196.185 179.972 229.399L180.569 253.069C139.994 258.637 141.387 261.222 139.199 224.228C138.403 210.704 140.194 186.439 112.747 197.179C100.414 201.952 84.901 214.482 78.5365 226.217C75.752 231.388 73.7633 230.593 60.8353 220.648C46.515 209.709 46.1173 212.891 63.8187 192.008C69.5864 185.246 75.3546 177.489 78.9347 172.118C92.8572 150.639 71.9738 146.064 46.5156 146.064H34.9792C34.9792 146.064 35.1781 123.787 36.9682 113.843C38.957 113.843 51.6861 114.041 63.8187 114.241C96.4369 114.639 97.4317 113.843 82.9125 97.9312C69.189 83.0143 61.4317 73.0703 56.6583 67.5013C59.4428 64.9157 46.9132 77.0481 83.1116 41.8441C85.2994 44.2308 96.6358 56.1644 107.576 69.2912C121.298 85.7987 137.41 79.6337 137.41 68.4957V56.5622C137.608 13.9992 135.817 16.9826 160.282 17.5792L173.21 17.7781L174.403 44.4297Z"
       fill="black"
     />
@@ -633,8 +633,8 @@ export const Asterisk2SVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M118.713 3.06019C107.178 5.2479 104.989 7.63464 103.398 17.977C102.205 26.3305 102.006 26.5294 97.8297 23.9438C70.9789 6.44134 8.92457 50.9933 28.2171 73.8658C38.3605 85.8001 41.3436 91.7666 42.7358 93.7554C10.3163 98.7268 0.968384 97.9312 0.968384 134.131C0.968384 164.163 8.92413 162.572 46.7136 165.158C43.3325 169.931 30.0073 190.815 22.4493 199.565C14.6926 208.516 15.0899 210.505 27.0235 223.035C61.8297 259.831 80.1277 265.797 98.4256 246.305C105.983 238.35 107.973 239.743 108.172 254.062C108.569 271.565 128.857 276.537 180.768 271.366C213.386 268.184 210.402 264.404 207.817 245.709L228.7 254.46C249.982 263.41 258.137 257.444 300.103 201.952C302.689 198.572 294.932 191.81 288.568 191.81C286.18 191.81 279.816 187.831 274.445 183.057L264.501 174.307C271.462 173.511 282.998 171.92 292.346 170.329C297.119 169.533 300.501 165.556 300.899 160.781C302.887 132.34 303.683 120.208 303.683 120.407C303.883 117.225 302.291 114.041 299.705 112.252C296.721 110.263 291.75 107.677 282.999 105.888C269.076 103.104 268.876 104.495 284.589 87.7889C301.494 69.4903 301.894 70.6836 271.86 39.8553C246.004 13.2037 225.32 4.85013 212.59 15.3915L206.426 20.5626L205.231 15.5904C202.248 3.65683 152.922 -3.50338 118.713 3.06019ZM174.403 44.4297C176.192 86.7938 183.552 90.3737 208.613 61.3356C234.668 31.3029 230.691 32.4962 248.392 49.4021C267.287 67.3024 267.883 64.5179 241.827 88.9822C212.392 116.43 214.381 122.196 251.772 118.219C279.22 115.235 276.236 121.401 273.451 155.81C223.728 158.992 207.021 158.992 233.275 177.688C253.761 192.406 262.91 201.157 260.523 204.339C259.33 205.732 235.264 235.565 235.264 235.565C232.082 233.179 227.309 231.19 210.999 215.478C187.132 192.803 179.176 196.185 179.972 229.399L180.569 253.069C139.994 258.637 141.387 261.222 139.199 224.228C138.403 210.704 140.194 186.439 112.747 197.179C100.414 201.952 84.901 214.482 78.5365 226.217C75.752 231.388 73.7633 230.593 60.8353 220.648C46.515 209.709 46.1173 212.891 63.8187 192.008C69.5864 185.246 75.3546 177.489 78.9347 172.118C92.8572 150.639 71.9738 146.064 46.5156 146.064H34.9792C34.9792 146.064 35.1781 123.787 36.9682 113.843C38.957 113.843 51.6861 114.041 63.8187 114.241C96.4369 114.639 97.4317 113.843 82.9125 97.9312C69.189 83.0143 61.4317 73.0703 56.6583 67.5013C59.4428 64.9157 46.9132 77.0481 83.1116 41.8441C85.2994 44.2308 96.6358 56.1644 107.576 69.2912C121.298 85.7987 137.41 79.6337 137.41 68.4957V56.5622C137.608 13.9992 135.817 16.9826 160.282 17.5792L173.21 17.7781L174.403 44.4297Z"
       fill="#5623E2"
     />
@@ -650,8 +650,8 @@ export const ExclamationSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M32.4152 3.7963C20.7285 7.81361 21.0931 7.44827 19.0845 16.2133C15.615 30.8218 20.7281 158.645 25.6584 184.21C26.9367 190.419 34.6059 192.245 51.9534 190.601C60.5359 189.871 71.1277 189.871 75.5102 190.601C86.8318 192.61 89.9353 191.332 91.2136 183.297C92.857 172.341 114.587 79.0297 118.604 43.0564C119.335 36.1174 116.596 29.1783 111.3 24.6131C111.3 24.6131 72.4058 -10.0817 32.4152 3.7963ZM86.4666 23.5175C89.9361 24.4306 90.6661 25.7089 89.7531 29.361C89.2053 31.9175 66.014 154.446 63.8228 167.045C62.7271 173.984 62.5449 173.984 55.0581 173.436L47.3883 172.889C44.8318 117.194 43.5543 77.5687 38.0761 33.7434C37.3457 28.2652 41.1799 23.335 46.6581 22.422C59.8056 20.4133 74.0494 20.048 86.4666 23.5175ZM152.569 59.1256C147.639 61.6821 146.909 63.6908 140.335 93.4555C125.909 159.011 123.17 178.184 127.187 183.297C132.848 190.419 162.795 199.732 177.404 199.001C183.795 198.636 189.638 194.801 192.56 189.141C212.464 149.15 224.515 125.594 234.559 98.5683C236.75 92.7249 235.107 86.1511 230.359 82.1338C209.907 64.0559 166.995 51.4562 152.569 59.1256ZM191.099 77.7515C209.907 84.8731 212.829 86.5165 211.003 88.7078C209.725 90.3512 170.099 180.376 168.091 182.384C165.899 184.758 150.926 180.193 152.204 177.636C154.396 173.254 162.43 138.742 169.004 103.864C172.656 84.3251 175.577 73.1863 177.038 73.1863C178.499 73.3689 184.708 75.3776 191.099 77.7515ZM27.4845 207.584C-21.4537 224.931 -0.271509 271.496 56.7014 271.496C90.6659 271.496 109.475 259.626 108.379 245.748C107.101 230.592 57.4318 196.993 27.4845 207.584ZM138.326 220.731C102.536 238.444 120.978 269.67 167.178 269.67C196.029 269.67 218.489 251.226 208.081 236.253C198.951 223.47 153.483 213.244 138.326 220.731ZM74.0489 230.227C89.2051 241.001 86.6492 247.574 64.5539 254.331C40.9978 261.452 22.1891 255.426 22.1891 243.74C22.0065 238.261 43.1886 208.314 74.0489 230.227ZM173.386 232.601C195.664 245.383 181.603 264.191 156.038 255.792C143.256 251.592 140.335 243.009 148.187 232.966C154.03 224.931 159.873 224.931 173.386 232.601Z"
       fill="#00CEBE"
     />
@@ -667,8 +667,8 @@ export const AngrySVG = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M195.457 54.0896C188.673 62.1863 188.892 93.9167 195.457 116.456C202.241 139.215 226.968 152.126 254.322 147.53C274.455 144.248 331.351 115.362 330.476 108.797C328.288 94.1355 307.936 95.6674 273.142 113.174C226.969 136.151 225.218 134.838 214.933 69.4077C210.994 44.461 198.302 50.8071 195.457 54.0896ZM143.157 96.9803C147.533 154.97 134.404 173.352 85.3856 177.51C65.2532 179.261 60.6571 183.637 72.6928 189.764C94.7947 201.144 142.938 191.515 157.162 172.914C167.665 159.128 176.2 85.3822 168.978 69.8452C167.446 66.5628 138.124 32.6441 143.157 96.9803ZM290.648 167.444C234.628 197.861 218.653 226.966 230.251 277.734C240.317 321.281 253.229 320.406 254.979 275.984C256.949 228.06 259.355 223.464 299.182 195.235C323.691 177.948 328.944 171.602 322.817 166.787C317.346 161.973 300.058 162.192 290.648 167.444ZM186.704 270.951C181.014 243.378 157.38 230.248 128.276 238.345C108.8 243.597 86.2607 257.602 86.2607 264.386C86.2607 272.482 104.861 274.233 119.085 267.668C123.681 265.48 133.746 261.76 141.624 258.915C144.469 257.821 147.533 258.258 150.159 259.79C152.785 261.322 154.536 263.948 154.973 267.011C156.724 277.734 159.131 293.928 160.225 307.714C162.851 340.976 166.571 347.104 184.077 347.104C195.238 346.447 196.332 317.343 186.704 270.951Z"
       fill="black"
     />

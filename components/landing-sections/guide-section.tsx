@@ -1,8 +1,7 @@
 import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
-import { Solutions } from "./solutions-section";
+import { Guides } from "../guide-cards";
 import { cn } from "@/lib/utils";
-import { SketchSVG } from "@/svgs/svgs";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
@@ -36,7 +35,7 @@ export default function GuideSection() {
             <div>
               <div className="mx-auto max-w-7xl sm:flex sm:space-x-3 p-3">
                 <div className="gap-x-2 w-full p-1">
-                  <Solutions />
+                  <Guides />
                 </div>
               </div>
             </div>

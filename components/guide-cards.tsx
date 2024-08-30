@@ -2,32 +2,32 @@ import React from "react";
 import { ChartLine, ClockArrowUp, SquareStack, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const Solutions = () => {
+export const Guides = () => {
   return (
-    <div id="solutions" className="container mx-auto p-4 sm:p-6 lg:p-8">
+    <div id="Guides" className="container mx-auto p-4 sm:p-6 lg:p-8">
       <div className="w-full flex justify-center ">
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
-          <SolutionCard
+          <GuideCard
             title="Gestão de Capacidade em Tempo Real"
             href="#"
             icon={<ClockArrowUp size={40} />}
             className=""
             color="#5623E2"
           />
-          <SolutionCard
+          <GuideCard
             title="Análise de Demandas"
             href="#"
             icon={<ChartLine size={40}/>}
             color="#EF462F"
           />
-          <SolutionCard
+          <GuideCard
             title="Previsão de Tendências"
             href="#"
             icon={<SquareStack size={40}/>}
             className=""
             color= "#D9014B"
           />
-          <SolutionCard
+          <GuideCard
             title="Experiência Inteligente e Personalizada"
             href="#"
             icon={<Users size={40}/>}
@@ -49,7 +49,7 @@ interface CardType {
   color: string
 }
 
-const SolutionCard = ({
+const GuideCard = ({
   title,
   subtitle,
   icon,

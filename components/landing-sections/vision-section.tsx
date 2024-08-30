@@ -72,12 +72,13 @@ export const VisionSection = () => {
               </a>
             ))}
           </div>
-          <div className="lg:w-3/4">
+          <div className="lg:w-3/4" >
             <h2
               className={cn(
                 "scroll-m-20 border-b pb-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight transition-colors first:mt-0",
                 syne.className
               )}
+              id="visao"
             >
               Entenda um pouco mais sobre a nossa visão
             </h2>
