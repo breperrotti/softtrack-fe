@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
-import { Curly2SVG } from "@/svgs/svgs";
+import { AbstractSVG, Cloud3SVG, Curly2SVG, RoxoSVG, Sparkle2SVG, SparkleBigSVG, SparkleSVG, VerdeSVG } from "@/svgs/svgs";
 import { Heading } from "../heading";
 
 const syne = Syne({
@@ -39,19 +39,31 @@ export default function AnalisePrevisaoSection() {
         </div>
         <div className="grid grid-cols-2 gap-4 mt-8">
           <div className="bg-roxo h-96 flex items-center justify-center text-white text-xl font-extrabold border-2 border-black bg-background transition-all duration-300 translate-x-[-4px] translate-y-[-4px] rounded-md shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none">
-            teste
+            <VerdeSVG />
           </div>
           <div className="mt-4 w-full lg:mt-10 bg-verde h-96 flex items-center justify-center text-white text-xl font-extrabold border-2 border-black bg-background transition-all duration-300 translate-x-[-4px] translate-y-[-4px] rounded-md shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none">
-            teste
+            <RoxoSVG />
           </div>
         </div>
       </div>
 
       <div
         className="absolute transform -rotate-90 z-10 hidden lg:block"
-        style={{ top: "80%", left: "-4%" }}
+        style={{ top: "40%", left: "-4%" }}
       >
         <Curly2SVG />
+      </div>
+      <div
+        className="absolute transform -rotate-45 z-10 hidden xl:block"
+        style={{ top: "-50%", left: "-5%" }}
+      >
+        <Cloud3SVG />
+      </div>
+      <div
+        className="absolute transform z-10 hidden xl:block"
+        style={{ top: "50%", left: "90%" }}
+      >
+        <AbstractSVG />
       </div>
     </section>
   );

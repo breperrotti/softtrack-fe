@@ -81,20 +81,8 @@ export const Hero = () => {
         <ExplosionSVG />
       </div>
       <div
-        className="absolute top-0 left-0 hidden xl:block"
-        style={{ top: "80%", left: "60%" }}
-      >
-        <ZigZagSVG />
-      </div>
-      <div
-        className="absolute top-0 left-0 hidden xl:block"
-        style={{ top: "87%", left: "62%" }}
-      >
-        <ZigZag2SVG />
-      </div>
-      <div
-        className="absolute top-0 left-0 transform -rotate-90 hidden lg:block"
-        style={{ top: "16%", left: "50%" }}
+        className="absolute top-0 left-0 transform rotate-180 hidden lg:block"
+        style={{ top: "78%", left: "47%" }}
       >
         <ThreeLinesSVG />
       </div>
@@ -106,19 +94,13 @@ export const Hero = () => {
       </div>
       <div
         className="absolute top-0 left-0 transform rotate-12 hidden md:block"
-        style={{ top: "34%", left: "94%" }}
+        style={{ top: "34%", left: "92%" }}
       >
         <ZapSVG />
       </div>
       <div
         className="absolute top-0 left-0 transform rotate-12 hidden lg:block"
-        style={{ top: "78%", left: "44%" }}
-      >
-        <AsteriskSVG />
-      </div>
-      <div
-        className="absolute top-0 left-0 transform rotate-12 hidden lg:block"
-        style={{ top: "18%", left: "30%" }}
+        style={{ top: "16%", left: "37%" }}
       >
         <ExclamationSVG />
       </div>
