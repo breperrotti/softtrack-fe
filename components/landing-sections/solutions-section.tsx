@@ -4,30 +4,30 @@ import { cn } from "@/lib/utils";
 
 export const Solutions = () => {
   return (
-    <div id="solutions">
+    <div id="solutions" className="container mx-auto p-4 sm:p-6 lg:p-8">
       <div className="w-full flex justify-center ">
-        <div className="grid gap-4 grid-cols-4  w-full">
-          <HelpCard
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
+          <SolutionCard
             title="Gestão de Capacidade em Tempo Real"
             href="#"
             icon={<ClockArrowUp size={40} />}
             className=""
             color="#5623E2"
           />
-          <HelpCard
+          <SolutionCard
             title="Análise de Demandas"
             href="#"
             icon={<ChartLine size={40}/>}
             color="#EF462F"
           />
-          <HelpCard
+          <SolutionCard
             title="Previsão de Tendências"
             href="#"
             icon={<SquareStack size={40}/>}
             className=""
             color= "#D9014B"
           />
-          <HelpCard
+          <SolutionCard
             title="Experiência Inteligente e Personalizada"
             href="#"
             icon={<Users size={40}/>}
@@ -49,7 +49,7 @@ interface CardType {
   color: string
 }
 
-const HelpCard = ({
+const SolutionCard = ({
   title,
   subtitle,
   icon,
@@ -61,11 +61,11 @@ const HelpCard = ({
     <a
       href={href}
       className={cn(
-        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-6px] translate-y-[-6px] shadow-[6px_6px_0px_black]",
+        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-6px] translate-y-[-6px] shadow-[6px_6px_0px_black] sm:p-6 lg:p-8",
         className
       )}
     >
-      <div className={cn(`absolute inset-0 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-400 text-white flex items-center justify-center`)} style={{ backgroundColor: color }}>
+      <div className={cn("absolute inset-0 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-400 text-white flex items-center justify-center", className)} style={{ backgroundColor: color }}>
       </div>
       <div className="mb-2 text-black group-hover:text-white transition-colors relative z-10 duration-300">
         {icon}

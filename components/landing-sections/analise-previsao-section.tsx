@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
+import { Curly2SVG } from "@/svgs/svgs";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
@@ -9,7 +10,7 @@ const syne = Syne({
 
 export default function AnalisePrevisaoSection() {
   return (
-    <section className="bg-white dark:bg-gray-900 mt-12">
+    <section className="bg-white dark:bg-gray-900 mt-12 relative">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div className="">
           <Badge className="mb-3">
@@ -50,6 +51,13 @@ export default function AnalisePrevisaoSection() {
           </div>
         </div>
       </div>
+
+      <div
+          className="absolute transform -rotate-90 z-10 hidden lg:block"
+          style={{ top: "80%", left: "-4%" }}
+        >
+          <Curly2SVG />
+        </div>
     </section>
   );
 }
