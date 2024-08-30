@@ -17,25 +17,28 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background fixed top-0 flex items-center p-4 w-full",
+        "z-50 bg-background fixed top-0 flex items-center justify-between p-4 w-full",
         scrolled && "border-b shadow-sm"
       )}
     >
       <Logo />
-      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center flex-wrap gap-x-4">
-        <Navigation className="hidden md:flex" /> {/* Mostrar apenas em telas maiores */}
-        <NavigationMobile /> {/* Mostrar apenas em telas menores */}
-        <TransitionLink href={"/admin/overview"}>
-          <Button className="gap-x-2 items-center whitespace-nowrap">
-            <Lock size={17} />
-            Admin
-          </Button>
-        </TransitionLink>
-        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-400 to-indigo-700 flex items-center justify-center text-white">
-          <User />
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <Navigation className="hidden md:flex mr-2" />
+        <div className="flex items-center justify-around gap-x-2 md:gap-x-4 w-full">
+          <NavigationMobile />
+          <TransitionLink href={"/admin/overview"}>
+            <Button className="gap-x-1 md:gap-x-2 items-center whitespace-nowrap text-sm md:text-base">
+              <Lock size={16} />
+              Admin
+            </Button>
+          </TransitionLink>
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-tr from-indigo-400 to-indigo-700 flex items-center justify-center text-white">
+            <User />
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
 

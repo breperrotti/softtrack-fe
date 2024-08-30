@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartLine, ClockArrowUp, SquareStack, Users } from "lucide-react";
+import { ChartLine, CircleHelp, ClockArrowUp, SquareStack } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Guides = () => {
@@ -9,28 +9,29 @@ export const Guides = () => {
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
           <GuideCard
             title="Gestão de Capacidade em Tempo Real"
-            href="#"
+            href="#realtime"
             icon={<ClockArrowUp size={40} />}
             className=""
             color="#5623E2"
           />
           <GuideCard
             title="Análise de Demandas"
-            href="#"
+            href="#analise"
             icon={<ChartLine size={40}/>}
             color="#EF462F"
+            className=""
           />
           <GuideCard
             title="Previsão de Tendências"
-            href="#"
+            href="#previsao"
             icon={<SquareStack size={40}/>}
             className=""
             color= "#D9014B"
           />
           <GuideCard
-            title="Experiência Inteligente e Personalizada"
-            href="#"
-            icon={<Users size={40}/>}
+            title="Perguntas Frequentes"
+            href="#faq"
+            icon={<CircleHelp size={40}/>}
             className=""
             color= "#00CEBE"
           />
@@ -61,7 +62,7 @@ const GuideCard = ({
     <a
       href={href}
       className={cn(
-        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-6px] translate-y-[-6px] shadow-[6px_6px_0px_black] sm:p-6 lg:p-8",
+        "w-full h-full p-4 rounded relative overflow-hidden group bg-white border-2 border-black px-6 py-3 font-semibold translate-x-[-4px] translate-y-[-4px] shadow-[4px_4px_0px_black] sm:p-6 lg:p-8",
         className
       )}
     >

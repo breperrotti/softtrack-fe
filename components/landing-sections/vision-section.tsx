@@ -1,15 +1,14 @@
-import { cn } from "@/lib/utils";
-import { Asterisk2SVG, CloudSVG, Curly2SVG } from "@/svgs/svgs";
+
+import { Asterisk2SVG, CloudSVG } from "@/svgs/svgs";
 import {
-  BookOpenIcon,
   ChartLine,
   ChevronRightIcon,
   Cog,
   Lightbulb,
   User,
 } from "lucide-react";
-import { Syne } from "next/font/google";
 import Link from "next/link";
+import { Heading } from "../heading";
 
 const visionData = [
   {
@@ -38,17 +37,10 @@ const visionData = [
   },
 ];
 
-const syne = Syne({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
-
 export const VisionSection = () => {
   return (
     <>
-      {/* Icon Blocks */}
       <div className="py-12 lg:py-24 relative container mx-auto px-4 md:px-8 lg:px-16 xl:px-20">
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {visionData.map((vision, index) => (
@@ -72,16 +64,14 @@ export const VisionSection = () => {
               </a>
             ))}
           </div>
-          <div className="lg:w-3/4" >
-            <h2
-              className={cn(
-                "scroll-m-20 border-b pb-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight transition-colors first:mt-0",
-                syne.className
-              )}
+          <div className="lg:w-3/4">
+            <Heading
+              title="Conheça Nossa Visão"
+              badge="Visão SoftTrack"
+              classNameBadge="flex justify-center md:justify-start "
+              classNameTitle="text-center md:text-start"
               id="visao"
-            >
-              Entenda um pouco mais sobre a nossa visão
-            </h2>
+            />
             <p className="mt-3 text-base md:text-lg text-muted-foreground">
               Na Softtrack, somos especialistas em desenvolver soluções que
               alavancam a tecnologia para resolver desafios complexos de gestão.

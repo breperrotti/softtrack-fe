@@ -90,25 +90,25 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full cursor-pointer overflow-hidden rounded-md p-4 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-4px] translate-y-[-4px] shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none",
+        "relative mx-auto min-h-fit w-full cursor-pointer overflow-hidden rounded-md p-3 sm:p-4 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-4px] translate-y-[-4px] shadow-[4px_4px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
       )}
     >
-      <div className="flex flex-row items-center gap-3">
+      <div className="flex flex-row items-center gap-2 sm:gap-3">
         <div
-          className="flex size-10 items-center justify-center rounded-2xl"
+          className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-2xl"
           style={{
             backgroundColor: color,
           }}
         >
-          <span className="text-lg">{icon}</span>
+          <span className="text-base sm:text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
-            <span className="text-sm sm:text-lg">{name}</span>
-            <span className="mx-1">·</span>
+          <figcaption className="flex flex-row items-center text-base sm:text-lg font-medium dark:text-white whitespace-pre">
+            <span className="text-sm sm:text-base">{name}</span>
+            <span className="mx-1 hidden sm:inline">·</span>
             <span className="text-xs text-gray-500">{time}</span>
           </figcaption>
-          <p className="text-sm font-normal dark:text-white/60">
+          <p className="text-xs sm:text-sm font-normal dark:text-white/60 truncate">
             {description}
           </p>
         </div>
@@ -116,6 +116,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
     </figure>
   );
 };
+
 
 export function AnimatedListDemo({
   className,

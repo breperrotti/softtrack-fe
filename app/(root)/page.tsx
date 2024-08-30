@@ -4,8 +4,9 @@ import { VisionSection } from "@/components/landing-sections/vision-section";
 import { Testimonials } from "@/components/landing-sections/testimonials-section";
 import GuideSection from "@/components/landing-sections/guide-section";
 import { ReatltimeSection } from "@/components/landing-sections/realtime-section";
-import AnalisePrevisaoSection from "@/components/landing-sections/analise-previsao-section";
-import { UserUXSection } from "@/components/landing-sections/user-ux-section";
+import AnalisePrevisaoSection from "@/components/landing-sections/analise-section";
+import { FaqSection } from "@/components/landing-sections/faq-section";
+import { PrevisaoSection } from "@/components/landing-sections/previsao-section";
 
 const LandingPage = () => {
   return (
@@ -15,8 +16,9 @@ const LandingPage = () => {
       <GuideSection />
       <ReatltimeSection />
       <AnalisePrevisaoSection />
-      <UserUXSection />
+      <PrevisaoSection />
       <Testimonials />
+      <FaqSection />
       <Footer />
     </div>
   );

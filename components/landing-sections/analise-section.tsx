@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
 import { Curly2SVG } from "@/svgs/svgs";
+import { Heading } from "../heading";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
@@ -10,33 +11,27 @@ const syne = Syne({
 
 export default function AnalisePrevisaoSection() {
   return (
-    <section className="bg-white dark:bg-gray-900 mt-12 relative">
+    <section className="bg-white dark:bg-gray-900 mt-24 relative">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div className="">
-          <Badge className="mb-3">
-            <p className="text-xs font-bold text-black tracking-wider uppercase">
-              Análise de demandas
-            </p>
-          </Badge>
-          <h1
-            className={cn(
-              "scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight transition-colors first:mt-0 ",
-              syne.className
-            )}
-          >
-            Análise de demandas
-          </h1>
-          <p className="mb-4 mt-4">
+        <div>
+          <Heading
+            title="Análise de Demandas"
+            badge="Análise de Demandas"
+            classNameBadge="flex justify-center md:justify-start"
+            classNameTitle="text-center md:text-start"
+            id="analise"
+          />
+          <p className="mb-4 mt-4 text-center md:text-start text-base md:text-lg text-muted-foreground">
             Com a Análise de Demandas, você obtém uma visão clara da
             complexidade e criticidade de cada solicitação, permitindo uma
             alocação de recursos precisa e eficiente.
           </p>
-          <p className="mb-4">
+          <p className="mb-4 text-center md:text-start text-base md:text-lg text-muted-foreground">
             Nossa solução avalia automaticamente as demandas, classificando-as
             por complexidade e impacto, para que as tarefas mais críticas sejam
             priorizadas.
           </p>
-          <p>
+          <p className="text-center md:text-start text-base md:text-lg text-muted-foreground">
             Baseada em dados históricos, a ferramenta também sugere abordagens e
             prazos, garantindo que sua equipe atenda as necessidades mais
             urgentes de forma rápida e eficaz
@@ -53,11 +48,11 @@ export default function AnalisePrevisaoSection() {
       </div>
 
       <div
-          className="absolute transform -rotate-90 z-10 hidden lg:block"
-          style={{ top: "80%", left: "-4%" }}
-        >
-          <Curly2SVG />
-        </div>
+        className="absolute transform -rotate-90 z-10 hidden lg:block"
+        style={{ top: "80%", left: "-4%" }}
+      >
+        <Curly2SVG />
+      </div>
     </section>
   );
 }

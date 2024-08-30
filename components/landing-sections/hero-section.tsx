@@ -72,7 +72,7 @@ export const Hero = () => {
         <SparkleSVG />
       </div>
       <div
-        className="absolute top-0 left-0 transform rotate-12"
+        className="absolute top-0 left-0 transform rotate-12 hidden md:block"
         style={{ top: "105%", left: "90%", fill: "#5623E2" }}
       >
         <CurlySVG />
@@ -105,7 +105,7 @@ export const Hero = () => {
         <CircleArrowSVG />
       </div>
       <div
-        className="absolute top-0 left-0 transform rotate-12"
+        className="absolute top-0 left-0 transform rotate-12 hidden md:block"
         style={{ top: "34%", left: "94%" }}
       >
         <ZapSVG />

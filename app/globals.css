@@ -135,3 +135,17 @@ body,
   transform: translateX(-200%);
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-transition {
+    font-size: 4rem; /* Smaller font size for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-transition {
+    font-size: 2rem; /* Even smaller font size for phones */
+    padding: 20px; /* Add some padding to prevent text from touching edges */
+    text-align: center; /* Center text alignment */
+  }
+}

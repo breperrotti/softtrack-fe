@@ -49,11 +49,11 @@ export function Navigation({ className }: NavigationProps) {
               <ListItem href="/#visao" title="Nossa Visão">
                 Qualidade e inovação para pequenas e médias empresas.
               </ListItem>
-              <ListItem href="/#solutions" title="Nossas Soluções">
+              <ListItem href="/#guide" title="Nossas Soluções">
                 Transformando dados com eficiência.
               </ListItem>
-              <ListItem href="/#" title="Lorem ipsum">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              <ListItem href="/#faq" title="Perguntas Frequentes">
+                Tire suas Súvidas sobre o nosso produto.
               </ListItem>
             </ul>
           </NavigationMenuContent>

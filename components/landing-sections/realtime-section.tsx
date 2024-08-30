@@ -10,6 +10,7 @@ import {
   SketchSVG,
   ZigZagSVG,
 } from "@/svgs/svgs";
+import { Heading } from "../heading";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
@@ -19,25 +20,17 @@ const syne = Syne({
 export const ReatltimeSection = () => {
   return (
     <section className="relative">
-      <div className="container mx-auto flex items-center h-auto md:h-144 border-black overflow-hidden">
+      <div className="container mx-auto flex items-center h-auto md:h-144 border-black overflow-hidden mt-20">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 p-4 md:p-6">
           <div className="flex p-4 md:p-6 mb-8">
             <div>
-              <div className="flex justify-center xl:justify-start">
-                <Badge className="mb-3">
-                  <p className="text-xs font-bold text-black tracking-wider uppercase">
-                    Gestão de conteúdo em tempo real
-                  </p>
-                </Badge>
-              </div>
-              <h1
-                className={cn(
-                  "scroll-m-20 border-b pb-2 text-3xl md:text-5xl font-bold tracking-tight transition-colors first:mt-0 text-center xl:text-start",
-                  syne.className
-                )}
-              >
-                Gestão de conteúdo em tempo real
-              </h1>
+            <Heading
+                title="Gestão dos Dados em Tempo Real"
+                badge="Gestão dos Dados em Tempo Real"
+                classNameBadge="flex justify-center"
+                classNameTitle="text-center"
+                id="realtime"
+              />
               <div>
                 <TabsRealtime />
               </div>
