@@ -1,56 +1,101 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { GraficoConsultoresSegmentoOverview } from "./charts/grafico-demandas-segmento-overview";
-import { GraficoConsultoresDisponiveisOverview } from "./charts/grafico-consultores-disponiveis-overview";
-import { GraficoDemandasSenioridade } from "./charts/grafico-demandas-senioridade-overview";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import "./style.css";
+import { createSwapy } from "swapy";
 import { GraficoBalancoChamadosConsultoresSegmento } from "./charts/grafico-balanco-chamados-consultores";
 import { GraficoCustoConsultoresChamados } from "./charts/grafico-custo-consultores-chamados";
-import { GraficoChsmadosAbertosResolvidosSegmento } from "./charts/grafico-chamados-abertos-resolvidos";
+import { Button } from "./ui/button";
 
-export function OverviewDashboard() {
+const DEFAULT = {
+  "1": "a",
+  "3": "c",
+  "4": "d",
+  "2": null,
+};
+
+function A() {
   return (
-    <BentoGrid className="max-w-full mx-auto mt-8 sm:mt-12 gap-4">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-        />
-      ))}
-    </BentoGrid>
+    <div className="item a" data-swapy-item="a">
+      <div>A</div>
+    </div>
   );
 }
 
-const items = [
-  {
-    header: <GraficoConsultoresSegmentoOverview />,
-  },
-  {
-    header: (
-      <GraficoConsultoresDisponiveisOverview disponiveis={"910"} ausentes={"60"} />
-    ),
-  },
-  {
-    header: <GraficoDemandasSenioridade />,
-  },
-  {
-    title: "9 em cada 10 executivos não confiam nos dados analisados",
-    description:
-      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.",
-    header: (
-      <div className="relative flex w-full h-full min-h-[18rem] rounded-xl overflow-hidden bg-muted-foreground/20">
+function C() {
+  return (
+    <div className="item c" data-swapy-item="c">
+      <GraficoBalancoChamadosConsultoresSegmento />
+    </div>
+  );
+}
+
+function D() {
+  return (
+    <div className="item d max-h-fit w-full" data-swapy-item="d">
+      <GraficoCustoConsultoresChamados />
+    </div>
+  );
+}
+
+function getItemById(itemId: "a" | "c" | "d" | null) {
+  switch (itemId) {
+    case "a":
+      return <A />;
+    case "c":
+      return <C />;
+    case "d":
+      return <D />;
+  }
+}
+
+export function OverviewDashboard() {
+  const slotItems: Record<string, "a" | "c" | "d" | null> =
+    localStorage.getItem("slotItem")
+      ? JSON.parse(localStorage.getItem("slotItem")!)
+      : DEFAULT;
+  
+  const [swapyInstance, setSwapyInstance] = useState<any>(null);
+  const [isSwapyEnabled, setIsSwapyEnabled] = useState(true);
+
+  useEffect(() => {
+    const container = document.querySelector(".teste")!;
+    const swapy = createSwapy(container, { animation: "spring" });
+    swapy.onSwap(({ data }) => {
+      localStorage.setItem("slotItem", JSON.stringify(data.object));
+    });
+    setSwapyInstance(swapy);
+  }, []);
+
+  const toggleSwapy = () => {
+    if (swapyInstance) {
+      swapyInstance.enable(!isSwapyEnabled);
+      setIsSwapyEnabled(!isSwapyEnabled);
+    }
+  };
+
+  return (
+    <div className="relative">
+      <div className="teste">
+        <div className="slot a" data-swapy-slot="1">
+          {getItemById(slotItems["1"])}
+        </div>
+        <div className="second-row">
+          <div className="slot b" data-swapy-slot="2">
+            {getItemById(slotItems["2"])}
+          </div>
+          <div className="slot c" data-swapy-slot="3">
+            {getItemById(slotItems["3"])}
+          </div>
+        </div>
+        <div className="slot d" data-swapy-slot="4">
+          {getItemById(slotItems["4"])}
+        </div>
       </div>
-    ),
-  },
-  {
-    header: <GraficoBalancoChamadosConsultoresSegmento />,
-  },
-  {
-    header: <GraficoChsmadosAbertosResolvidosSegmento />,
-  },
-  {
-    header: <GraficoCustoConsultoresChamados />,
-  },
-];
+      <Button
+        className="fixed bottom-2 right-2 z-50"
+        onClick={toggleSwapy}
+      >
+        {isSwapyEnabled ? "Desativar Layout" : "Ativar Layout"}
+      </Button>
+    </div>
+  );
+}

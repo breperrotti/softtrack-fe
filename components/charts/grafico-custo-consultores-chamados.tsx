@@ -1,15 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
-
+import * as React from "react";
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -17,32 +16,9 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@radix-ui/react-select"
+} from "@/components/ui/chart";
 
 const chartData = [
-  { date: "2024-04-01", chamados: 222, consultores: 150 },
-  { date: "2024-04-02", chamados: 97, consultores: 180 },
-  { date: "2024-04-03", chamados: 167, consultores: 120 },
-  { date: "2024-04-04", chamados: 242, consultores: 260 },
-  { date: "2024-04-05", chamados: 373, consultores: 290 },
-  { date: "2024-04-06", chamados: 301, consultores: 340 },
-  { date: "2024-04-07", chamados: 245, consultores: 180 },
-  { date: "2024-04-08", chamados: 409, consultores: 320 },
-  { date: "2024-04-09", chamados: 59, consultores: 110 },
-  { date: "2024-04-10", chamados: 261, consultores: 190 },
-  { date: "2024-04-11", chamados: 327, consultores: 350 },
-  { date: "2024-04-12", chamados: 292, consultores: 210 },
-  { date: "2024-04-13", chamados: 342, consultores: 380 },
-  { date: "2024-04-14", chamados: 137, consultores: 220 },
-  { date: "2024-04-15", chamados: 120, consultores: 170 },
-  { date: "2024-04-16", chamados: 138, consultores: 190 },
-  { date: "2024-04-17", chamados: 446, consultores: 360 },
-  { date: "2024-04-18", chamados: 364, consultores: 410 },
-  { date: "2024-04-19", chamados: 243, consultores: 180 },
-  { date: "2024-04-20", chamados: 89, consultores: 150 },
-  { date: "2024-04-21", chamados: 137, consultores: 200 },
-  { date: "2024-04-22", chamados: 224, consultores: 170 },
   { date: "2024-04-23", chamados: 138, consultores: 230 },
   { date: "2024-04-24", chamados: 387, consultores: 290 },
   { date: "2024-04-25", chamados: 215, consultores: 250 },
@@ -115,9 +91,6 @@ const chartData = [
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
   chamados: {
     label: "Chamados",
     color: "#CECDEE",
@@ -126,83 +99,47 @@ const chartConfig = {
     label: "Consultores",
     color: "#5F5DF1",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
+
+const tickFormatter = (value: string) => {
+  const date = new Date(value);
+  return date.toLocaleDateString("pt-br", {
+    month: "short",
+    day: "numeric",
+  });
+};
+
+const labelFormatter = (value: string) => {
+  return new Date(value).toLocaleDateString("pt-br", {
+    month: "short",
+    day: "numeric",
+  });
+};
+
+const MemoizedCardHeader = React.memo(() => (
+  <CardHeader className="flex flex-col items-center gap-2 space-y-0 border-b py-5">
+    <div className="grid gap-1 text-center">
+      <CardTitle>Controle de Custos Consultores x Chamados</CardTitle>
+      <CardDescription>Agosto - 2024</CardDescription>
+    </div>
+  </CardHeader>
+));
 
 export function GraficoCustoConsultoresChamados() {
-  const [timeRange, setTimeRange] = React.useState("90d")
-
-  const filteredData = chartData.filter((item) => {
-    const date = new Date(item.date)
-    const now = new Date()
-    let daysToSubtract = 90
-    if (timeRange === "30d") {
-      daysToSubtract = 30
-    } else if (timeRange === "7d") {
-      daysToSubtract = 7
-    }
-    now.setDate(now.getDate() - daysToSubtract)
-    return date >= now
-  })
-
   return (
-    <Card className="border-none shadow-none">
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
-        <div className="grid flex-1 gap-1 text-center sm:text-left">
-          <CardTitle>Controle de Custos Consultores x Chamados</CardTitle>
-          <CardDescription>
-            Agosto - 2024
-          </CardDescription>
-        </div>
-        <Select value={timeRange} onValueChange={setTimeRange}>
-          <SelectTrigger
-            className="w-[160px] rounded-lg sm:ml-auto"
-            aria-label="Select a value"
-          >
-            <SelectValue placeholder="Last 3 months" />
-          </SelectTrigger>
-          <SelectContent className="rounded-xl">
-            <SelectItem value="90d" className="rounded-lg">
-              Last 3 months
-            </SelectItem>
-            <SelectItem value="30d" className="rounded-lg">
-              Last 30 days
-            </SelectItem>
-            <SelectItem value="7d" className="rounded-lg">
-              Last 7 days
-            </SelectItem>
-          </SelectContent>
-        </Select>
-      </CardHeader>
-      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
-        <ChartContainer
-          config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
-        >
-          <AreaChart data={filteredData}>
+    <Card className="border-none shadow-none h-full w-full bg-white">
+      <MemoizedCardHeader />
+      <CardContent className="pt-4">
+        <ChartContainer config={chartConfig} className="w-full h-[450px] aspect-square">
+          <AreaChart data={chartData}>
             <defs>
-              <linearGradient id="fillchamados" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-chamados)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-chamados)"
-                  stopOpacity={0.1}
-                />
+              <linearGradient id="fillchamados" x1="1" y1="1" x2="1" y2="1">
+                <stop offset="5%" stopColor="var(--color-chamados)" stopOpacity={1} />
+                <stop offset="70%" stopColor="var(--color-chamados)" stopOpacity={1} />
               </linearGradient>
-              <linearGradient id="fillconsultores" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-consultores)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-consultores)"
-                  stopOpacity={0.1}
-                />
+              <linearGradient id="fillconsultores" x1="1" y1="1" x2="1" y2="1">
+                <stop offset="5%" stopColor="var(--color-consultores)" stopOpacity={1} />
+                <stop offset="70%" stopColor="var(--color-consultores)" stopOpacity={0.8} />
               </linearGradient>
             </defs>
             <CartesianGrid vertical={false} />
@@ -212,46 +149,18 @@ export function GraficoCustoConsultoresChamados() {
               axisLine={false}
               tickMargin={8}
               minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value)
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              }}
+              tickFormatter={tickFormatter}
             />
             <ChartTooltip
               cursor={false}
-              content={
-                <ChartTooltipContent
-                  labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    })
-                  }}
-                  indicator="dot"
-                />
-              }
+              content={<ChartTooltipContent labelFormatter={labelFormatter} indicator="dot" />}
             />
-            <Area
-              dataKey="consultores"
-              type="natural"
-              fill="url(#fillconsultores)"
-              stroke="var(--color-consultores)"
-              stackId="a"
-            />
-            <Area
-              dataKey="chamados"
-              type="natural"
-              fill="url(#fillchamados)"
-              stroke="var(--color-chamados)"
-              stackId="a"
-            />
+            <Area dataKey="consultores" type="natural" fill="url(#fillconsultores)" stroke="var(--color-consultores)" stackId="a" />
+            <Area dataKey="chamados" type="natural" fill="url(#fillchamados)" stroke="var(--color-chamados)" stackId="a" />
             <ChartLegend content={<ChartLegendContent />} />
           </AreaChart>
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

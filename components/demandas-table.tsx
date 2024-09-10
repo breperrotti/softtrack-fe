@@ -1,4 +1,5 @@
 "use client";
+import * as XLSX from "xlsx"
 import * as React from "react";
 import {
   ColumnDef,
@@ -34,6 +35,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Demanda, demandas } from "@/mocks/contracts";
+import { useCallback } from "react";
 
 const data: Demanda[] = demandas;
 
@@ -144,26 +146,26 @@ export const columns: ColumnDef<Demanda>[] = [
   },
 ];
 
-// function generateFilename() {
-//   const now = new Date();
-//   const year = now.getFullYear();
-//   const month = String(now.getMonth() + 1).padStart(2, '0');
-//   const day = String(now.getDate()).padStart(2, '0');
-//   const hours = String(now.getHours()).padStart(2, '0');
-//   const minutes = String(now.getMinutes()).padStart(2, '0');
+function generateFilename() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
 
-//   return `Demandas_${year}-${month}-${day}_${hours}-${minutes}.xlsx`;
-// }
+  return `Demandas_${year}-${month}-${day}_${hours}-${minutes}.xlsx`;
+}
 
-// function exportToXlsx(selectedRows: Demanda[]) {
-//   const ws = XLSX.utils.json_to_sheet(selectedRows);
-//   const wb = XLSX.utils.book_new();
-//   XLSX.utils.book_append_sheet(wb, ws, "Demandas");
+function exportToXlsx(selectedRows: Demanda[]) {
+  const ws = XLSX.utils.json_to_sheet(selectedRows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Demandas");
 
-//   const filename = generateFilename();
+  const filename = generateFilename();
   
-//   XLSX.writeFile(wb, filename);
-// }
+  XLSX.writeFile(wb, filename);
+}
 
 export function DemandasTable() {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -193,13 +195,13 @@ export function DemandasTable() {
     },
   });
 
-  // const handleExport = useCallback(() => {
-  //   const selectedRows = table.getRowModel().rows
-  //     .filter(row => row.getIsSelected())
-  //     .map(row => row.original);
+  const handleExport = useCallback(() => {
+    const selectedRows = table.getRowModel().rows
+      .filter(row => row.getIsSelected())
+      .map(row => row.original);
 
-  //   exportToXlsx(selectedRows);
-  // }, [table]);
+    exportToXlsx(selectedRows);
+  }, [table]);
 
   return (
     <div className="w-full">
@@ -237,7 +239,7 @@ export function DemandasTable() {
         <Button
           variant="outline"
           className="ml-2"
-          // onClick={handleExport}
+          onClick={handleExport}
         >
           Exportar Selecionados
         </Button>
@@ -266,6 +268,7 @@ export function DemandasTable() {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className="text-black"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
