@@ -164,3 +164,5 @@ export function GraficoCustoConsultoresChamados() {
     </Card>
   );
 }
+
+GraficoCustoConsultoresChamados.displayName = "GraficoCustoConsultoresChamados"

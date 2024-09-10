@@ -21,7 +21,6 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
-// Dados do gráfico
 const chartData = [
   { month: "T.I", chamados: 186, consultores: 150 },
   { month: "Vendas", chamados: 305, consultores: 200 },
@@ -31,7 +30,6 @@ const chartData = [
   { month: "R.H", chamados: 214, consultores: 140 },
 ]
 
-// Configuração do gráfico
 const chartConfig = {
   chamados: {
     label: "Chamados",
@@ -86,3 +84,5 @@ export const GraficoBalancoChamadosConsultoresSegmento = memo(() => {
     </Card>
   )
 })
+
+GraficoBalancoChamadosConsultoresSegmento.displayName = "GraficoBalancoChamadosConsultoresSegmento"
