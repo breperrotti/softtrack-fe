@@ -2,7 +2,7 @@ import { Syne } from "next/font/google";
 import { Badge } from "../ui/badge";
 import { Guides } from "../guide-cards";
 import { cn } from "@/lib/utils";
-import { Cloud2SVG, CloudSVG, ThreeArrowsSVG } from "@/svgs/svgs";
+import { ThreeArrowsSVG } from "@/svgs/svgs";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],

@@ -11,10 +11,6 @@ import {
 } from "@/svgs/svgs";
 import { Heading } from "../heading";
 
-const syne = Syne({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
 
 export const ReatltimeSection = () => {
   return (

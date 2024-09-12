@@ -10,12 +10,11 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
-import { Slack } from "lucide-react";
 import { TransitionLink } from "./transition-link";
 import { Button } from "./ui/button";
+import { Slack } from "lucide-react";
 
 interface NavigationProps {
   className: string
@@ -53,7 +52,7 @@ export function Navigation({ className }: NavigationProps) {
                 Transformando dados com eficiência.
               </ListItem>
               <ListItem href="/#faq" title="Perguntas Frequentes">
-                Tire suas Súvidas sobre o nosso produto.
+                Tire suas Dúvidas sobre o nosso produto.
               </ListItem>
             </ul>
           </NavigationMenuContent>

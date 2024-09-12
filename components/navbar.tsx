@@ -1,4 +1,3 @@
-// components/navbar.tsx
 "use client";
 
 import { useScrollTop } from "@/hooks/use-scroll-top";
@@ -9,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import { Navigation } from "./navigation";
 import { TransitionLink } from "./transition-link";
-import { NavigationMobile } from "./navigation-mobile"; // Importar o novo componente
+import { NavigationMobile } from "./navigation-mobile";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -26,7 +25,7 @@ export const Navbar = () => {
         <Navigation className="hidden md:flex mr-2" />
         <div className="flex items-center justify-around gap-x-2 md:gap-x-4 w-full">
           <NavigationMobile />
-          <TransitionLink href={"/admin/overview"}>
+          <TransitionLink href={"/admin"}>
             <Button className="gap-x-1 md:gap-x-2 items-center whitespace-nowrap text-sm md:text-base">
               <Lock size={16} />
               Admin

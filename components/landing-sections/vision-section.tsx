@@ -1,4 +1,4 @@
-import { Asterisk2SVG, CloudSVG, LinesSVG } from "@/svgs/svgs";
+import { CloudSVG, LinesSVG } from "@/svgs/svgs";
 import {
   ChartLine,
   ChevronRightIcon,

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bowlby_One, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 

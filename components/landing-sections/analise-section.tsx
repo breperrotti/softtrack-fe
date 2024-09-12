@@ -1,13 +1,8 @@
-import { cn } from "@/lib/utils";
-import { Syne } from "next/font/google";
-import { Badge } from "../ui/badge";
-import { AbstractSVG, Cloud3SVG, Curly2SVG, RoxoSVG, Sparkle2SVG, SparkleBigSVG, SparkleSVG, VerdeSVG } from "@/svgs/svgs";
-import { Heading } from "../heading";
 
-const syne = Syne({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
+import { Syne } from "next/font/google";
+
+import { AbstractSVG, Cloud3SVG, Curly2SVG, RoxoSVG, VerdeSVG } from "@/svgs/svgs";
+import { Heading } from "../heading";
 
 export default function AnalisePrevisaoSection() {
   return (

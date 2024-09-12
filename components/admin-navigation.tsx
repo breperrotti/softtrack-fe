@@ -3,19 +3,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowUpRight,
   ChevronsLeft,
   ChevronsRight,
-  CircleHelp,
   Home,
-  LineChart,
-  Newspaper,
-  Settings,
-  Users,
+  Newspaper
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TransitionLink } from "./transition-link";
 
 interface NavigationProps {
   className?: string;
@@ -27,10 +21,15 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
   const routes = [
     {
       name: "Visão Geral",
-      path: "/admin/overview",
+      path: "/admin",
       icon: <Home className="h-6 w-6" />,
+    },
+    {
+      name: "Demandas",
+      path: "/admin/demandas",
+      icon: <Newspaper />
     }
-  ];
+    ];
 
   const currentPath = usePathname();
 

@@ -116,14 +116,14 @@ const labelFormatter = (value: string) => {
   });
 };
 
-const MemoizedCardHeader = React.memo(() => (
+const MemoizedCardHeader = () => (
   <CardHeader className="flex flex-col items-center gap-2 space-y-0 border-b py-5">
     <div className="grid gap-1 text-center">
       <CardTitle>Controle de Custos Consultores x Chamados</CardTitle>
       <CardDescription>Agosto - 2024</CardDescription>
     </div>
   </CardHeader>
-));
+);
 
 export function GraficoCustoConsultoresChamados() {
   return (

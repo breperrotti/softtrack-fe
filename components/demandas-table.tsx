@@ -207,7 +207,7 @@ export function DemandasTable() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Procurar demanda..."
+          placeholder="Procurar número do chamado..."
           value={(table.getColumn("chamado")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("chamado")?.setFilterValue(event.target.value)

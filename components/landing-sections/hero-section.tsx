@@ -10,12 +10,9 @@ import {
   SparkleSVG,
   CurlySVG,
   ExplosionSVG,
-  ZigZagSVG,
-  ZigZag2SVG,
   ThreeLinesSVG,
   CircleArrowSVG,
   ZapSVG,
-  AsteriskSVG,
   ExclamationSVG,
 } from "@/svgs/svgs";
 

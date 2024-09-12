@@ -1,13 +1,8 @@
-import { cn } from "@/lib/utils";
-import { Badge } from "../ui/badge";
+
 import { Syne } from "next/font/google";
 import { Heading } from "../heading";
 import { EyeSVG, Sparkle2SVG, SparkleSVG } from "@/svgs/svgs";
 
-const syne = Syne({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
 
 export const PrevisaoSection = () => {
   return (

@@ -36,7 +36,6 @@ interface GraficoConsultoresDisponiveisOverviewProps {
 
 export function GraficoConsultoresDisponiveisOverview({
   disponiveis,
-  ausentes,
 }: GraficoConsultoresDisponiveisOverviewProps) {
   const chartData = [
     { month: "janeiro", ausentes: 500, disponiveis: Number(disponiveis) },
