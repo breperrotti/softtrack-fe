@@ -43,7 +43,7 @@ const chartConfig = {
 
 export const GraficoBalancoChamadosConsultoresSegmento = memo(() => {
   return (
-    <Card className="border-none shadow-none">
+    <Card className="border-none shadow-none h-full w-full">
       <CardHeader className="items-center pb-4">
         <CardTitle className="text-center text-base lg:text-lg">
           Balanço Chamados x Consultores por Segmento
@@ -53,7 +53,7 @@ export const GraficoBalancoChamadosConsultoresSegmento = memo(() => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="w-full h-auto">
+        <ChartContainer config={chartConfig} className="w-full h-full max-h-[400px]">
           <ResponsiveContainer>
             <RadarChart data={chartData}>
               <PolarAngleAxis dataKey="month" />
