@@ -4,7 +4,7 @@ import React from "react";
 import { OverviewDashboard } from "@/components/overview-dashboard";
 import { AdminBanner } from "@/components/admin-banner";
 
-const OverviewPage = () => {
+const AdminPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <AdminBanner title="Painel Administrador" />
@@ -15,4 +15,4 @@ const OverviewPage = () => {
   );
 };
 
-export default OverviewPage;
+export default AdminPage;
