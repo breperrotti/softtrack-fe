@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { OverviewDashboard } from "@/components/overview-dashboard";
-import { AdminBanner } from "@/components/admin-banner";
+import { OverviewDashboard } from "@/app/(admin)/_components/overview-dashboard";
 
 const AdminPage = () => {
     const [isClient, setIsClient] = useState(false);
@@ -17,7 +16,6 @@ const AdminPage = () => {
 
     return (
         <div className="bg-gray-100 min-h-screen">
-            <AdminBanner title="Painel Administrador" />
             <div className="p-4 sm:p-6 w-full">
                 <OverviewDashboard />
             </div>

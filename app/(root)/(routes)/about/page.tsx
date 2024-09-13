@@ -1,7 +1,7 @@
 "use client";
 
-import { TeamCard } from "@/components/card-team";
-import { Badge } from "@/components/ui/badge";
+import { TeamCard } from "@/app/(root)/_components/card-team";
+import { Badge } from "@/app/(root)/_components/ui/badge";
 
 const AboutPage = () => {
   return (

@@ -1,7 +1,8 @@
 "use client";
 
-import { AdminHeader } from "@/components/admin-header";
-import { AdminNavigation } from "@/components/admin-navigation";
+import { AdminHeader } from "@/app/(admin)/_components/admin-header";
+import { AdminNavigation } from "@/app/(admin)/_components/admin-navigation";
+import React from "react";
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (

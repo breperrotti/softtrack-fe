@@ -1,4 +1,4 @@
-import {DemandasTable} from "@/components/demandas-table";
+import {DemandasTable} from "@/app/(admin)/_components/demandas-table";
 
 
 const TestPage = () => {

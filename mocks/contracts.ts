@@ -17732,6 +17732,7 @@ export type Equipe = {
   consultores: Consultor[];
 };
 
+// noinspection JSUnusedGlobalSymbols
 export const equipes: Equipe[] = [
   {
     id: "EQ001",

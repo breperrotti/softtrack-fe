@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import { useEffect, useState } from "react";
 
 export const useWindowSize = () => {
