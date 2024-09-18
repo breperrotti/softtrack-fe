@@ -19,18 +19,15 @@ import { useCallback, useState } from "react";
 import { Table } from "./ui/table"; 
 import { TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 
-// Mock data (replace with your data fetching logic)
 const contracts = [
   { id: "1", name: "Contract A" },
   { id: "2", name: "Contract B" },
   { id: "3", name: "Contract C" },
 ];
 
-// Mock demand data (replace with your data fetching logic)
 const demandas = [
   { chamado: "Operador está faltando.", id: "123", projeto: "Projeto X", consultor: "John", tipo_chamado: "Suporte", complexidade: "Média", dt_abertura_chamado: "2023-09-01" },
   { chamado: "Bold text column", id: "456", projeto: "Projeto Y", consultor: "Alice", tipo_chamado: "Manutenção", complexidade: "Alta", dt_abertura_chamado: "2023-09-05" },
-  // Add more data as needed
 ];
 
 export const columns: ColumnDef<typeof demandas[0]>[] = [
