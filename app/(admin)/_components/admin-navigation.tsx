@@ -28,7 +28,12 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
       name: "Demandas",
       path: "/admin/demandas",
       icon: <Newspaper />
-    }
+    },
+    {
+      name: "Contratos",
+      path: "/admin/contrats",
+      icon: <Newspaper />
+    },
     ];
 
   const currentPath = usePathname();
