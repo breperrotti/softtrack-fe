@@ -33,7 +33,7 @@ type Contrato = {
   fim_contrato: string;
 };
 
-const contratos: Contrato[] = [
+export const contratos: Contrato[] = [
   {
     projeto: "PROJETO_01",
     descricao: "BBR05",

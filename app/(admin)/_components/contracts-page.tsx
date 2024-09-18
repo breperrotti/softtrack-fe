@@ -1,89 +1,56 @@
 "use client";
 import * as XLSX from "xlsx";
-import * as React from "react";
-import {
-  ColumnDef,
-  SortingState,
-  ColumnFiltersState,
-  VisibilityState,
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-
 import { Button } from "@/components/ui/button";
-import { useCallback, useState } from "react";
-import { Table } from "./ui/table"; 
-import { TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { contratos } from "@/mocks/contracts";
+import { useState } from "react";
+import {GraficoDesvioEscopo } from "@/app/(admin)/_components/charts/grafico-desvio-escopo";
 
-const contracts = [
-  { id: "1", name: "Contract A" },
-  { id: "2", name: "Contract B" },
-  { id: "3", name: "Contract C" },
-];
-
-const demandas = [
-  { chamado: "Operador está faltando.", id: "123", projeto: "Projeto X", consultor: "John", tipo_chamado: "Suporte", complexidade: "Média", dt_abertura_chamado: "2023-09-01" },
-  { chamado: "Bold text column", id: "456", projeto: "Projeto Y", consultor: "Alice", tipo_chamado: "Manutenção", complexidade: "Alta", dt_abertura_chamado: "2023-09-05" },
-];
-
-export const columns: ColumnDef<typeof demandas[0]>[] = [
-  { accessorKey: "chamado", header: "Chamado" },
-  { accessorKey: "id", header: "ID" },
-  { accessorKey: "projeto", header: "Projeto" },
-  { accessorKey: "consultor", header: "Consultor" },
-  { accessorKey: "tipo_chamado", header: "Tipo Chamado" },
-  { accessorKey: "complexidade", header: "Complexidade" },
-  { accessorKey: "dt_abertura_chamado", header: "Data de Abertura" },
-];
 
 function generateFilename() {
   const now = new Date();
   return `Demandas_${now.toISOString().slice(0, 19).replace(/:/g, "-")}.xlsx`;
 }
 
-function exportToXlsx(selectedRows: typeof demandas[0][]) {
+function exportToXlsx(selectedRows: typeof contratos) {
   const ws = XLSX.utils.json_to_sheet(selectedRows);
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, "Demandas");
+  XLSX.utils.book_append_sheet(wb, ws, "Contratos");
   XLSX.writeFile(wb, generateFilename());
 }
 
 export function ContractManagementPage() {
-  const [selectedContract, setSelectedContract] = useState(contracts[0].id);
-  const [sorting, setSorting] = useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
-  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
-  const [rowSelection, setRowSelection] = useState({});
+  const [selectedContract, setSelectedContract] = useState(contratos[1]);
 
-  const table = useReactTable({
-    data: demandas,
-    columns,
-    onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
-    onColumnVisibilityChange: setColumnVisibility,
-    onRowSelectionChange: setRowSelection,
-    state: {
-      sorting,
-      columnFilters,
-      columnVisibility,
-      rowSelection,
-    },
-  });
+  const handleExport = () => {
+    exportToXlsx(contratos);
+  };
 
-  const handleExport = useCallback(() => {
-    const selectedRows = table.getRowModel().rows
-      .filter(row => row.getIsSelected())
-      .map(row => row.original);
-    exportToXlsx(selectedRows);
-  }, [table]);
+  const calculateUtilizationRate = () => {
+    const totalHoursAllocated = selectedContract.horas_gestao;
+    const totalHoursWorked = (
+      (parseFloat(selectedContract.expert.percentual.replace("%", "")) / 100) * totalHoursAllocated +
+      (parseFloat(selectedContract.senior.percentual.replace("%", "")) / 100) * totalHoursAllocated +
+      (parseFloat(selectedContract.pleno.percentual.replace("%", "")) / 100) * totalHoursAllocated +
+      (parseFloat(selectedContract.junior.percentual.replace("%", "")) / 100) * totalHoursAllocated +
+      (parseFloat(selectedContract.estagiario.percentual.replace("%", "")) / 100) * totalHoursAllocated
+    );
+    return ((totalHoursWorked / totalHoursAllocated) * 100).toFixed(2);
+  };
+
+  const calculateTotalCostByExpertise = () => {
+    const expertCost = parseFloat(selectedContract.expert.custo_venda.replace("R$", "").replace(".", "").replace(",", "."));
+    const seniorCost = parseFloat(selectedContract.senior.custo_venda.replace("R$", "").replace(".", "").replace(",", "."));
+    const plenoCost = parseFloat(selectedContract.pleno.custo_venda.replace("R$", "").replace(".", "").replace(",", "."));
+    const juniorCost = parseFloat(selectedContract.junior.custo_venda.replace("R$", "").replace(".", "").replace(",", "."));
+    const estagiarioCost = parseFloat(selectedContract.estagiario.custo_venda.replace("R$", "").replace(".", "").replace(",", "."));
+    return expertCost + seniorCost + plenoCost + juniorCost + estagiarioCost;
+  };
+
+  const calculateManagementCost = () => {
+    return (
+      parseFloat(selectedContract.custo_venda_gestao.replace("R$", "").replace(".", "").replace(",", ".")) * selectedContract.horas_gestao
+    ).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  };
 
   return (
     <div className="w-full p-6">
@@ -95,13 +62,13 @@ export function ContractManagementPage() {
           </label>
           <select
             id="contract-select"
-            value={selectedContract}
-            onChange={(e) => setSelectedContract(e.target.value)}
+            value={selectedContract.projeto}
+            onChange={(e) => setSelectedContract(contratos.find(c => c.projeto === e.target.value)!)}
             className="p-2 border rounded-md"
           >
-            {contracts.map((contract) => (
-              <option key={contract.id} value={contract.id}>
-                {contract.name}
+            {contratos.map((contract) => (
+              <option key={contract.projeto} value={contract.projeto}>
+                {contract.descricao}
               </option>
             ))}
           </select>
@@ -111,25 +78,45 @@ export function ContractManagementPage() {
         </Button>
       </div>
 
+      {/* New Contract Details Card */}
+      <div className="p-4 bg-white rounded-lg mb-6 shadow">
+        <p className="text-xl font-bold">Detalhes do Contrato</p>
+        <p className="text-lg">Nome do Contrato: {selectedContract.projeto}</p>
+        <p className="text-lg">Início do Contrato: {selectedContract.inicio_contrato}</p>
+        <p className="text-lg">Fim do Contrato: {selectedContract.fim_contrato}</p>
+        <p className="text-lg">Valor Total do Contrato: {selectedContract.valor_contrato}</p>
+        <p className="text-lg">Valor da Gestão por Horas: {calculateManagementCost()}</p>
+      </div>
+
       {/* KPIs Section */}
       <div className="grid grid-cols-3 gap-6 mb-6">
-        <div className="p-4 bg-gray-100 rounded-lg text-center">
-          <p className="text-xl font-bold">Custo Total do Projeto</p>
-          <p className="text-3xl">R$ 1.500.000</p>
-          <p className="text-sm text-green-500">+5% (Aumento)</p>
+        <div className="p-4 bg-white rounded-lg text-center shadow ">
+          <p className="text-xl font-bold">Execução do Contrato</p>
+          <p className="text-3xl">
+            {(selectedContract.horas_gestao / selectedContract.baseline) * 100}%
+          </p>
         </div>
-        <div className="p-4 bg-gray-100 rounded-lg text-center">
-          <p className="text-xl font-bold">Taxa de Utilização de Recursos</p>
-          <p className="text-3xl">85%</p>
-          <p className="text-sm text-red-500">-10% (Redução)</p>
+
+        <div className="p-4 bg-white rounded-lg text-center shadow">
+          <p className="text-xl font-bold">Custo por Expertise</p>
+          <p className="text-3xl">
+            {calculateTotalCostByExpertise().toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+          </p>
+          <p className="text-sm text-red-500">Custo total por hora (Consultores)</p>
         </div>
-        <div className="p-4 bg-gray-100 rounded-lg text-center">
-          <p className="text-xl font-bold">Taxa de Substituição de Recursos</p>
-          <p className="text-3xl">4%</p>
-          <p className="text-sm text-red-500">+50% (Alerta)</p>
+
+        <div className="p-4 bg-white rounded-lg text-center shadow">
+          <p className="text-xl font-bold">Utilização de Recursos</p>
+          <p className="text-3xl">{calculateUtilizationRate()}%</p>
         </div>
       </div>
-      {/* End KPIs Section */}
+
+      <div className="grid grid-cols-3 gap-6 mb-6">
+        <GraficoDesvioEscopo/>
+        <GraficoDesvioEscopo/>
+        <GraficoDesvioEscopo/>
+      </div>
+
     </div>
   );
 }
