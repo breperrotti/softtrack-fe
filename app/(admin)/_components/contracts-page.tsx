@@ -37,7 +37,6 @@ import {ToggleGroup, ToggleGroupItem} from "@/components/ui/toggle-group"
 import React, {useState, useContext} from 'react';
 import {ContractContext} from '../_components/contexts/contract-context';
 import {Card} from "@/components/ui/card";
-import {cn} from "@/lib/utils";
 
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);

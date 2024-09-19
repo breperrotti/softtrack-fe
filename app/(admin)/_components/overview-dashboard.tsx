@@ -1,12 +1,26 @@
-import {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import "./style.css";
 import {createSwapy} from "swapy";
 import {Button} from "@/components/ui/button";
 import {ArrowDown, Lock, LockOpen} from "lucide-react";
-import {GraficoBalancoChamadosConsultoresSegmento} from "@/app/(admin)/_components/charts/grafico-balanco-chamados-consultores";
-import {GraficoChsmadosAbertosResolvidosSegmento} from "@/app/(admin)/_components/charts/grafico-chamados-abertos-resolvidos";
+import {
+    GraficoBalancoChamadosConsultoresSegmento
+} from "@/app/(admin)/_components/charts/grafico-balanco-chamados-consultores";
 import {GraficoCustoConsultoresChamados} from "@/app/(admin)/_components/charts/grafico-custo-consultores-chamados";
-import {GraficoConsultoresDisponiveisOverview} from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
+import {
+    GraficoConsultoresDisponiveisOverview
+} from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
+import {CalendarHeatmap} from "@/app/(admin)/_components/ui/heatmap-calendar";
+
+import {Card} from "@/components/ui/card";
+import {Modifiers} from "react-day-picker";
+
+
+import {
+    currentMonthFirstDate,
+    currentMonthLastDate,
+    randomDate,
+} from "@/lib/utils"
 
 const DEFAULT = {
     "1": "a",
@@ -15,6 +29,70 @@ const DEFAULT = {
     "5": "e",
     "2": null,
 };
+
+
+
+export const GithubStreak = [
+    "text-white hover:text-white bg-green-400 hover:bg-green-400",
+    "text-white hover:text-white bg-green-500 hover:bg-green-500",
+    "text-white hover:text-white bg-green-700 hover:bg-green-700",
+]
+
+export const GithubStreakDates = [
+    [...Array(12)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(3))
+    ),
+    [...Array(9)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(3))
+    ),
+    [...Array(6)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(3))
+    ),
+]
+
+export const Heatmap = [
+    "text-white hover:text-white bg-blue-300 hover:bg-blue-300",
+    "text-white hover:text-white bg-green-500 hover:bg-green-500",
+    "text-white hover:text-white bg-amber-400 hover:bg-amber-400",
+    "text-white hover:text-white bg-red-700 hover:bg-red-700",
+]
+
+export const HeatmapDatesWeight = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+export const Rainbow = [
+    "text-white hover:text-white bg-violet-400 hover:bg-violet-400",
+    "text-white hover:text-white bg-indigo-400 hover:bg-indigo-400",
+    "text-white hover:text-white bg-blue-400 hover:bg-blue-400",
+    "text-white hover:text-white bg-green-400 hover:bg-green-400",
+    "text-white hover:text-white bg-yellow-400 hover:bg-yellow-400",
+    "text-white hover:text-white bg-orange-400 hover:bg-orange-400",
+    "text-white hover:text-white bg-red-400 hover:bg-red-400",
+]
+
+export const RainbowDates = [
+    [...Array(3)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(2)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(1)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(3)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(2)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(1)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+    [...Array(3)].map((_) =>
+        randomDate(currentMonthFirstDate(), currentMonthLastDate(2))
+    ),
+]
+
 
 function A() {
     return (
@@ -33,9 +111,15 @@ function C() {
 }
 
 function D() {
+
     return (
         <div data-swapy-item="d">
-            <GraficoChsmadosAbertosResolvidosSegmento/>
+            <Card>
+                <CalendarHeatmap
+                    variantClassnames={GithubStreak}
+                    datesPerVariant={GithubStreakDates}
+                />
+            </Card>
         </div>
     );
 }
@@ -70,7 +154,7 @@ function getItemById(itemId: "a" | "c" | "d" | "e" | null) {
         case "e":
             return <E/>;
         case null:
-            return <Placeholder />;
+            return <Placeholder/>;
     }
 }
 
