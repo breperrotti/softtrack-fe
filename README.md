@@ -36,7 +36,8 @@ A aplicação inclui as seguintes telas:
 - **Task 3.1:** Melhorar Design
 
 ### 4. Equipes
-- **Task 4.1:** Mostrar Equipes
-- **Task 4.2:** Info Consultor. Por exemplo: Senioridade: Pleno, Ultimos 30 dias: 
-- **Task 4.2:** Ausencias Atuais
-- **Task 4.3:** Simulacao de Ausencias Futuras (Preditivo) - Contendo Ferias/Blackfriday/Outros Feriados
+- **Task 4.1:** Mostrar Equipes 
+- **Task 4.2:** Info Consultor. Por exemplo: Senioridade: Pleno, Ultimos 30 dias:
+& Simulacao para Antecipar Férias no Calendario
+- **Task 4.2:** Ausencias Atuais - Geral
+- **Task 4.3:** Simulacao de Ausencias Futuras (Preditivo) - Contendo Ferias/Blackfriday/Outros Feriados - Geral
