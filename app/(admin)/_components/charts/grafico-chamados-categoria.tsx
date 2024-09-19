@@ -22,7 +22,6 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 
-// Adicionando a quantidade total
 const dataCriticidade = [
     { categoria: "Baixa", percentual: 35, quantidade: 70 },
     { categoria: "Média", percentual: 40, quantidade: 80 },

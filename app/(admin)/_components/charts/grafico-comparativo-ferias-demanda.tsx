@@ -86,7 +86,6 @@ export function GraficoComparativoDemanda() {
                 content={<ChartTooltipContent labelFormatter={labelFormatter} indicator="dot" />}
               />
               <Legend content={<ChartLegendContent />} />
-              {/* Linhas para as comparações */}
               <Line type="monotone" dataKey="DemandaFerias" stroke={chartConfig.DemandaFerias.color} />
               <Line type="monotone" dataKey="DemandaGeral" stroke={chartConfig.DemandaGeral.color} />
             </LineChart>
