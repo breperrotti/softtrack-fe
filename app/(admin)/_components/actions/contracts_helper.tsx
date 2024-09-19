@@ -1,4 +1,4 @@
-import { Contrato, Demanda } from "@/mocks/contracts";
+import {Contrato, Demanda} from "@/mocks/contracts";
 
 export const calculateUtilizationRate = (selectedContract: Contrato) => {
     const totalHoursAllocated = selectedContract.horas_gestao;
@@ -91,15 +91,11 @@ export const calculateUtilizationRate = (selectedContract: Contrato) => {
     const estagiario =
       (parseFloat(contrato.estagiario.percentual) / 100) * baseline * parseFloat(contrato.estagiario.custo_venda.replace("R$", "").replace(",", "."));
 
-    const totalConsultores = expert + senior + pleno + junior + estagiario;
-
-    return totalConsultores;
+    return expert + senior + pleno + junior + estagiario;
   };
 
   export const calcularCustoGestao = (contrato: Contrato) => {
-    const custoGestao =
-      parseFloat(contrato.custo_venda_gestao.replace("R$", "").replace(",", ".")) * contrato.horas_gestao;
-    return custoGestao;
+    return parseFloat(contrato.custo_venda_gestao.replace("R$", "").replace(",", ".")) * contrato.horas_gestao;
   };
 
   export const calcularLucroOperacional = (contrato: Contrato) => {

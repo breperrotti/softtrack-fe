@@ -27,7 +27,7 @@ export function GraficoDesvioEscopo({ nome, subtitle, valor, labelFinal }: Grafi
   ]
 
   return (
-    <Card className="border-none shadow-none flex flex-col items-center">
+    <Card className="border-none drop-shadow-md flex flex-col items-center">
       <CardHeader className="flex flex-col items-center">
         <CardTitle>{nome}</CardTitle>
         <CardDescription>{subtitle}</CardDescription>
