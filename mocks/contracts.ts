@@ -1,5 +1,5 @@
 
-type Contrato = {
+export type Contrato = {
   projeto: string;
   descricao: string;
   tipo_contrato: string;
@@ -53,7 +53,7 @@ export const contratos: Contrato[] = [
     fim_contrato: "31/12/2024",
   },
   {
-    projeto: "PROJETO_01",
+    projeto: "PROJETO_02",
     descricao: "BBR05",
     tipo_contrato: "BASIS",
     modulo: "BASIS",
@@ -71,7 +71,7 @@ export const contratos: Contrato[] = [
     fim_contrato: "31/12/2024",
   },
   {
-    projeto: "PROJETO_02",
+    projeto: "PROJETO_03",
     descricao: "RIG10",
     tipo_contrato: "FUNCIONAL",
     modulo: "CO;FI;MASTERSAF;MM;PM;PP;QM;SD;WF;WM",
@@ -88,6 +88,65 @@ export const contratos: Contrato[] = [
     inicio_contrato: "01/01/2024",
     fim_contrato: "31/12/2024",
   }
+];
+
+
+export type Custos = {
+  exercicio: string;
+  periodo: number;
+  codigo_at: string;
+  valor_at: number;
+};
+
+export const custos: Custos[] = [
+  { exercicio: "2024", periodo: 1, codigo_at: "4890742-A0641", valor_at: 15.0 },
+  { exercicio: "2024", periodo: 1, codigo_at: "4890742-A0642", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 1, codigo_at: "4890722-A0662", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 1, codigo_at: "4890742-A0643", valor_at: 40.0 },
+  { exercicio: "2024", periodo: 2, codigo_at: "4890742-A0641", valor_at: 13.64 },
+  { exercicio: "2024", periodo: 2, codigo_at: "4890742-A0642", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 2, codigo_at: "4890722-A0662", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 2, codigo_at: "4890742-A0643", valor_at: 36.36 },
+  { exercicio: "2024", periodo: 3, codigo_at: "4890742-A0641", valor_at: 13.64 },
+  { exercicio: "2024", periodo: 3, codigo_at: "4890742-A0642", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 3, codigo_at: "4890722-A0662", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 3, codigo_at: "4890742-A0643", valor_at: 36.36 },
+  { exercicio: "2024", periodo: 4, codigo_at: "4890742-A0641", valor_at: 15.0 },
+  { exercicio: "2024", periodo: 4, codigo_at: "4890742-A0642", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 4, codigo_at: "4890722-A0662", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 4, codigo_at: "4890742-A0643", valor_at: 40.0 },
+  { exercicio: "2024", periodo: 5, codigo_at: "4890742-A0641", valor_at: 15.0 },
+  { exercicio: "2024", periodo: 5, codigo_at: "4890742-A0642", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 5, codigo_at: "4890722-A0662", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 5, codigo_at: "4890742-A0643", valor_at: 40.0 },
+  { exercicio: "2024", periodo: 6, codigo_at: "4890742-A0641", valor_at: 13.64 },
+  { exercicio: "2024", periodo: 6, codigo_at: "4890742-A0642", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 6, codigo_at: "4890722-A0662", valor_at: 22.73 },
+  { exercicio: "2024", periodo: 6, codigo_at: "4890742-A0643", valor_at: 36.36 },
+  { exercicio: "2024", periodo: 7, codigo_at: "4890742-A0641", valor_at: 15.68 },
+  { exercicio: "2024", periodo: 7, codigo_at: "4890742-A0642", valor_at: 26.14 },
+  { exercicio: "2024", periodo: 7, codigo_at: "4890722-A0662", valor_at: 26.14 },
+  { exercicio: "2024", periodo: 7, codigo_at: "4890742-A0643", valor_at: 41.82 },
+  { exercicio: "2024", periodo: 8, codigo_at: "4890742-A0641", valor_at: 15.0 },
+  { exercicio: "2024", periodo: 8, codigo_at: "4890742-A0642", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 8, codigo_at: "4890722-A0662", valor_at: 25.0 },
+  { exercicio: "2024", periodo: 8, codigo_at: "4890742-A0643", valor_at: 40.0 },
+  { exercicio: "2024", periodo: 9, codigo_at: "4890742-A0641", valor_at: 14.32 },
+  { exercicio: "2024", periodo: 9, codigo_at: "4890742-A0642", valor_at: 23.86 },
+  { exercicio: "2024", periodo: 9, codigo_at: "4890722-A0662", valor_at: 23.86 },
+  { exercicio: "2024", periodo: 9, codigo_at: "4890742-A0643", valor_at: 38.18 },
+  { exercicio: "2024", periodo: 10, codigo_at: "4890742-A0641", valor_at: 15.68 },
+  { exercicio: "2024", periodo: 10, codigo_at: "4890742-A0642", valor_at: 26.14 },
+  { exercicio: "2024", periodo: 10, codigo_at: "4890722-A0662", valor_at: 26.14 },
+  { exercicio: "2024", periodo: 10, codigo_at: "4890742-A0643", valor_at: 41.82 },
+  { exercicio: "2024", periodo: 11, codigo_at: "4890742-A0641", valor_at: 12.95 },
+  { exercicio: "2024", periodo: 11, codigo_at: "4890742-A0642", valor_at: 21.59 },
+  { exercicio: "2024", periodo: 11, codigo_at: "4890722-A0662", valor_at: 21.59 },
+  { exercicio: "2024", periodo: 11, codigo_at: "4890742-A0643", valor_at: 34.55 },
+  { exercicio: "2024", periodo: 12, codigo_at: "4890742-A0641", valor_at: 14.32 },
+  { exercicio: "2024", periodo: 12, codigo_at: "4890742-A0642", valor_at: 23.86 },
+  { exercicio: "2024", periodo: 12, codigo_at: "4890722-A0662", valor_at: 23.86 },
+  { exercicio: "2024", periodo: 12, codigo_at: "4890742-A0643", valor_at: 38.18 },
 ];
 
 export type Demanda = {
@@ -124,7 +183,7 @@ export const demandas: Demanda[] = [
     dia: 26,
     horas: 2.8,
     tipo_horas: "Horas Normais",
-    complexidade: "N3"
+    complexidade: "N3",
   },
   {
     projeto: "PROJETO_01",

@@ -11,22 +11,29 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-const COLORS = ['#8884d8', '#e0e0e0'] 
+const COLORS = ['#8884d8', '#e0e0e0']
 
-const chartData = [
-  { name: 'Escopo Alcançado', value: 75 },
-  { name: 'Desvio', value: 25 },
-]
+type GraficoDesvioEscopoProps = {
+  nome: string
+  subtitle: string
+  valor: number
+  labelFinal: string
+}
 
-export function GraficoDesvioEscopo() {
+export function GraficoDesvioEscopo({ nome, subtitle, valor, labelFinal }: GraficoDesvioEscopoProps) {
+  const chartData = [
+    { name: 'Alcançado', value: valor },
+    { name: 'Desvio', value: 100 - valor },
+  ]
+
   return (
     <Card className="border-none shadow-none flex flex-col items-center">
       <CardHeader className="flex flex-col items-center">
-        <CardTitle>Desvio de Escopo</CardTitle>
-        <CardDescription>Agosto - 2024</CardDescription>
+        <CardTitle>{nome}</CardTitle>
+        <CardDescription>{subtitle}</CardDescription>
       </CardHeader>
       <CardContent className="mt-6 flex justify-center relative">
-        <ResponsiveContainer width={220} height={220}> 
+        <ResponsiveContainer width={220} height={220}>
           <PieChart>
             <Pie
               data={chartData}
@@ -43,15 +50,15 @@ export function GraficoDesvioEscopo() {
             </Pie>
           </PieChart>
         </ResponsiveContainer>
-        <div 
+        <div
           className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-          style={{ transform: 'translateY(-5%)' }} 
+          style={{ transform: 'translateY(-5%)' }}
         >
-          <span className="text-4xl font-bold">75%</span>
+          <span className="text-4xl font-bold">{valor}%</span>
         </div>
       </CardContent>
       <CardFooter className="flex-col items-center gap-2 text-sm mt-4">
-        <div className="text-center font-medium">Escopo Alcançado</div>
+        <div className="text-center font-medium">{labelFinal}</div>
       </CardFooter>
     </Card>
   )
