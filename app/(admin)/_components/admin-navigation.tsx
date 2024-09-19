@@ -6,7 +6,8 @@ import {
   ChevronsLeft,
   ChevronsRight,
   Home,
-  Newspaper
+  Newspaper, 
+  Paperclip
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,7 +33,7 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
     {
       name: "Contratos",
       path: "/admin/contrats",
-      icon: <Newspaper />
+      icon: <Paperclip/>
     },
     ];
 
