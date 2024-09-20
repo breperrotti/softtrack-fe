@@ -38,7 +38,7 @@ export function Grafico1Hero() {
   return (
     <Card className="border-none shadow-none">
       <CardContent className="-mb-28">
-        <CardHeader className="font-bold text-xl text-center">Gráficos de barra</CardHeader>
+        <CardHeader className="font-bold text-xl text-center">Abertos x Resolvidos</CardHeader>
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />

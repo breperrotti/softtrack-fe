@@ -3,35 +3,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./
 const accordionData = [
   {
     value: "item-1",
-    trigger: "Como posso começar a usar o produto?",
-    content: "Para começar, você precisa se inscrever no nosso site e criar uma conta. Após o cadastro, você receberá um e-mail de confirmação com instruções para acessar o painel de controle e começar a explorar as funcionalidades do produto",
+    trigger: "Como posso começar a usar a solução de gestão preditiva?",
+    content: "Para começar, inscreva-se no nosso site e crie uma conta. Após o cadastro, você receberá um e-mail com instruções para acessar o painel e começar a explorar as ferramentas de análise preditiva e otimização de recursos.",
     color: "bg-roxo" 
   },
   {
     value: "item-2",
-    trigger: "O produto oferece suporte técnico?",
-    content: "Sim, oferecemos suporte técnico completo. Você pode entrar em contato com nossa equipe de suporte através do e-mail suporte@exemplo.com ou pelo chat ao vivo disponível em nosso site durante o horário comercial.",
+    trigger: "O sistema oferece suporte técnico especializado?",
+    content: "Sim, nossa equipe de suporte está disponível para ajudar com qualquer questão técnica. Entre em contato por e-mail ou pelo nosso chat ao vivo, disponível durante o horário comercial, para suporte completo.",
     color: "bg-verde" 
   },
   {
     value: "item-3",
-    trigger: "Quais são as opções de pagamento disponíveis?",
-    content: "Aceitamos diversas formas de pagamento, incluindo cartões de crédito, débito, e transferências bancárias. Você pode escolher sua forma de pagamento preferida durante o processo de checkout.",
+    trigger: "Como a análise preditiva ajuda minha empresa?",
+    content: "Nosso sistema utiliza IA avançada para prever demandas e otimizar a alocação de recursos, garantindo que sua empresa esteja sempre preparada para mudanças. Essas previsões são baseadas em dados históricos e em tempo real, permitindo uma gestão eficiente.",
     color: "bg-roxo"
   },
   {
     value: "item-4",
-    trigger: "O que devo fazer se encontrar um erro ou problema técnico?",
-    content: "Se você encontrar um erro ou problema técnico, por favor, entre em contato com nossa equipe de suporte técnico. Forneça detalhes sobre o problema para que possamos resolvê-lo o mais rápido possível.",
+    trigger: "A solução tem validação científica?",
+    content: "Sim, nossa solução foi validada cientificamente pela Universidade de St. Gallen, comprovando a eficácia de nossa abordagem.",
     color: "bg-verde"
   },
   {
     value: "item-5",
-    trigger: "O produto é compatível com dispositivos móveis?",
-    content: "Sim, o nosso produto é totalmente compatível com dispositivos móveis. Você pode acessar todas as funcionalidades através do seu smartphone ou tablet, garantindo uma experiência contínua e eficiente em qualquer lugar.",
+    trigger: "O sistema funciona em dispositivos móveis?",
+    content: "Sim, nossa plataforma é totalmente compatível com dispositivos móveis. Isso permite que você acesse todas as funcionalidades, monitore as previsões e tome decisões estratégicas diretamente de seu smartphone ou tablet.",
     color: "bg-roxo" 
   }
 ];
+
 
 export const AccordionFAQ = () => {
   return (

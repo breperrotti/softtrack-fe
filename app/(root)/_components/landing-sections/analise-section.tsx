@@ -7,26 +7,22 @@ export default function AnalisePrevisaoSection() {
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div>
           <Heading
-            title="Análise de Demandas"
-            badge="Análise de Demandas"
+            title="Análise de Demandas e Contratos com Suporte Preditivo"
+            badge="Análise de Demandas e Contratos"
             classNameBadge="flex justify-center md:justify-start"
             classNameTitle="text-center md:text-start"
             id="analise"
           />
           <p className="mb-4 mt-4 text-center md:text-start text-base md:text-lg text-muted-foreground">
-            Com a Análise de Demandas, você obtém uma visão clara da
-            complexidade e criticidade de cada solicitação, permitindo uma
-            alocação de recursos precisa e eficiente.
+          Com a Análise de Demandas e Contratos, o gestor obtém uma visão clara e detalhada da complexidade 
+          e criticidade de cada solicitação e acordo. Isso permite uma alocação precisa e eficiente dos recursos, 
+          sempre baseada em dados sólidos.
           </p>
           <p className="mb-4 text-center md:text-start text-base md:text-lg text-muted-foreground">
-            Nossa solução avalia automaticamente as demandas, classificando-as
-            por complexidade e impacto, para que as tarefas mais críticas sejam
-            priorizadas.
-          </p>
-          <p className="text-center md:text-start text-base md:text-lg text-muted-foreground">
-            Baseada em dados históricos, a ferramenta também sugere abordagens e
-            prazos, garantindo que sua equipe atenda as necessidades mais
-            urgentes de forma rápida e eficaz
+          Nossa solução faz uso de análise preditiva, avaliando automaticamente demandas e contratos 
+          com base em dados históricos e algoritmos de machine learning. Classificamos as tarefas por 
+          complexidade e impacto, mas é o gestor quem toma as decisões finais, com todas as informações 
+          necessárias para priorizar o que realmente importa.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-8">

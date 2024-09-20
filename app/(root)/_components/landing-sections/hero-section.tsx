@@ -26,7 +26,7 @@ export const Hero = () => {
     <section className="mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
         <div className="text-center lg:text-start space-y-6 max-w-3xl">
-          <Badge variant={"neutral"}>Lorem ipsum dolor, sit amet co</Badge>
+          <Badge variant={"neutral"}>Powered by Softtek</Badge>
           <main className={cn("text-5xl md:text-7xl font-bold", syne.className)}>
             <h1 className="inline">
               Transforme <br /> <span className="inline text-verde">Dados</span>{" "}
@@ -34,12 +34,11 @@ export const Hero = () => {
             </h1>{" "}
             <h2 className="inline font-bold">
               <span className="inline text-roxo font-bold">Decisões</span>{" "}
-              através da IA
+              através de Analise Preditiva
             </h2>
           </main>
           <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-            Antecipe tendências e mova-se à frente da concorrência. Acelere seu
-            processo decisório com inteligência artificial.
+          Antecipe tendências e fique à frente da concorrência, acelerando seu processo decisório com inteligência artificial de ponta.
           </p>
           <div className="space-y-4 md:space-x-4">
             <Button className="w-2/3 sm:w-1/3">Quero saber mais</Button>

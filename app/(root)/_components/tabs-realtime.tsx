@@ -3,9 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/(root)/_componen
 const tabsData = [
   {
     value: "item-2",
-    trigger: "Priorização Inteligente",
+    trigger: "Analise Preditiva",
     content:
-      "Nossa IA avalia a criticidade das demandas, sugerindo prioridades para focar no que realmente importa.",
+      "Nossa analise preditiva avalia a criticidade das demandas, sugerindo prioridades para focar no que realmente importa.",
   },
   {
     value: "item-3",
@@ -19,6 +19,11 @@ const tabsData = [
     content:
       "Gere relatórios em tempo real para avaliar a performance e ajustar estratégias conforme necessário.",
   },
+  {
+    "value": "item-6",
+    "trigger": "Exportação de Demandas para Excel",
+    "content": "Facilite a análise e o compartilhamento de informações ao exportar as demandas para planilhas Excel, permitindo uma visualização detalhada e organizada dos dados para tomada de decisões mais eficazes."
+  }
 ];
 
 export const TabsRealtime = () => {

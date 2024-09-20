@@ -30,19 +30,19 @@ const chartConfig = {
     label: "Consultores",
   },
   ti: {
-    label: "T.I",
+    label: "N1",
     color: "#5F5DF1",
   },
   vendas: {
-    label: "Vendas",
+    label: "N2",
     color: "#00CEBE",
   },
   rh: {
-    label: "RH",
+    label: "N3",
     color: "#D9014B",
   },
   suporte: {
-    label: "Suporte",
+    label: "Outras",
     color: "#CECDEE",
   },
 } satisfies ChartConfig;
@@ -55,7 +55,7 @@ export function Grafico2Hero() {
   return (
     <Card className="flex flex-col overflow-hidden border-none shadow-none">
       <CardHeader className="items-center pb-0">
-        <CardTitle className="text-center">Gráficos de pizza</CardTitle>
+        <CardTitle className="text-center">Retrabalho por Complexidade</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -96,7 +96,7 @@ export function Grafico2Hero() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Funcionários
+                          Horas
                         </tspan>
                       </text>
                     );
