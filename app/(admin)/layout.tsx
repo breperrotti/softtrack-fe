@@ -10,8 +10,6 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
 
     const { user } = useUser()
 
-    if (!user) redirect("/")
-
   return (
     <div className="fixed inset-0 flex flex-col md:flex-row">
       <AdminNavigation className="w-full md:w-auto" />

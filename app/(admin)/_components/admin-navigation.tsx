@@ -8,7 +8,7 @@ import {
     Home,
     Newspaper,
     Paperclip, Users,
-    User, Settings
+    User, Settings, ArrowUpRight
 } from "lucide-react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
@@ -46,10 +46,11 @@ export const AdminNavigation = ({className}: NavigationProps) => {
             name: "Consultores",
             path: "/admin/consultores",
             icon: <User/>
-        },        {
+        },
+        {
             name: "Personalização",
             path: "/admin/personalizacao",
-            icon: <Settings />
+            icon: <Settings/>
         },
     ];
 
@@ -62,8 +63,8 @@ export const AdminNavigation = ({className}: NavigationProps) => {
             } transition-all duration-300`}
         >
             <div className="flex h-full max-h-screen flex-col gap-2">
-                <div className="flex h-14 items-center border-b px-6 lg:h-[60px] justify-between gap-x-4">
-                    <Link href="/public" className="flex items-center gap-2 font-semibold">
+                <div className="flex h-14 items-center border-b px-6 lg:h-[60px] justify-between">
+                    <Link href="/" className="flex items-center gap-2 font-semibold">
                         {isExpanded && <span className="text-3xl">SoftTrack</span>}
                     </Link>
                     <Button
@@ -92,6 +93,24 @@ export const AdminNavigation = ({className}: NavigationProps) => {
                         ))}
                     </nav>
                 </div>
+                {isExpanded && (
+                    <div className={"p-3"}>
+                        <div
+                            className={"w-full h-44 bg-white drop-shadow-lg border px-3 rounded-lg flex flex-col items-center"}>
+                            <div className={"flex flex-col p-3"}>
+                                <h1 className={"text-3xl font-bold"}>Evoluções <br/> Softtrack</h1>
+                                <p>Descubra o que vem por aí!</p>
+                            </div>
+                            <div className={""}>
+                                <Link href={"/admin/blog"}>
+                                    <Button className={" flex gap-x-2 "}>
+                                        Novidades Softtrack <ArrowUpRight/>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -54,8 +54,8 @@ export const FaqSection = () => {
           <QuestionSVG />
         </div>
         <div
-          className="absolute transform z-10 hidden md:block rotate-12"
-          style={{ top: "%", left: "24%" }}
+          className="absolute transform z-10 hidden 2xl:block rotate-12"
+          style={{ top: "85%", left: "24%" }}
         >
           <QuestionSVG />
         </div>
@@ -116,7 +116,7 @@ export const FaqSection = () => {
           <Question3SVG />
         </div>
         <div
-          className="absolute transform z-10 hidden md:block -rotate-12"
+          className="absolute transform z-10 hidden 2xl:block -rotate-12"
           style={{ top: "40%", left: "25%" }}
         >
           <Question3SVG />

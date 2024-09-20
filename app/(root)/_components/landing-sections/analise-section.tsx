@@ -36,7 +36,7 @@ export default function AnalisePrevisaoSection() {
       </div>
 
       <div
-        className="absolute transform -rotate-90 z-10 hidden lg:block"
+        className="absolute transform -rotate-90 z-10 hidden 2xl:block"
         style={{ top: "40%", left: "-4%" }}
       >
         <Curly2SVG />

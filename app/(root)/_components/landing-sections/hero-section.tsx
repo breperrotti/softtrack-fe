@@ -83,7 +83,7 @@ export const Hero = () => {
         <ThreeLinesSVG />
       </div>
       <div
-        className="absolute top-0 left-0 transform rotate-45 hidden xl:block"
+        className="absolute top-0 left-0 transform rotate-45 hidden 2xl:block"
         style={{ top: "75%", left: "-2%" }}
       >
         <CircleArrowSVG />

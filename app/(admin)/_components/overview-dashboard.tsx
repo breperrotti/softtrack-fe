@@ -12,6 +12,7 @@ import {
 } from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
 
 import {Card} from "@/components/ui/card";
+import {GraficoChamadosPorCategoria} from "@/app/(admin)/_components/charts/grafico-chamados-categoria";
 
 const DEFAULT = {
     "1": "a",
@@ -29,6 +30,17 @@ function A() {
     );
 }
 
+function Placeholder() {
+    return (
+        <div
+            className="space-y-6 text-white font-bold text-2xl w-full h-full min-h-[400px] flex flex-col items-center justify-center bg-roxo rounded-xl"
+            data-swapy-item="b">
+            Você pode mover os gráficos
+            <ArrowDown width={40} height={40}/>
+        </div>
+    );
+}
+
 function C() {
     return (
         <div data-swapy-item="c">
@@ -41,20 +53,7 @@ function D() {
 
     return (
         <div data-swapy-item="d">
-            <Card className={"bg-roxo text-white flex items-center justify-center w-[435px] h-[435px]"}>
-                teste
-            </Card>
-        </div>
-    );
-}
-
-function Placeholder() {
-    return (
-        <div
-            className="space-y-6 text-white font-bold text-2xl w-full h-full min-h-[400px] flex flex-col items-center justify-center bg-roxo rounded-xl"
-            data-swapy-item="b">
-            Você pode mover os gráficos
-            <ArrowDown width={40} height={40}/>
+            <GraficoChamadosPorCategoria nome={"Criticidade e Complexidade por Categoria"} subtitle={"Setembro - 2024"} />
         </div>
     );
 }
@@ -89,23 +88,12 @@ export function OverviewDashboard() {
             : DEFAULT;
 
     const [swapyInstance, setSwapyInstance] = useState<any>(null);
-    const [isSwapyEnabled, setIsSwapyEnabled] = useState(true);
 
     useEffect(() => {
         const container = document.querySelector(".teste")!;
         const swapy = createSwapy(container, {animation: "spring"});
-        swapy.onSwap(({data}) => {
-            localStorage.setItem("slotItem", JSON.stringify(data.object));
-        });
         setSwapyInstance(swapy);
     }, []);
-
-    const toggleSwapy = () => {
-        if (swapyInstance) {
-            swapyInstance.enable(!isSwapyEnabled);
-            setIsSwapyEnabled(!isSwapyEnabled);
-        }
-    };
 
     return (
         <div className="relative">
@@ -128,12 +116,6 @@ export function OverviewDashboard() {
                     {getItemById(slotItems["5"])}
                 </div>
             </div>
-            <Button
-                className="fixed bottom-2 right-2 z-50"
-                onClick={toggleSwapy}
-            >
-                {isSwapyEnabled ? <LockOpen/> : <Lock/>}
-            </Button>
         </div>
     );
 }
