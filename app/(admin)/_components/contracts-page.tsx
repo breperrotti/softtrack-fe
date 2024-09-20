@@ -43,6 +43,7 @@ import { GraficoComparativoDemanda } from "./charts/grafico-comparativo-ferias-d
 import { GraficoOciosidadePie } from "./charts/grafico-ociosidade";
 import { GraficoReworkPorComplexidade } from "./charts/grafico-rework";
 
+
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);
     const [showModal, setShowModal] = useState(false);

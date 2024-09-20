@@ -42,7 +42,7 @@ export function GraficoChsmadosAbertosResolvidosSegmento() {
     return (
         <Card className="border-none shadow-none h-full w-full">
             <CardHeader className="text-center">
-                <CardTitle>Número de abertos Abertos x Resolvidos por segmento</CardTitle>
+                <CardTitle>Número de chamados Abertos x Resolvidos por segmento</CardTitle>
                 <CardDescription>Agosto - 2024</CardDescription>
             </CardHeader>
             <CardContent>

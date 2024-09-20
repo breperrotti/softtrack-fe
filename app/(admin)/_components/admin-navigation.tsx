@@ -32,7 +32,7 @@ export const AdminNavigation = ({ className }: NavigationProps) => {
     },
     {
       name: "Contratos",
-      path: "/admin/contrats",
+      path: "/admin/contratos",
       icon: <Paperclip/>
     },
     ];

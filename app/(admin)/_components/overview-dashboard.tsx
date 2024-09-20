@@ -1,12 +1,17 @@
-import {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import "./style.css";
 import {createSwapy} from "swapy";
 import {Button} from "@/components/ui/button";
 import {ArrowDown, Lock, LockOpen} from "lucide-react";
-import {GraficoBalancoChamadosConsultoresSegmento} from "@/app/(admin)/_components/charts/grafico-balanco-chamados-consultores";
-import {GraficoChsmadosAbertosResolvidosSegmento} from "@/app/(admin)/_components/charts/grafico-chamados-abertos-resolvidos";
+import {
+    GraficoBalancoChamadosConsultoresSegmento
+} from "@/app/(admin)/_components/charts/grafico-balanco-chamados-consultores";
 import {GraficoCustoConsultoresChamados} from "@/app/(admin)/_components/charts/grafico-custo-consultores-chamados";
-import {GraficoConsultoresDisponiveisOverview} from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
+import {
+    GraficoConsultoresDisponiveisOverview
+} from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
+
+import {Card} from "@/components/ui/card";
 
 const DEFAULT = {
     "1": "a",
@@ -15,6 +20,7 @@ const DEFAULT = {
     "5": "e",
     "2": null,
 };
+
 
 function A() {
     return (
@@ -33,9 +39,12 @@ function C() {
 }
 
 function D() {
+
     return (
         <div data-swapy-item="d">
-            <GraficoChsmadosAbertosResolvidosSegmento/>
+            <Card className={"bg-roxo text-white flex items-center justify-center"}>
+                teste
+            </Card>
         </div>
     );
 }
@@ -70,7 +79,7 @@ function getItemById(itemId: "a" | "c" | "d" | "e" | null) {
         case "e":
             return <E/>;
         case null:
-            return <Placeholder />;
+            return <Placeholder/>;
     }
 }
 
