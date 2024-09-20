@@ -19,12 +19,14 @@ export const HeroCards = () => {
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <div className="rounded-full bg-gradient-to-br from-teal-400 to-indigo-700 h-8 w-8"></div>
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Funcionário #54732</CardTitle>
-            <CardDescription>@lorem_ipsum</CardDescription>
+            <CardTitle className="text-lg">Consultor #54732</CardTitle>
+            <CardDescription>@consultor</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>Essa Dashboard é maneeeeira!</CardContent>
+        <CardContent>
+          Nossa, essa análise preditiva me economizou tempo e recurso!
+        </CardContent>
       </Card>
 
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
@@ -32,15 +34,15 @@ export const HeroCards = () => {
           <div
             className="absolute bg-gradient-to-br from-teal-400 to-indigo-700 -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
-          <CardTitle className="text-center">Lorem Ipsum</CardTitle>
+          <CardTitle className="text-center">Founder</CardTitle>
           <CardDescription className="font-normal text-primary">
-            Lorem Ipsum
+            CTO
           </CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab amet adipisci.
+          Consegui gerir melhor meus consultores, e aumentando a eficiência da equipe.
           </p>
         </CardContent>
 

@@ -8,20 +8,20 @@ export const Guides = () => {
       <div className="w-full flex justify-center ">
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full">
           <GuideCard
-            title="Gestão de Capacidade em Tempo Real"
+            title="Otimização da Capacidade em Tempo Real"
             href="#realtime"
             icon={<ClockArrowUp size={40} />}
             className=""
             color="#5623E2"
           />
           <GuideCard
-            title="Análise de Demandas"
+            title="Análise Inteligente de Demandas e Contratos"
             href="#analise"
             icon={<ChartLine size={40}/>}
             color="#EF462F"
           />
           <GuideCard
-            title="Previsão de Tendências"
+            title="Previsão Avançada de Tendências"
             href="#previsao"
             icon={<SquareStack size={40}/>}
             className=""

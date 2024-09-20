@@ -23,31 +23,32 @@ const AboutPage = () => {
           image="https://github.com/RafaelRMJesus.png"
           github="RafaelRMJesus"
           name="Rafael - RM98296"
-          description="Head of Frontend"
+          description="Head of Front-end Development"
         />
         <TeamCard
           color="#EF462F"
           image="https://github.com/bellujrb.png"
+          github="bellujrb"
           name="Belluzzo - RM99282"
-          description="Head of Global, Discovery, Pitch"
+          description="Head of Data Analytics"
         />
         <TeamCard
           color="#FADF0B"
           image="/grupo3.jpeg"
           name="Platini - RM551212"
-          description="Frontend Developer"
+          description="Frontend Specialist"
         />
         <TeamCard
           color="#D9014B"
           image="/grupo2.jpeg"
           name="Gabriel - RM97753"
-          description="Head of Back-end Developer & Pitch"
+          description="Head of Back-end Specialist"
         />
         <TeamCard
           color="#5623E2"
           image="/grupo1.jpeg"
           name="Breno - RM550434"
-          description="Back-end Developer & Pitch"
+          description="Back-end Specialist"
         />
       </div>
     </div>

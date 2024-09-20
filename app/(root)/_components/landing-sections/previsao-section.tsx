@@ -26,41 +26,29 @@ export const PrevisaoSection = () => {
 
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+
               <div className="p-6 rounded-md w-full border-2 border-blac bg-white">
                 <p className="text-lg md:text-xl text-muted-foreground">
-                  Nossas soluções de previsão de tendências são projetadas para fornecer insights detalhados e
-                  precisos, permitindo que sua empresa se mantenha competitiva e inovadora. Utilizamos algoritmos
-                  avançados que analisam dados históricos e em tempo real, identificando padrões emergentes e
-                  prevendo o impacto de mudanças no mercado.
+                  Nossa solução de previsão de tendências fornece insights claros e detalhados, 
+                  ajudando sua empresa a antecipar necessidades e otimizar a alocação de recursos. 
+                  Utilizando algoritmos avançados de análise preditiva, o sistema identifica padrões 
+                  em dados históricos e em tempo real, oferecendo uma visão precisa das próximas demandas. 
+                  Entretanto, a decisão final é sempre sua — nossa tecnologia é uma ferramenta para apoiar
+                  sua tomada de decisões.
                 </p>
               </div>
 
               <div className="p-6 rounded-md w-full border-2 border-blac bg-white">
                 <p className="text-lg md:text-xl text-muted-foreground">
-                  Com nossa tecnologia, você pode antecipar movimentos estratégicos, otimizar campanhas de marketing,
-                  ajustar linhas de produtos e melhorar a alocação de recursos. Nossa plataforma é equipada com uma
-                  interface intuitiva que facilita a visualização de dados complexos e a criação de relatórios personalizados
-                  para sua equipe.
+                  Com nossa plataforma, você terá à sua disposição todas as informações necessárias para gerir 
+                  de forma eficiente a capacidade de sua equipe e atender às demandas futuras. A ferramenta 
+                  oferece uma interface simples e intuitiva que facilita a visualização de dados complexos, 
+                  mas é o gestor que direciona as ações e implementa as decisões. Nossa solução proporciona 
+                  o suporte necessário para garantir que suas decisões sejam sempre informadas e estratégicas.
                 </p>
               </div>
 
-              <div className="p-6 rounded-md w-full border-2 border-blac bg-white">
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  A inteligência artificial de última geração que utilizamos é treinada em vastas quantidades de dados
-                  setoriais, o que permite a identificação de oportunidades e ameaças antes mesmo que elas se
-                  manifestem. Isso oferece uma vantagem competitiva significativa, dando a sua empresa o tempo necessário
-                  para se adaptar e responder às mudanças com agilidade.
-                </p>
-              </div>
 
-              <div className="p-6 rounded-md w-full border-2 border-blac bg-white">
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  Em um mundo onde a informação se move rapidamente, ser capaz de prever tendências de mercado com
-                  precisão é fundamental para o sucesso. Com nossas ferramentas, você estará bem equipado para tomar
-                  decisões informadas e garantir que sua empresa esteja sempre à frente, explorando novas oportunidades e
-                  mitigando riscos com confiança.
-                </p>
-              </div>
             </div>
           </div>
         </div>

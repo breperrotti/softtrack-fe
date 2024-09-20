@@ -3,73 +3,75 @@ import { Marquee } from '../ui/marquee'
 import Image from 'next/image'
 
 const reviews = [
-  {
-     name: 'Rafaela',
-     username: '@rafaela_souza',
-     body: 'Nunca vi uma dashboard como essa. É simplesmente fantástica! Recomendo a todos.',
-     img: 'https://github.com/Rafaela.png',
-  },
-  {
-     name: 'Ana',
-     username: '@ana_paula',
-     body: 'Essa dashboard mudou a forma como acompanho meus dados. É intuitiva e muito eficaz.',
-     img: 'https://github.com/Ana.png',
-  },
-  {
-     name: 'João',
-     username: '@joao_silva',
-     body: 'Impressionante o nível de detalhamento. Me ajudou a tomar decisões com muito mais confiança.',
-     img: 'https://github.com/Joao.png',
-  },
-  {
-     name: 'Maria',
-     username: '@maria_oliveira',
-     body: 'A interface é tão amigável que até quem não entende de tecnologia consegue usar facilmente.',
-     img: 'https://github.com/Maria.png',
-  },
-  {
-     name: 'Juliana',
-     username: '@juliana_santos',
-     body: 'Essa dashboard realmente superou minhas expectativas. Funcional e muito bem desenhada.',
-     img: 'https://github.com/Juliana.png',
-  },
-  {
-     name: 'Ricardo',
-     username: '@ricardo_martins',
-     body: 'O design é impecável e os recursos são exatamente o que eu precisava. Perfeita!',
-     img: 'https://github.com/Ricardo.png',
-  },
-  {
-     name: 'Carolina',
-     username: '@carolina_ferreira',
-     body: 'Nunca foi tão fácil acompanhar o desempenho da minha equipe. Essa dashboard é indispensável.',
-     img: 'https://github.com/Carolina.png',
-  },
-  {
-     name: 'Pedro',
-     username: '@pedro_almeida',
-     body: 'A clareza das informações apresentadas faz toda a diferença no meu trabalho. Excelente ferramenta!',
-     img: 'https://github.com/Pedro.png',
-  },
-  {
-     name: 'Fernanda',
-     username: '@fernanda_lima',
-     body: 'A praticidade dessa dashboard me economiza horas de trabalho. Incrível!',
-     img: 'https://github.com/Fernanda.png',
-  },
-  {
-     name: 'Luiz',
-     username: '@luiz_costa',
-     body: 'Finalmente uma dashboard que atende todas as minhas necessidades. Estou muito satisfeito.',
-     img: 'https://github.com/Luiz.png',
-  },
-  {
-     name: 'Mariana',
-     username: '@mariana_ribeiro',
-     body: 'A integração com outras ferramentas é o que mais me impressionou. Muito bem pensada.',
-     img: 'https://github.com/Mariana.png',
-  },
-]
+   {
+      name: 'Rafaela (Gerente de Projetos)',
+      username: '@rafaela_souza',
+      body: 'A dashboard me ajuda a antecipar demandas e ajustar os recursos com precisão. Fundamental para evitar gargalos.',
+      img: 'https://github.com/Rafaela.png',
+   },
+   {
+      name: 'Ana (Gerente de Dados)',
+      username: '@ana_paula',
+      body: 'Com as previsões claras e precisas, posso tomar decisões mais rápidas e garantir a eficiência da equipe.',
+      img: 'https://github.com/Ana.png',
+   },
+   {
+      name: 'João (Diretor de Operações)',
+      username: '@joao_silva',
+      body: 'A previsão de demandas me permite alocar minha equipe estrategicamente. Decisões muito mais confiantes.',
+      img: 'https://github.com/Joao.png',
+   },
+   {
+      name: 'Maria (Gerente de RH)',
+      username: '@maria_oliveira',
+      body: 'A interface fácil de usar e as previsões de equipe me ajudam a otimizar a alocação de pessoal com agilidade.',
+      img: 'https://github.com/Maria.png',
+   },
+   {
+      name: 'Juliana (Gerente de TI)',
+      username: '@juliana_santos',
+      body: 'As análises preditivas são essenciais para ajustar rapidamente os recursos e evitar sobrecarga.',
+      img: 'https://github.com/Juliana.png',
+   },
+   {
+      name: 'Ricardo (Diretor Financeiro)',
+      username: '@ricardo_martins',
+      body: 'A previsão de demandas facilita o planejamento financeiro e garante que os recursos estejam bem alocados.',
+      img: 'https://github.com/Ricardo.png',
+   },
+   {
+      name: 'Carolina (Gerente de Operações)',
+      username: '@carolina_ferreira',
+      body: 'Essa dashboard facilita a alocação e monitoramento da equipe. As decisões são mais rápidas e assertivas.',
+      img: 'https://github.com/Carolina.png',
+   },
+   {
+      name: 'Pedro (Gerente de Produção)',
+      username: '@pedro_almeida',
+      body: 'A clareza nas previsões permite otimizar a produção e antecipar demandas. Ferramenta essencial.',
+      img: 'https://github.com/Pedro.png',
+   },
+   {
+      name: 'Fernanda (Gerente de Planejamento)',
+      username: '@fernanda_lima',
+      body: 'As previsões precisas me ajudam a planejar melhor os recursos e minimizar problemas futuros.',
+      img: 'https://github.com/Fernanda.png',
+   },
+   {
+      name: 'Luiz (Diretor de Operações)',
+      username: '@luiz_costa',
+      body: 'A dashboard é essencial para ajustar a equipe em tempo real com base nas previsões e nos insights.',
+      img: 'https://github.com/Luiz.png',
+   },
+   {
+      name: 'Mariana (Head de Estratégia)',
+      username: '@mariana_ribeiro',
+      body: 'As previsões de demanda são fundamentais para decisões estratégicas rápidas e precisas.',
+      img: 'https://github.com/Mariana.png',
+   },
+ ]
+ 
+ 
 
 const firstRow = reviews.slice(0, reviews.length / 2)
 const secondRow = reviews.slice(reviews.length / 2)
