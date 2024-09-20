@@ -51,7 +51,7 @@ import {
 import {GraficoCustoConsultoresChamados} from "@/app/(admin)/_components/charts/grafico-custo-consultores-chamados";
 import {GraficoDemandasSenioridade} from "@/app/(admin)/_components/charts/grafico-demandas-senioridade-overview";
 import {GraficoOciosidadePie} from "@/app/(admin)/_components/charts/grafico-ociosidade";
-import {GraficoRetrabalho, GraficoReworkPorComplexidade} from "@/app/(admin)/_components/charts/grafico-rework";
+import {GraficoRetrabalho} from "@/app/(admin)/_components/charts/grafico-rework";
 
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);

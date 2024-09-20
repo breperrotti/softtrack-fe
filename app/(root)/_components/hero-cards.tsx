@@ -97,7 +97,7 @@ export const HeroCards = () => {
         </CardFooter>
       </Card>
 
-      <Card className="absolute top-[150px] left-[50px] w-72">
+      <Card className="absolute top-[150px] left-[50px] w-72 mt-4">
         <Grafico2Hero />
       </Card>
 

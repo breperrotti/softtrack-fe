@@ -34,7 +34,7 @@ export const Hero = () => {
             </h1>{" "}
             <h2 className="inline font-bold">
               <span className="inline text-roxo font-bold">Decisões</span>{" "}
-              através de Analise Preditiva
+              através de Análise Preditiva
             </h2>
           </main>
           <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
