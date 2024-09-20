@@ -37,6 +37,21 @@ import {ToggleGroup, ToggleGroupItem} from "@/components/ui/toggle-group"
 import React, {useState, useContext} from 'react';
 import {ContractContext} from '../_components/contexts/contract-context';
 import {Card} from "@/components/ui/card";
+import {
+    GraficoBalancoChamadosConsultoresSegmento
+} from "@/app/(admin)/_components/charts/grafico-balanco-chamados-consultores";
+import {
+    GraficoChsmadosAbertosResolvidosSegmento
+} from "@/app/(admin)/_components/charts/grafico-chamados-abertos-resolvidos";
+import {GraficoChamadosPorCategoria} from "@/app/(admin)/_components/charts/grafico-chamados-categoria";
+import {GraficoComparativoDemanda} from "@/app/(admin)/_components/charts/grafico-comparativo-ferias-demanda";
+import {
+    GraficoConsultoresDisponiveisOverview
+} from "@/app/(admin)/_components/charts/grafico-consultores-disponiveis-overview";
+import {GraficoCustoConsultoresChamados} from "@/app/(admin)/_components/charts/grafico-custo-consultores-chamados";
+import {GraficoDemandasSenioridade} from "@/app/(admin)/_components/charts/grafico-demandas-senioridade-overview";
+import {GraficoOciosidadePie} from "@/app/(admin)/_components/charts/grafico-ociosidade";
+import {GraficoReworkPorComplexidade} from "@/app/(admin)/_components/charts/grafico-rework";
 
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);
@@ -303,11 +318,27 @@ export function ContractManagementPage() {
                             labelFinal={`${calcularDesvioSLA(demandas, contratos.indexOf(selectedContract))}% dos chamados ultrapassaram o prazo do SLA devido à alta complexidade e falta de recursos.`}
                         />
                     </div>
+                    <div className="grid grid-cols-3 gap-6 mb-6">
+                        <GraficoBalancoChamadosConsultoresSegmento/>
+                        <GraficoChsmadosAbertosResolvidosSegmento/>
+                        <GraficoChamadosPorCategoria nome={"Grafico Chamados Por Categoria"}
+                                                     subtitle={"Setembro - 2024"}/>
+                    </div>
 
-                    <GraficoPrevisaoDemanda/>
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+                        <GraficoComparativoDemanda/>
+                        <GraficoConsultoresDisponiveisOverview disponiveis={"1200"} ausentes={"100"}/>
+                    </div>
+                    <div className={"mb-6"}><GraficoCustoConsultoresChamados/></div>
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+                        <GraficoDemandasSenioridade/>
+                        <GraficoOciosidadePie/>
+                    </div>
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+                        <GraficoPrevisaoDemanda/>
+                        <GraficoReworkPorComplexidade />
+                    </div>
 
-                    {/* Modal */
-                    }
                     <ModalContract show={showModal} onClose={() => setShowModal(false)}
                                    selectedContract={selectedContract}/>
                 </>

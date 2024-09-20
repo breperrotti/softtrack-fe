@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -34,7 +34,7 @@ const dataComplexidade = [
     { categoria: "N3", percentual: 20, quantidade: 40 },
 ];
 
-export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitle: string }) {
+export function GraficoChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitle: string }) {
     const [selectedFilter, setSelectedFilter] = useState("criticidade");
 
     const data = selectedFilter === "criticidade" ? dataCriticidade : dataComplexidade;
@@ -42,7 +42,7 @@ export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitl
     return (
         <Card className="border-none drop-shadow-md flex flex-col items-center w-full">
             <CardHeader className="flex flex-col items-center">
-                <CardTitle>{nome}</CardTitle>
+                <CardTitle className={"text-center"}>{nome}</CardTitle>
                 <CardDescription>{subtitle}</CardDescription>
             </CardHeader>
 
@@ -105,10 +105,9 @@ export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitl
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" domain={[0, 100]} hide />
                         <YAxis type="category" dataKey="categoria" />
-                        {/* Atualize o Tooltip para exibir percentual e quantidade */}
                         <Tooltip 
                             formatter={(value: any, props: any) => [
-                                `${value}% (${props.payload.quantidade} chamados)`, 
+                                `${value}% (${props.quantidade} chamados)`,
                                 'Percentual'
                             ]} 
                         />
@@ -117,9 +116,6 @@ export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitl
                 </ResponsiveContainer>
             </CardContent>
 
-            <CardFooter className="flex-col items-center gap-2 text-sm mt-4">
-                <div className="text-center font-medium">O maior índice identificado no gráfico é a criticidade de nível &quot;Média&quot;, representando 40% dos chamados, o que indica que a maioria dos chamados requer uma atenção intermediária, nem crítica, nem trivial. No aspecto de complexidade, o maior índice está no nível N2, que corresponde a 50% dos chamados, sugerindo que grande parte dos problemas demandam um nível médio de esforço técnico para serem resolvidos.</div>
-            </CardFooter>
         </Card>
     );
 }
