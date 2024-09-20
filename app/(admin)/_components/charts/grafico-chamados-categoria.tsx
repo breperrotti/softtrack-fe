@@ -118,7 +118,7 @@ export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitl
             </CardContent>
 
             <CardFooter className="flex-col items-center gap-2 text-sm mt-4">
-                <div className="text-center font-medium">O maior índice identificado no gráfico é a criticidade de nível "Média", representando 40% dos chamados, o que indica que a maioria dos chamados requer uma atenção intermediária, nem crítica, nem trivial. No aspecto de complexidade, o maior índice está no nível N2, que corresponde a 50% dos chamados, sugerindo que grande parte dos problemas demandam um nível médio de esforço técnico para serem resolvidos.</div>
+                <div className="text-center font-medium">O maior índice identificado no gráfico é a criticidade de nível "Média", representando 40% dos chamados.</div>
             </CardFooter>
         </Card>
     );

@@ -27,7 +27,6 @@ import {
   ChartLegendContent,
 } from "@/components/ui/chart";
 
-// Dados fictícios para o gráfico preditivo
 const chartData = [
   { name: "Outubro 2024", Manutencao: 80, Melhoria: 40, Projetos: 100, Suporte: 50, Erro: 30, Problema: 20 },
   { name: "Novembro 2024", Manutencao: 100, Melhoria: 50, Projetos: 120, Suporte: 70, Erro: 40, Problema: 30 },
@@ -36,7 +35,6 @@ const chartData = [
   { name: "Fevereiro 2025", Manutencao: 130, Melhoria: 70, Projetos: 150, Suporte: 90, Erro: 60, Problema: 50 },
 ];
 
-// Configuração de cores do gráfico
 const chartConfig = {
   Manutencao: {
     label: "Manutenção",
