@@ -2,7 +2,7 @@ import {Input} from "@/components/ui/input"
 import {Button} from "@/components/ui/button"
 import {ArrowRight, Construction} from "lucide-react";
 
-const EquipesPage = () => {
+const PersonalizacaoPage = () => {
     return (
         <div className={"flex items-center justify-center h-full"}>
             <div className={"flex flex-col gap-4 justify-center items-center -mt-24"}>
@@ -26,4 +26,4 @@ const EquipesPage = () => {
     )
 }
 
-export default EquipesPage;
+export default PersonalizacaoPage;
