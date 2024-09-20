@@ -39,7 +39,7 @@ export const ModalContract: React.FC<ModalProps> = ({show, onClose, selectedCont
                 <h2 className="text-2xl font-bold mb-4">Custo dos Consultores</h2>
 
                 {consultores.map((consultor, index) => (
-                    <Card key={index} className={"p-4 m-2"}>
+                    <Card key={index} className={"p-4 m-2 drop-shadow-md"}>
                         <p className="text-lg font-medium">{consultor.nome}</p>
                         <p>Custo por Hora: R$ {consultor.data.custo_venda}</p>
                         <p>

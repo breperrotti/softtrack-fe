@@ -51,7 +51,7 @@ import {
 import {GraficoCustoConsultoresChamados} from "@/app/(admin)/_components/charts/grafico-custo-consultores-chamados";
 import {GraficoDemandasSenioridade} from "@/app/(admin)/_components/charts/grafico-demandas-senioridade-overview";
 import {GraficoOciosidadePie} from "@/app/(admin)/_components/charts/grafico-ociosidade";
-import {GraficoReworkPorComplexidade} from "@/app/(admin)/_components/charts/grafico-rework";
+import {GraficoRetrabalho, GraficoReworkPorComplexidade} from "@/app/(admin)/_components/charts/grafico-rework";
 
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);
@@ -75,55 +75,6 @@ export function ContractManagementPage() {
             state: showHoursData,
             setState: setShowHoursData,
         },
-        {
-            value: 'financialData',
-            label: 'Dados Financeiros',
-            state: showFinancialData,
-            setState: setShowFinancialData,
-        },
-        {
-            value: 'hoursData',
-            label: 'Dados de Horas',
-            state: showHoursData,
-            setState: setShowHoursData,
-        },
-        {
-            value: 'financialData',
-            label: 'Dados Financeiros',
-            state: showFinancialData,
-            setState: setShowFinancialData,
-        },
-        {
-            value: 'hoursData',
-            label: 'Dados de Horas',
-            state: showHoursData,
-            setState: setShowHoursData,
-        },
-        {
-            value: 'financialData',
-            label: 'Dados Financeiros',
-            state: showFinancialData,
-            setState: setShowFinancialData,
-        },
-        {
-            value: 'hoursData',
-            label: 'Dados de Horas',
-            state: showHoursData,
-            setState: setShowHoursData,
-        },
-        {
-            value: 'financialData',
-            label: 'Dados Financeiros',
-            state: showFinancialData,
-            setState: setShowFinancialData,
-        },
-        {
-            value: 'hoursData',
-            label: 'Dados de Horas',
-            state: showHoursData,
-            setState: setShowHoursData,
-        },
-
     ];
 
     return (
@@ -180,8 +131,8 @@ export function ContractManagementPage() {
 
             {selectedContract && (
                 <>
-                    <div className="p-4 rounded-lg mb-6 drop-shadow-md bg-white">
-                        <h1 className="text-2xl font-bold text-center mb-8">Detalhes do Contrato</h1>
+                    <div className="p-4 rounded-lg mb-6 drop-shadow-md bg-roxo">
+                        <h1 className="text-2xl font-bold text-center mb-8 text-white">Detalhes do Contrato</h1>
                         <div className="flex items-center space-x-4 w-full justify-around">
                             <Card
                                 className="text-lg h-40 w-60 flex flex-col items-center justify-center text-center border-none drop-shadow-md rounded-lg hover:border-none hover:drop-shadow-none transition-all duration-300 hover:shadow-2xl">
@@ -257,14 +208,14 @@ export function ContractManagementPage() {
                         showHoursData && (
                             <div className="grid grid-cols-3 gap-6 mb-6">
 
-                                <div className="p-4 bg-white rounded-lg text-center">
+                                <div className="p-4 bg-white rounded-lg text-center drop-shadow-md">
                                     <p className="text-xl font-bold">Horas Contratadas</p>
                                     <p className="text-3xl">
                                         {contratos[contratos.indexOf(selectedContract)].baseline} h
                                     </p>
                                 </div>
 
-                                <div className="p-4 bg-white rounded-lg text-center">
+                                <div className="p-4 bg-white rounded-lg text-center drop-shadow-md">
                                     <p className="text-xl font-bold">Desvio de Horas Contratadas</p>
                                     <p className="text-3xl">
                                         {converterHorasParaHorasMinutos(
@@ -278,7 +229,7 @@ export function ContractManagementPage() {
                                 </div>
 
                                 {/* Card de Horas Trabalhadas */}
-                                <div className="p-4 bg-white rounded-lg text-center">
+                                <div className="p-4 bg-white rounded-lg text-center drop-shadow-md">
                                     <p className="text-xl font-bold">Horas Trabalhadas</p>
                                     <p className="text-3xl">
                                         {converterHorasParaHorasMinutos(
@@ -309,7 +260,7 @@ export function ContractManagementPage() {
                             nome="Rentabilidade do Projeto"
                             subtitle="Setembro - 2024"
                             valor={calcularRentabilidade(selectedContract)}
-                            labelFinal={`A rentabilidade do projeto é de ${calcularRentabilidade(selectedContract)}%. Este valor reflete a diferença entre os custos totais dos consultores e o valor do contrato. Quanto maior a rentabilidade, maior o lucro gerado em relação ao custo, indicando uma gestão eficiente dos recursos.`}
+                            labelFinal={`A rentabilidade do projeto é de ${calcularRentabilidade(selectedContract)}%. Este valor reflete a diferença entre os custos totais dos consultores e o valor do contrato.`}
                         />
                         <GraficoDesvioEscopo
                             nome="Desvio de SLA"
@@ -318,25 +269,30 @@ export function ContractManagementPage() {
                             labelFinal={`${calcularDesvioSLA(demandas, contratos.indexOf(selectedContract))}% dos chamados ultrapassaram o prazo do SLA devido à alta complexidade e falta de recursos.`}
                         />
                     </div>
-                    <div className="grid grid-cols-3 gap-6 mb-6">
-                        <GraficoBalancoChamadosConsultoresSegmento/>
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+
                         <GraficoChsmadosAbertosResolvidosSegmento/>
                         <GraficoChamadosPorCategoria nome={"Grafico Chamados Por Categoria"}
                                                      subtitle={"Setembro - 2024"}/>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-6 mb-6">
-                        <GraficoComparativoDemanda/>
+                    <div className="grid grid-cols-3 gap-6 mb-6">
                         <GraficoConsultoresDisponiveisOverview disponiveis={"1200"} ausentes={"100"}/>
+                        <div className={"col-span-2"}>
+                            <GraficoComparativoDemanda/>
+                        </div>
                     </div>
                     <div className={"mb-6"}><GraficoCustoConsultoresChamados/></div>
-                    <div className="grid grid-cols-2 gap-6 mb-6">
+                    <div className="grid grid-cols-3 gap-6 mb-6">
                         <GraficoDemandasSenioridade/>
+                        <GraficoBalancoChamadosConsultoresSegmento/>
                         <GraficoOciosidadePie/>
                     </div>
-                    <div className="grid grid-cols-2 gap-6 mb-6">
-                        <GraficoPrevisaoDemanda/>
-                        <GraficoReworkPorComplexidade />
+                    <div className="grid grid-cols-3 gap-6 mb-6">
+                        <div className={"col-span-2"}>
+                            <GraficoPrevisaoDemanda/>
+                        </div>
+                        <GraficoRetrabalho />
                     </div>
 
                     <ModalContract show={showModal} onClose={() => setShowModal(false)}

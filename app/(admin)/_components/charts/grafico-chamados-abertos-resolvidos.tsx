@@ -17,6 +17,7 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
+import React from "react";
 
 const chartData = [
     {month: "T.I", abertos: 186, resolvidos: 150},
@@ -40,7 +41,7 @@ const chartConfig = {
 
 export function GraficoChsmadosAbertosResolvidosSegmento() {
     return (
-        <Card className="border-none shadow-none h-full w-full">
+        <Card className="border-none drop-shadow-md h-full w-full">
             <CardHeader className="text-center">
                 <CardTitle>Número de chamados Abertos x Resolvidos por segmento</CardTitle>
                 <CardDescription>Agosto - 2024</CardDescription>
@@ -59,7 +60,7 @@ export function GraficoChsmadosAbertosResolvidosSegmento() {
                             />
                             <ChartTooltip
                                 cursor={false}
-                                content={<ChartTooltipContent indicator="dashed"/>}
+                                content={<ChartTooltipContent indicator="line"/>}
                             />
                             <Bar dataKey="abertos" fill="#CECDEE" radius={4}/>
                             <Bar dataKey="resolvidos" fill="#5F5DF1" radius={4}/>
@@ -67,9 +68,9 @@ export function GraficoChsmadosAbertosResolvidosSegmento() {
                     </ResponsiveContainer>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm">
-                <div className="flex gap-2 font-medium leading-none">
-                    Número de chamados concluídos aumentou em 3.4% <TrendingUp className="h-4 w-4"/>
+            <CardFooter className="flex-col gap-2 text-sm px-2">
+                <div className="flex gap-2 font-medium text-center leading-none">
+                    <p className={"flex items-center"}>Número de chamados concluídos aumentou em 3.4% <TrendingUp className="h-4 w-4"/></p>
                 </div>
                 <div className="leading-none text-muted-foreground">
                     Porcentagem baseada nos últimos 3 meses

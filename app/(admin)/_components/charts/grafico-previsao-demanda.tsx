@@ -67,7 +67,7 @@ const labelFormatter = (value: string) => value;
 
 export function GraficoPrevisaoDemanda() {
   return (
-    <Card className="border-none shadow-none h-full w-full bg-white">
+    <Card className="border-none drop-shadow-md h-full w-full bg-white">
       <CardHeader className="flex flex-col items-center gap-2 space-y-0 border-b py-5">
         <div className="grid gap-1 text-center">
           <CardTitle>Previsão de Demanda por Tipo</CardTitle>

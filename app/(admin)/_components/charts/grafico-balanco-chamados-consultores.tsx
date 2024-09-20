@@ -1,6 +1,6 @@
 "use client"
 
-import { memo } from "react"
+import React, { memo } from "react"
 import { TrendingUp } from "lucide-react"
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from "recharts"
 
@@ -43,7 +43,7 @@ const chartConfig = {
 
 export const GraficoBalancoChamadosConsultoresSegmento = memo(() => {
   return (
-    <Card className="border-none shadow-none h-full w-full">
+    <Card className="border-none drop-shadow-md h-full w-full">
       <CardHeader className="items-center pb-4">
         <CardTitle className="text-center text-base lg:text-lg">
           Balanço Chamados x Consultores por Segmento

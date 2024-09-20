@@ -32,7 +32,7 @@ const chartConfig = {
 
 export function GraficoDemandasSenioridade() {
   return (
-    <Card className="border-none shadow-none">
+    <Card className="border-none drop-shadow-md">
       <CardHeader className="flex flex-col items-center">
         <CardTitle>Demandas por Senioridade</CardTitle>
         <CardDescription>Agosto - 2024</CardDescription>

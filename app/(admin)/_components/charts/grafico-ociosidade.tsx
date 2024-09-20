@@ -2,8 +2,8 @@
 
 import { Pie, PieChart, ResponsiveContainer, Cell, Tooltip } from "recharts"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartContainer, ChartConfig } from "@/components/ui/chart"
-import { useState } from "react"
+import {ChartContainer, ChartConfig, ChartTooltipContent, ChartTooltip} from "@/components/ui/chart"
+import React, { useState } from "react"
 import { TrendingUp } from "lucide-react"
 import { Contrato, contratos, Demanda, demandas } from "@/mocks/contracts"
 import { calcularOciosidadeTotal } from "../actions/ociosidade_helper"
@@ -11,15 +11,15 @@ import { calcularOciosidadeTotal } from "../actions/ociosidade_helper"
 const chartConfig = {
     "Horas Trabalhadas": {
         label: "Horas Trabalhadas",
-        color: "#5F5DF1",
+        color: "#5623E2",
     },
     "Horas Ociosas": {
         label: "Horas Ociosas",
-        color: "#CECDEE",
+        color: "#00CEBE",
     },
 } satisfies ChartConfig
 
-const COLORS = ["#5F5DF1", "#CECDEE"];
+const COLORS = ["#5623E2", "#00CEBE"];
 
 const resultadoOciosidadeTotal = calcularOciosidadeTotal(contratos, demandas);
 
@@ -40,7 +40,7 @@ export function GraficoOciosidadePie() {
     }
 
     return (
-        <Card className="border-none shadow-none h-full w-full">
+        <Card className="border-none drop-shadow-md h-full w-full">
             <CardHeader className="text-center">
                 <CardTitle>Ociosidade por Falta de Demanda</CardTitle>
                 <CardDescription>Ano de 2024</CardDescription>
@@ -69,23 +69,15 @@ export function GraficoOciosidadePie() {
                                     />
                                 ))}
                             </Pie>
-                            <Tooltip
-                                content={({ active, payload }) => {
-                                    if (active && payload && payload.length && typeof payload[0].value === 'number') {
-                                        return (
-                                            <div className="bg-white p-2 rounded shadow-lg">
-                                                <p className="label">{`${payload[0].name} : ${payload[0].value.toFixed(2)}`}</p>
-                                            </div>
-                                        )
-                                    }
-                                    return null
-                                }}
+                            <ChartTooltip
+                                cursor={false}
+                                content={<ChartTooltipContent indicator="line" />}
                             />
                         </PieChart>
                     </ResponsiveContainer>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm">
+            <CardFooter className="flex-col gap-2 text-sm text-center">
                 <div className="flex gap-2 font-medium leading-none">
                     Ociosidade detectada em 9.36% das horas totais <TrendingUp className="h-4 w-4"/>
                 </div>

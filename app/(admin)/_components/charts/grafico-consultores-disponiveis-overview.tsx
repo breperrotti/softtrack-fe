@@ -44,7 +44,7 @@ export function GraficoConsultoresDisponiveisOverview({
   const totalVisitors = chartData[0].ausentes + chartData[0].disponiveis;
 
   return (
-    <Card className="flex flex-col border-none shadow-none">
+    <Card className="flex flex-col border-none drop-shadow-md">
       <CardHeader className="items-center pb-0">
         <CardTitle>Consultores Disponíveis</CardTitle>
         <CardDescription>Agosto - 2024</CardDescription>

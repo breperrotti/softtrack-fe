@@ -45,11 +45,11 @@ const chartData = [
 const chartConfig = {
   DemandaFerias: {
     label: "Ausencia",
-    color: "#82ca9d",
+    color: "#00CEBE",
   },
   DemandaGeral: {
     label: "Demanda Geral",
-    color: "#8884d8",
+    color: "#5623E2",
   },
 } satisfies ChartConfig;
 
@@ -58,7 +58,7 @@ const labelFormatter = (value: string) => value;
 
 export function GraficoComparativoDemanda() {
   return (
-    <Card className="border-none shadow-none h-full w-full bg-white">
+    <Card className="border-none drop-shadow-md h-full w-full bg-white">
       <CardHeader className="flex flex-col items-center gap-2 space-y-0 border-b py-5">
         <div className="grid gap-1 text-center">
           <CardTitle>Comparativo de Ausencias x Demanda</CardTitle>
@@ -83,7 +83,7 @@ export function GraficoComparativoDemanda() {
               <YAxis />
               <Tooltip
                 cursor={false}
-                content={<ChartTooltipContent labelFormatter={labelFormatter} indicator="dot" />}
+                content={<ChartTooltipContent labelFormatter={labelFormatter} indicator="line" />}
               />
               <Legend content={<ChartLegendContent />} />
               <Line type="monotone" dataKey="DemandaFerias" stroke={chartConfig.DemandaFerias.color} />
