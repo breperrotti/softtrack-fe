@@ -12,7 +12,7 @@ const VideoPage = () => {
         allow="autoplay; clipboard-write; encrypted-media; gyroscope"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="absolute aspect-video w-80 md:w-144 lg:w-256 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-6px] translate-y-[-6px] rounded-md shadow-[6px_6px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
+        className="absolute aspect-video z-40 w-80 md:w-144 lg:w-256 border-2 border-black bg-background hover:bg-accent hover:text-accent-foreground transition-all duration-300 translate-x-[-6px] translate-y-[-6px] rounded-md shadow-[6px_6px_0px_black] hover:translate-x-[0px] hover:translate-y-[0px] hover:shadow-none"
       ></iframe>
       <div
         className="absolute transform z-10 hidden xl:block rotate-12"

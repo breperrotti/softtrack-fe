@@ -23,7 +23,10 @@ export const UserBox = () => {
                             avatarBox: "w-10 h-10"
                         }
                     }}/>
-                    <p className="font-semibold text-sm">Bem vindo, {user.username}</p>
+                    <div>
+                        <p className="font-semibold text-sm">{user.fullName}</p>
+                        <p className={"text-xs text-muted-foreground"}>Data Manager - ||</p>
+                    </div>
                 </div>
             )}
         </>

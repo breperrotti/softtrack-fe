@@ -21,7 +21,6 @@ const DEFAULT = {
     "2": null,
 };
 
-
 function A() {
     return (
         <div data-swapy-item="a">
@@ -42,7 +41,7 @@ function D() {
 
     return (
         <div data-swapy-item="d">
-            <Card className={"bg-roxo text-white flex items-center justify-center"}>
+            <Card className={"bg-roxo text-white flex items-center justify-center w-[435px] h-[435px]"}>
                 teste
             </Card>
         </div>

@@ -43,9 +43,9 @@ export const Hero = () => {
           </p>
           <div className="space-y-4 md:space-x-4">
             <Button className="w-2/3 sm:w-1/3">Quero saber mais</Button>
-            <Link href="https://github.com/leoMirandaa/shadcn-landing-page.git">
+            <Link href="/video">
               <Button variant={"outline"}>
-                Softtrack Docs
+                Softtrack Video Pitch
                 <ArrowUpRight size={20} />
               </Button>
             </Link>

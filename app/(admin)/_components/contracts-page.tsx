@@ -1,10 +1,10 @@
 "use client";
 
-import { Contrato, contratos, demandas } from "@/mocks/contracts";
+import {Contrato, contratos, demandas} from "@/mocks/contracts";
 
-import { GraficoDesvioEscopo } from "@/app/(admin)/_components/charts/grafico-desvio-escopo";
-import { GraficoPrevisaoDemanda } from "./charts/grafico-previsao-demanda";
-import { ModalContract } from "./modals/modal-contracts";
+import {GraficoDesvioEscopo} from "@/app/(admin)/_components/charts/grafico-desvio-escopo";
+import {GraficoPrevisaoDemanda} from "./charts/grafico-previsao-demanda";
+import {ModalContract} from "./modals/modal-contracts";
 import {
     calcularCustoConsultores,
     calcularCustoGestao,
@@ -17,7 +17,7 @@ import {
     converterHorasParaHorasMinutos
 } from "./actions/contracts_helper";
 
-import { Button } from "@/components/ui/button"
+import {Button} from "@/components/ui/button"
 import {
     Command,
     CommandEmpty,
@@ -31,18 +31,12 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import {ToggleGroup, ToggleGroupItem} from "@/components/ui/toggle-group"
 
 
-import React, { useState, useContext } from 'react';
-import { ContractContext } from '../_components/contexts/contract-context';
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { ChamadosPorCategoria } from "./charts/grafico-chamados-categoria";
-import { GraficoComparativoDemanda } from "./charts/grafico-comparativo-ferias-demanda";
-import { GraficoOciosidadePie } from "./charts/grafico-ociosidade";
-import { GraficoReworkPorComplexidade } from "./charts/grafico-rework";
-
+import React, {useState, useContext} from 'react';
+import {ContractContext} from '../_components/contexts/contract-context';
+import {Card} from "@/components/ui/card";
 
 export function ContractManagementPage() {
     const [selectedContract, setSelectedContract] = useState<Contrato | null>(contratos[0]);
@@ -51,7 +45,7 @@ export function ContractManagementPage() {
     const [showHoursData, setShowHoursData] = useState(false);
     const [openCombobox, setOpenCombobox] = React.useState(false);
 
-    const { updateContract } = useContext(ContractContext);
+    const {updateContract} = useContext(ContractContext);
 
     const toggleButtons = [
         {
@@ -141,7 +135,7 @@ export function ContractManagementPage() {
                         </PopoverTrigger>
                         <PopoverContent className="p-0 border-2 border-black" side="right" align="start">
                             <Command>
-                                <CommandInput placeholder="Procurar contrato..." />
+                                <CommandInput placeholder="Procurar contrato..."/>
                                 <CommandList>
                                     <CommandEmpty>Nenhum contrato encontrado.</CommandEmpty>
                                     <CommandGroup>
@@ -310,21 +304,12 @@ export function ContractManagementPage() {
                         />
                     </div>
 
-                    <GraficoPrevisaoDemanda />
-                    
-                    <br></br>
-
-                    <div className="grid grid-cols-3 gap-6 mb-6">
-                        <ChamadosPorCategoria nome={"Chamados por Categoria"} subtitle={"Geral"} />
-                        <GraficoComparativoDemanda />
-                        <GraficoReworkPorComplexidade/>
-                        {/* <GraficoOciosidadePie /> */}
-                    </div>
+                    <GraficoPrevisaoDemanda/>
 
                     {/* Modal */
                     }
                     <ModalContract show={showModal} onClose={() => setShowModal(false)}
-                        selectedContract={selectedContract} />
+                                   selectedContract={selectedContract}/>
                 </>
             )}
         </div>

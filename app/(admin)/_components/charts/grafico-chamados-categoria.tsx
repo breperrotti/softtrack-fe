@@ -107,7 +107,7 @@ export function ChamadosPorCategoria({ nome, subtitle }: { nome: string; subtitl
                         <YAxis type="category" dataKey="categoria" />
                         {/* Atualize o Tooltip para exibir percentual e quantidade */}
                         <Tooltip 
-                            formatter={(value: any, name: any, props: any) => [
+                            formatter={(value: any, props: any) => [
                                 `${value}% (${props.payload.quantidade} chamados)`, 
                                 'Percentual'
                             ]} 
