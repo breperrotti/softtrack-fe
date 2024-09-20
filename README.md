@@ -9,7 +9,6 @@ A aplicação inclui as seguintes telas:
 ## Verificar se possuem os seguintes graficos:
 
 -- Fornecer visão da capacidade de consultores x demandas de chamados contemplando:
--- Visão do atendimento indicando consultores disponíveis considerando (Custo, Senioridade e complexidade)
 -- Visão de ociosidade por falta de demanda.
 -- Visão geral das demandas atuais e projeção futura indicando capacidade correta para podermos dimensionar o time
 -- Controlar a tendência de chamados (Dificuldade, Criticidade) para preparar alocação de consultores com determinados perfis mediante a complexidade dos atendimentos.

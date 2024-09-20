@@ -44,7 +44,7 @@ const chartData = [
 
 const chartConfig = {
   DemandaFerias: {
-    label: "Demanda de Férias",
+    label: "Ausencia",
     color: "#82ca9d",
   },
   DemandaGeral: {
@@ -61,9 +61,9 @@ export function GraficoComparativoDemanda() {
     <Card className="border-none shadow-none h-full w-full bg-white">
       <CardHeader className="flex flex-col items-center gap-2 space-y-0 border-b py-5">
         <div className="grid gap-1 text-center">
-          <CardTitle>Comparativo de Ferias x Demanda</CardTitle>
+          <CardTitle>Comparativo de Ausencias x Demanda</CardTitle>
           <CardDescription>
-           Férias vs Demanda Geral por Período do Ano
+            Ausências e Feriados vs Demanda Sazonal
           </CardDescription>
         </div>
       </CardHeader>
